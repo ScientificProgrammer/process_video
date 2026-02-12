@@ -8,7 +8,8 @@
       "temperature": null,
       "session": null,
       "sleep_between_patterns": 0,
-      "parallel_jobs": 8
+      "parallel_jobs": 8,
+      "llm_slug": true
     },
     "patterns": [
       "analyze_claims",

@@ -79,7 +79,7 @@ readonly -a REPORT_SECTIONS=(
     "extraction|extract_extraordinary_claims|Extraordinary Claims"
     "extraction|extract_questions|Questions Raised"
     "strategic|create_ai_jobs_analysis|AI Jobs Impact Analysis"
-    "strategic|prepare_7s_strategy|7S Strategic Framework"
+    "strategic|prepare_7s_strategy|McKinsey 7S Strategic Framework"
     "strategic|extract_alpha|Alpha Extraction"
     "summary|create_summary|Structured Summary"
     "summary|summarize|General Summary"
@@ -271,6 +271,7 @@ Options:
   Transcript:
       --timestamps         Fetch transcript with timestamps
       --skip-preprocessing Skip clean_text/fix_typos preprocessing
+      --no-llm-slug        Use mechanical slugs instead of LLM-generated
 
   Display:
       --no-color           Disable color output
@@ -331,6 +332,7 @@ parse_args() {
     CLI_QUIET="false"
     CLI_TIMESTAMPS="false"
     CLI_SKIP_PREPROCESSING="false"
+    CLI_NO_LLM_SLUG="false"
     CLI_LIST_PATTERNS="false"
     CLI_VERIFY_PATTERNS="false"
     CLI_INIT_CONFIG=""
@@ -370,6 +372,7 @@ parse_args() {
             -q|--quiet)               CLI_QUIET="true"; shift ;;
             --timestamps)             CLI_TIMESTAMPS="true"; shift ;;
             --skip-preprocessing)     CLI_SKIP_PREPROCESSING="true"; shift ;;
+            --no-llm-slug)            CLI_NO_LLM_SLUG="true"; shift ;;
             --init-config)
                 # Next arg is optional output file; peek to see if it's a flag or file
                 if [[ "${2:-}" == "" ]] || [[ "${2:-}" == -* ]]; then
@@ -453,7 +456,7 @@ OPT_MODEL="" OPT_VENDOR="" OPT_STRATEGY="" OPT_TEMPERATURE=""
 OPT_SESSION="" OPT_RAW="" OPT_SLEEP="" OPT_JOBS=""
 OPT_OUTPUT_DIR="" OPT_TIMESTAMPS="" OPT_SKIP_PREPROCESSING=""
 OPT_NO_ARTIFACTS="" OPT_CONVERT_ARTIFACTS="" OPT_NO_REPORT=""
-OPT_DRY_RUN="" OPT_VERBOSE="" OPT_QUIET="" OPT_NO_COLOR=""
+OPT_DRY_RUN="" OPT_VERBOSE="" OPT_QUIET="" OPT_NO_COLOR="" OPT_NO_LLM_SLUG=""
 declare -a OPT_PATTERNS=()
 declare -a OPT_PANDOC_FORMATS=()
 
@@ -480,6 +483,7 @@ resolve_config() {
     OPT_OUTPUT_DIR="$CLI_OUTPUT_DIR"
     OPT_TIMESTAMPS="$(_resolve "$CLI_TIMESTAMPS" "$CFG_TIMESTAMPS" "false")"
     OPT_SKIP_PREPROCESSING="$(_resolve "$CLI_SKIP_PREPROCESSING" "$CFG_SKIP_PREPROCESSING" "false")"
+    OPT_NO_LLM_SLUG="$CLI_NO_LLM_SLUG"
     OPT_NO_ARTIFACTS="$CLI_NO_ARTIFACTS"
     OPT_CONVERT_ARTIFACTS="$(_resolve "$CLI_CONVERT_ARTIFACTS" "$CFG_CONVERT_ARTIFACTS" "false")"
     OPT_NO_REPORT="$CLI_NO_REPORT"
@@ -678,8 +682,165 @@ fetch_metadata() {
     info "  Metadata fetched $(format_duration $elapsed)"
 }
 
+# ------------------------------------------------------------------------------
+# LLM Slug Generation
+# ------------------------------------------------------------------------------
+
+readonly SLUG_PATTERN_NAME="generate_filename_slug"
+readonly SLUG_MODEL="claude-haiku-4-5"
+LLM_TITLE_SLUG=""
+LLM_CHANNEL_SLUG=""
+
+ensure_slug_pattern() {
+    local pattern_dir="${FABRIC_PATTERN_DIR}/${SLUG_PATTERN_NAME}"
+    local system_file="${pattern_dir}/system.md"
+
+    [[ -f "$system_file" ]] && return 0
+
+    debug "Installing fabric pattern: $SLUG_PATTERN_NAME"
+    mkdir -p "$pattern_dir"
+
+    cat > "$system_file" <<'SLUG_PATTERN_EOF'
+# IDENTITY and PURPOSE
+
+You are a filename slug generator. You take a video title and channel name and
+produce concise, descriptive filesystem-safe slugs.
+
+# INSTRUCTIONS
+
+You will receive JSON input with `title` and `channel` fields.
+
+For the **title_slug**:
+- Distill the title into its essential topic or theme using 3-5 words
+- Maximum 40 characters
+- Use only lowercase letters, digits, and underscores
+- Capture the core subject matter, not filler words
+- Drop subtitles, speaker names, series names, and parenthetical asides
+- Example: "AI Productivity Bubble: Early Adopters Are Already Burning Out | Natasha Bernal" → "ai_productivity_burnout"
+
+For the **channel_slug**:
+- Simplify the channel name to its shortest recognizable form
+- Maximum 20 characters
+- Use only lowercase letters, digits, and underscores
+- Drop common suffixes like "official", "channel", "podcast", "daily", "news"
+- Example: "AI News & Strategy Daily | Nate B Jones" → "nate_b_jones"
+- Example: "The Tech Report" → "tech_report"
+
+# OUTPUT FORMAT
+
+Return ONLY a single JSON object on one line, no markdown fencing, no explanation:
+
+{"title_slug": "...", "channel_slug": "..."}
+
+# OUTPUT INSTRUCTIONS
+
+- Output ONLY the JSON object, nothing else
+- No markdown code fences
+- No explanatory text before or after
+- Slugs must use only: lowercase a-z, digits 0-9, underscores
+- No leading or trailing underscores
+- No consecutive underscores
+SLUG_PATTERN_EOF
+}
+
+generate_llm_slug() {
+    if [[ "$OPT_NO_LLM_SLUG" == "true" ]]; then
+        debug "LLM slug generation disabled (--no-llm-slug)"
+        return 0
+    fi
+
+    if [[ "$OPT_DRY_RUN" == "true" ]]; then
+        info "  [dry-run] Would generate LLM filename slugs"
+        return 0
+    fi
+
+    ensure_slug_pattern
+
+    info "Generating filename slugs..."
+    local start_time=$SECONDS
+
+    local input_json
+    input_json="$(jq -n \
+        --arg title "$VIDEO_TITLE" \
+        --arg channel "$CHANNEL_NAME" \
+        '{"title": $title, "channel": $channel}')"
+
+    local raw_output exit_code=0
+    raw_output="$(printf '%s' "$input_json" | \
+        fabric --pattern="$SLUG_PATTERN_NAME" \
+            --model="$SLUG_MODEL" \
+            --raw \
+            2>>"$LOG_FILE")" || exit_code=$?
+
+    if [[ $exit_code -ne 0 ]] || [[ -z "$raw_output" ]]; then
+        warn "LLM slug generation failed (exit=$exit_code); using mechanical slugs"
+        log "WARN" "LLM slug generation failed: exit=$exit_code"
+        return 0
+    fi
+
+    # Extract JSON from output (LLM may wrap in markdown fences)
+    local json_line
+    json_line="$(printf '%s' "$raw_output" | grep -m1 '^{' || true)"
+    if [[ -z "$json_line" ]]; then
+        warn "LLM slug output is not JSON; using mechanical slugs"
+        log "WARN" "LLM slug raw output: $raw_output"
+        return 0
+    fi
+
+    # Parse and validate slugs
+    local title_slug channel_slug
+    title_slug="$(printf '%s' "$json_line" | jq -r '.title_slug // empty' 2>/dev/null)" || true
+    channel_slug="$(printf '%s' "$json_line" | jq -r '.channel_slug // empty' 2>/dev/null)" || true
+
+    if [[ -z "$title_slug" ]] || [[ -z "$channel_slug" ]]; then
+        warn "LLM slug output missing fields; using mechanical slugs"
+        log "WARN" "LLM slug parsed: title='$title_slug' channel='$channel_slug'"
+        return 0
+    fi
+
+    # Sanitize: enforce lowercase, allowed chars, length limits
+    title_slug="$(printf '%s' "$title_slug" \
+        | tr '[:upper:]' '[:lower:]' \
+        | sed -E 's/[^a-z0-9_]+/_/g' \
+        | sed -E 's/_+/_/g' \
+        | sed -E 's/^_|_$//g')"
+    channel_slug="$(printf '%s' "$channel_slug" \
+        | tr '[:upper:]' '[:lower:]' \
+        | sed -E 's/[^a-z0-9_]+/_/g' \
+        | sed -E 's/_+/_/g' \
+        | sed -E 's/^_|_$//g')"
+
+    # Enforce max widths
+    title_slug="${title_slug:0:40}"
+    channel_slug="${channel_slug:0:20}"
+
+    if [[ -z "$title_slug" ]] || [[ -z "$channel_slug" ]]; then
+        warn "LLM slug sanitization produced empty result; using mechanical slugs"
+        return 0
+    fi
+
+    LLM_TITLE_SLUG="$title_slug"
+    LLM_CHANNEL_SLUG="$channel_slug"
+
+    local elapsed=$(( SECONDS - start_time ))
+    info "  Channel slug: $LLM_CHANNEL_SLUG"
+    info "  Title slug:   $LLM_TITLE_SLUG"
+    info "  Slugs generated $(format_duration $elapsed)"
+}
+
+# ------------------------------------------------------------------------------
+# Filename Generation
+# ------------------------------------------------------------------------------
+
 generate_base_filename() {
-    local temp_filename="${CHANNEL_NAME}.${UPLOAD_DATE}.${VIDEO_ID}.${VIDEO_TITLE}"
+    local temp_filename
+
+    if [[ -n "$LLM_TITLE_SLUG" ]] && [[ -n "$LLM_CHANNEL_SLUG" ]]; then
+        temp_filename="${LLM_CHANNEL_SLUG}.${UPLOAD_DATE}.${VIDEO_ID}.${LLM_TITLE_SLUG}"
+    else
+        temp_filename="${CHANNEL_NAME}.${UPLOAD_DATE}.${VIDEO_ID}.${VIDEO_TITLE}"
+    fi
+
     BASE_FILENAME="$(printf '%s' "$temp_filename" \
         | tr '[:upper:]' '[:lower:]' \
         | sed -E 's/[^-._[:alnum:]]+/_/g' \
@@ -1258,7 +1419,8 @@ do_init_config() {
       "temperature": null,
       "session": null,
       "sleep_between_patterns": 0,
-      "parallel_jobs": 8
+      "parallel_jobs": 8,
+      "llm_slug": true
     },
     "patterns": [
       "analyze_claims",
@@ -1443,6 +1605,7 @@ main() {
         BASE_FILENAME="dryrun.${VIDEO_ID}"
         setup_output_dir
         fetch_metadata
+        generate_llm_slug
         generate_base_filename
         info "[dry-run] Final output directory would be: ${PWD}/${BASE_FILENAME}"
     else
@@ -1485,7 +1648,8 @@ main() {
         info "  Date:    $UPLOAD_DATE"
         info "  Metadata fetched $(format_duration $elapsed)"
 
-        # Generate base filename and set up output dir
+        # Generate LLM slugs, then base filename, then set up output dir
+        generate_llm_slug
         generate_base_filename
         setup_output_dir
 
