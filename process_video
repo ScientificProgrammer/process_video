@@ -675,7 +675,7 @@ fetch_metadata() {
 # ------------------------------------------------------------------------------
 
 readonly SLUG_PATTERN_NAME="generate_filename_slug"
-readonly SLUG_MODEL="claude-haiku-4-5"
+readonly SLUG_MODEL="claude-3-5-haiku-latest"
 LLM_TITLE_SLUG=""
 LLM_CHANNEL_SLUG=""
 
@@ -757,6 +757,7 @@ generate_llm_slug() {
     raw_output="$(printf '%s' "$input_json" | \
         fabric --pattern="$SLUG_PATTERN_NAME" \
             --model="$SLUG_MODEL" \
+            --vendor=Anthropic \
             --raw \
             2>>"$LOG_FILE")" || exit_code=$?
 
