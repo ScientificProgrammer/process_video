@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+import sys
+from youtube_transcript_api import YouTubeTranscriptApi
+
+
+def usage():
+    print(f"Usage: {sys.argv[0]} [--quiet] VIDEO_ID", file=sys.stderr)
+    sys.exit(1)
+
+
+# Parse args
+quiet = False
+args = sys.argv[1:]
+if not args:
+    usage()
+
+if args[0] in ("-q", "--quiet"):
+    quiet = True
+    args.pop(0)
+
+if len(args) != 1:
+    usage()
+
+video_id = args[0]
+
+# Fetch and write
+if not quiet:
+    print(f"[INFO] Fetching transcript for {video_id}", file=sys.stderr)
+
+try:
+    api = YouTubeTranscriptApi()
+    transcript = api.fetch(video_id, languages=["en"])
+except Exception as e:
+    print(f"[ERROR] Failed to fetch transcript: {e}", file=sys.stderr)
+    sys.exit(1)
+
+outfile = f"{video_id}.txt"
+with open(outfile, "w", encoding="utf-8") as out:
+    for seg in transcript:
+        text = seg.text.strip()
+        if not quiet:
+            end = seg.start + seg.duration
+            print(f"[{seg.start:.2f}s → {end:.2f}s] {text}", file=sys.stderr)
+        out.write(text + "\n")
+
+if not quiet:
+    print(f"[INFO] Wrote {len(transcript)} segments to {outfile}", file=sys.stderr)
