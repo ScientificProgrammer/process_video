@@ -32,8 +32,6 @@
       "youtube_summary",
       "create_summary",
       "summarize",
-      "create_conceptmap",
-      "create_mermaid_visualization",
       "find_logical_fallacies",
       "explain_terms"
     ],
