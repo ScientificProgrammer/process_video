@@ -7,15 +7,19 @@ This document is for AI agents (@Data, @Clawdbot, @JARVIS) that need to invoke
 
 | Item | Path |
 |------|------|
-| **Executable (symlink)** | `~/.local/bin/process_video` |
-| **Actual script** | `~/Projects/git-repos/github-repos/process_video/process_video` |
+| **Installed executable** | `~/.local/bin/process_video` (stable release copy) |
+| **Development source** | `~/Projects/git-repos/github-repos/process_video/process_video` |
 | **Default config** | `~/Projects/git-repos/github-repos/process_video/process_video.config.json` |
 | **Fallback transcript tool** | `~/.local/bin/fetch_transcript` |
 | **Fabric patterns directory** | `~/.config/fabric/patterns/` |
 
-The symlink at `~/.local/bin/process_video` points to the actual script. Always
-invoke via the symlink (i.e., just `process_video`) so that `$PATH` resolution
-works consistently.
+The installed copy at `~/.local/bin/process_video` is the stable release. The
+development source lives in the git repo. At release milestones, the release
+copy is updated via:
+```bash
+cp ~/Projects/git-repos/github-repos/process_video/process_video ~/.local/bin/process_video
+```
+Always invoke via `process_video` (the `~/.local/bin` copy) in production.
 
 ## What It Does
 
