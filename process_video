@@ -55,8 +55,6 @@ readonly -a DEFAULT_ANALYSIS_PATTERNS=(
     youtube_summary
     create_summary
     summarize
-    create_conceptmap
-    create_mermaid_visualization
     find_logical_fallacies
     explain_terms
 )
@@ -83,8 +81,6 @@ readonly -a REPORT_SECTIONS=(
     "strategic|extract_alpha|Alpha Extraction"
     "summary|create_summary|Structured Summary"
     "summary|summarize|General Summary"
-    "visualization|create_conceptmap|Concept Map"
-    "visualization|create_mermaid_visualization|Mermaid Diagram"
     "quality|find_logical_fallacies|Logical Fallacies"
     "reference|explain_terms|Key Terms Glossary"
 )
@@ -96,7 +92,6 @@ declare -A TIER_NAMES=(
     [extraction]="Key Extractions"
     [strategic]="Strategic Intelligence"
     [summary]="Summaries"
-    [visualization]="Visualizations"
     [quality]="Quality Assessment"
     [reference]="Reference"
 )
@@ -260,6 +255,7 @@ Options:
       --timestamps         Fetch transcript with timestamps
       --skip-preprocessing Skip clean_text/fix_typos preprocessing
       --no-llm-slug        Use mechanical slugs instead of LLM-generated
+      --no-editorial       Skip editorial consolidation pass on report
 
   Display:
       --no-color           Disable color output
@@ -321,6 +317,7 @@ parse_args() {
     CLI_TIMESTAMPS="false"
     CLI_SKIP_PREPROCESSING="false"
     CLI_NO_LLM_SLUG="false"
+    CLI_NO_EDITORIAL="false"
     CLI_LIST_PATTERNS="false"
     CLI_VERIFY_PATTERNS="false"
     CLI_INIT_CONFIG=""
@@ -361,6 +358,7 @@ parse_args() {
             --timestamps)             CLI_TIMESTAMPS="true"; shift ;;
             --skip-preprocessing)     CLI_SKIP_PREPROCESSING="true"; shift ;;
             --no-llm-slug)            CLI_NO_LLM_SLUG="true"; shift ;;
+            --no-editorial)           CLI_NO_EDITORIAL="true"; shift ;;
             --init-config)
                 # Next arg is optional output file; peek to see if it's a flag or file
                 if [[ "${2:-}" == "" ]] || [[ "${2:-}" == -* ]]; then
@@ -445,6 +443,7 @@ OPT_SESSION="" OPT_RAW="" OPT_SLEEP="" OPT_JOBS=""
 OPT_OUTPUT_DIR="" OPT_TIMESTAMPS="" OPT_SKIP_PREPROCESSING=""
 OPT_NO_ARTIFACTS="" OPT_CONVERT_ARTIFACTS="" OPT_NO_REPORT=""
 OPT_DRY_RUN="" OPT_VERBOSE="" OPT_QUIET="" OPT_NO_COLOR="" OPT_NO_LLM_SLUG=""
+OPT_NO_EDITORIAL=""
 declare -a OPT_PATTERNS=()
 declare -a OPT_PANDOC_FORMATS=()
 
@@ -472,6 +471,7 @@ resolve_config() {
     OPT_TIMESTAMPS="$(_resolve "$CLI_TIMESTAMPS" "$CFG_TIMESTAMPS" "false")"
     OPT_SKIP_PREPROCESSING="$(_resolve "$CLI_SKIP_PREPROCESSING" "$CFG_SKIP_PREPROCESSING" "false")"
     OPT_NO_LLM_SLUG="$CLI_NO_LLM_SLUG"
+    OPT_NO_EDITORIAL="$CLI_NO_EDITORIAL"
     OPT_NO_ARTIFACTS="$CLI_NO_ARTIFACTS"
     OPT_CONVERT_ARTIFACTS="$(_resolve "$CLI_CONVERT_ARTIFACTS" "$CFG_CONVERT_ARTIFACTS" "false")"
     OPT_NO_REPORT="$CLI_NO_REPORT"
@@ -676,6 +676,7 @@ fetch_metadata() {
 
 readonly SLUG_PATTERN_NAME="generate_filename_slug"
 readonly SLUG_MODEL="claude-3-5-haiku-latest"
+readonly EDITORIAL_PATTERN_NAME="editorial_consolidation"
 LLM_TITLE_SLUG=""
 LLM_CHANNEL_SLUG=""
 
@@ -729,6 +730,134 @@ Return ONLY a single JSON object on one line, no markdown fencing, no explanatio
 - No leading or trailing underscores
 - No consecutive underscores
 SLUG_PATTERN_EOF
+}
+
+ensure_editorial_pattern() {
+    local pattern_dir="${FABRIC_PATTERN_DIR}/${EDITORIAL_PATTERN_NAME}"
+    local system_file="${pattern_dir}/system.md"
+
+    [[ -f "$system_file" ]] && return 0
+
+    debug "Installing fabric pattern: $EDITORIAL_PATTERN_NAME"
+    mkdir -p "$pattern_dir"
+
+    cat > "$system_file" <<'EDITORIAL_PATTERN_EOF'
+# IDENTITY and PURPOSE
+
+You are the chief editor of a prestigious international news organization. You
+are renowned for your ability to synthesize complex multi-source analyses into
+cohesive, authoritative reports. You write and speak parsimoniously — every word
+earns its place. You have zero tolerance for redundancy, padding, or restating
+what has already been said.
+
+# INSTRUCTIONS
+
+You will receive a multi-section analysis report generated from a YouTube video
+transcript. Multiple analytical patterns were run independently against the same
+source material, which means there is significant overlap and duplication across
+sections.
+
+Your task is to consolidate this report into a single, cohesive document that:
+
+1. **Eliminates redundancy** — If the same insight, claim, or recommendation
+   appears in multiple sections, it should appear exactly once, in the most
+   appropriate section.
+
+2. **Preserves all unique information** — Every distinct insight, data point,
+   claim, or observation must survive the consolidation. Do not discard
+   information merely because it appears minor.
+
+3. **Maintains the section structure** — Keep the existing heading hierarchy
+   (H2 tier headings, H3 section headings). Do not rename sections, merge
+   sections, or create new sections. You may remove a section entirely only if
+   every piece of information in it already appears in another section.
+
+4. **Preserves the YAML front matter** — The document begins with YAML front
+   matter between `---` delimiters. Copy it through unchanged.
+
+5. **Preserves the metadata table** — The document has an info table after the
+   H1 heading. Copy it through unchanged.
+
+6. **Tightens the prose** — Where the original is verbose or uses filler
+   language, tighten the writing. Prefer active voice, concrete language, and
+   shorter sentences. Do not add your own commentary, analysis, or opinions.
+
+7. **Maintains markdown formatting** — Preserve bullet lists, numbered lists,
+   bold/italic emphasis, and code formatting as used in the original. Keep the
+   Table of Contents section and update it to reflect any removed sections.
+
+# OUTPUT FORMAT
+
+Output the complete consolidated report as a single markdown document. Include
+everything from the YAML front matter through the final section. Do not wrap
+the output in code fences. Do not add any preamble or postscript.
+
+# OUTPUT INSTRUCTIONS
+
+- Output ONLY the consolidated markdown report
+- No commentary before or after the report
+- No markdown code fences wrapping the output
+- Preserve all YAML front matter exactly as provided
+- Preserve all heading levels (H1, H2, H3) exactly as provided
+- Update the Table of Contents to reflect any removed sections
+- If a section becomes empty after deduplication, remove it and its TOC entry
+EDITORIAL_PATTERN_EOF
+}
+
+run_editorial_pass() {
+    if [[ "$OPT_NO_EDITORIAL" == "true" ]]; then
+        debug "Editorial consolidation disabled (--no-editorial)"
+        return 0
+    fi
+
+    if [[ "$OPT_NO_REPORT" == "true" ]]; then
+        return 0
+    fi
+
+    if [[ "$OPT_DRY_RUN" == "true" ]]; then
+        info "[dry-run] Would run editorial consolidation pass"
+        return 0
+    fi
+
+    local report_file="${OUTPUT_DIR}/${BASE_FILENAME}.report.md"
+    [[ -f "$report_file" ]] || { warn "No report.md for editorial pass"; return 0; }
+
+    ensure_editorial_pattern
+
+    info "Running editorial consolidation..."
+    local start_time=$SECONDS
+
+    # Save the raw assembled report
+    local raw_report="${OUTPUT_DIR}/${BASE_FILENAME}.report.raw.md"
+    cp "$report_file" "$raw_report"
+
+    # Build fabric command
+    local -a fabric_cmd=(
+        fabric
+        --pattern="$EDITORIAL_PATTERN_NAME"
+        --model="$OPT_MODEL"
+    )
+    [[ -n "$OPT_VENDOR" ]] && fabric_cmd+=(--vendor="$OPT_VENDOR")
+    [[ "$OPT_RAW" == "true" ]] && fabric_cmd+=(--raw)
+
+    local edited_output exit_code=0
+    edited_output="$(cat "$report_file" | "${fabric_cmd[@]}" 2>>"$LOG_FILE")" || exit_code=$?
+
+    if [[ $exit_code -ne 0 ]] || [[ -z "$edited_output" ]]; then
+        warn "Editorial consolidation failed (exit=$exit_code); keeping raw report"
+        # Restore the raw report as the primary report
+        cp "$raw_report" "$report_file"
+        return 0
+    fi
+
+    # Write the consolidated version as the primary report
+    printf '%s\n' "$edited_output" > "$report_file"
+
+    local elapsed=$(( SECONDS - start_time ))
+    local raw_lines edited_lines
+    raw_lines="$(wc -l < "$raw_report")"
+    edited_lines="$(wc -l < "$report_file")"
+    info "  Editorial pass done: ${raw_lines} → ${edited_lines} lines $(format_duration $elapsed)"
 }
 
 generate_llm_slug() {
@@ -1432,8 +1561,6 @@ do_init_config() {
       "youtube_summary",
       "create_summary",
       "summarize",
-      "create_conceptmap",
-      "create_mermaid_visualization",
       "find_logical_fallacies",
       "explain_terms"
     ],
@@ -1662,6 +1789,7 @@ main() {
 
     # Phase 4: Assemble and convert report
     assemble_report
+    run_editorial_pass
     convert_report
     convert_artifacts
 
