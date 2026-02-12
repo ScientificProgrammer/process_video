@@ -684,12 +684,8 @@ ensure_slug_pattern() {
     local pattern_dir="${FABRIC_PATTERN_DIR}/${SLUG_PATTERN_NAME}"
     local system_file="${pattern_dir}/system.md"
 
-    [[ -f "$system_file" ]] && return 0
-
-    debug "Installing fabric pattern: $SLUG_PATTERN_NAME"
-    mkdir -p "$pattern_dir"
-
-    cat > "$system_file" <<'SLUG_PATTERN_EOF'
+    local desired
+    desired="$(cat <<'SLUG_PATTERN_EOF'
 # IDENTITY and PURPOSE
 
 You are a filename slug generator. You take a video title and channel name and
@@ -730,18 +726,23 @@ Return ONLY a single JSON object on one line, no markdown fencing, no explanatio
 - No leading or trailing underscores
 - No consecutive underscores
 SLUG_PATTERN_EOF
+)"
+
+    if [[ -f "$system_file" ]] && [[ "$(cat "$system_file")" == "$desired" ]]; then
+        return 0
+    fi
+
+    debug "Installing fabric pattern: $SLUG_PATTERN_NAME"
+    mkdir -p "$pattern_dir"
+    printf '%s\n' "$desired" > "$system_file"
 }
 
 ensure_editorial_pattern() {
     local pattern_dir="${FABRIC_PATTERN_DIR}/${EDITORIAL_PATTERN_NAME}"
     local system_file="${pattern_dir}/system.md"
 
-    [[ -f "$system_file" ]] && return 0
-
-    debug "Installing fabric pattern: $EDITORIAL_PATTERN_NAME"
-    mkdir -p "$pattern_dir"
-
-    cat > "$system_file" <<'EDITORIAL_PATTERN_EOF'
+    local desired
+    desired="$(cat <<'EDITORIAL_PATTERN_EOF'
 # IDENTITY and PURPOSE
 
 You are the chief editor of a prestigious international news organization. You
@@ -802,6 +803,15 @@ the output in code fences. Do not add any preamble or postscript.
 - Update the Table of Contents to reflect any removed sections
 - If a section becomes empty after deduplication, remove it and its TOC entry
 EDITORIAL_PATTERN_EOF
+)"
+
+    if [[ -f "$system_file" ]] && [[ "$(cat "$system_file")" == "$desired" ]]; then
+        return 0
+    fi
+
+    debug "Installing fabric pattern: $EDITORIAL_PATTERN_NAME"
+    mkdir -p "$pattern_dir"
+    printf '%s\n' "$desired" > "$system_file"
 }
 
 run_editorial_pass() {
