@@ -446,8 +446,11 @@ load_config() {
     CFG_JOBS="$(jq -r '.process_video.fabric.parallel_jobs // empty' "$config_file")"
     CFG_TIMESTAMPS="$(jq -r '.process_video.transcript.with_timestamps // empty' "$config_file")"
     CFG_SKIP_PREPROCESSING="$(jq -r '.process_video.transcript.skip_preprocessing // empty' "$config_file")"
+    # shellcheck disable=SC2034  # Used in option merging
     CFG_PRESERVE_ARTIFACTS="$(jq -r '.process_video.output.preserve_artifacts // empty' "$config_file")"
+    # shellcheck disable=SC2034
     CFG_CONVERT_ARTIFACTS="$(jq -r '.process_video.output.convert_artifacts // empty' "$config_file")"
+    # shellcheck disable=SC2034
     CFG_GENERATE_REPORT="$(jq -r '.process_video.output.generate_report // empty' "$config_file")"
 
     mapfile -t CFG_PATTERNS < <(
