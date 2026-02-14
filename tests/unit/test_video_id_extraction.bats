@@ -11,17 +11,24 @@ setup() {
         local url="$1"
         local video_id=""
 
+        # Store regex patterns in variables to avoid bash parsing issues
+        local re_raw='^[a-zA-Z0-9_-]{11}$'
+        local re_shorturl='youtu\.be/([a-zA-Z0-9_-]{11})'
+        local re_watch='[?&]v=([a-zA-Z0-9_-]{11})'
+        local re_embed='youtube\.com/embed/([a-zA-Z0-9_-]{11})'
+        local re_v='youtube\.com/v/([a-zA-Z0-9_-]{11})'
+
         # Try various YouTube URL patterns
-        if [[ "$url" =~ ^[a-zA-Z0-9_-]{11}$ ]]; then
+        if [[ "$url" =~ $re_raw ]]; then
             # Already a video ID
             video_id="$url"
-        elif [[ "$url" =~ youtu\.be/([a-zA-Z0-9_-]{11}) ]]; then
+        elif [[ "$url" =~ $re_shorturl ]]; then
             video_id="${BASH_REMATCH[1]}"
-        elif [[ "$url" =~ [?&]v=([a-zA-Z0-9_-]{11}) ]]; then
+        elif [[ "$url" =~ $re_watch ]]; then
             video_id="${BASH_REMATCH[1]}"
-        elif [[ "$url" =~ youtube\.com/embed/([a-zA-Z0-9_-]{11}) ]]; then
+        elif [[ "$url" =~ $re_embed ]]; then
             video_id="${BASH_REMATCH[1]}"
-        elif [[ "$url" =~ youtube\.com/v/([a-zA-Z0-9_-]{11}) ]]; then
+        elif [[ "$url" =~ $re_v ]]; then
             video_id="${BASH_REMATCH[1]}"
         fi
 
