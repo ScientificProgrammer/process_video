@@ -1078,31 +1078,39 @@ fetch_transcript() {
     fi
 
     local transcript_file="${OUTPUT_DIR}/transcripts/${BASE_FILENAME}.transcript_raw.txt"
-    local transcript_flag="--transcript"
-    [[ "$OPT_TIMESTAMPS" == "true" ]] && transcript_flag="--transcript-with-timestamps"
-
     local exit_code=0
-    fabric --youtube="$VIDEO_URL" $transcript_flag --raw \
-        > "$transcript_file" 2>>"$LOG_FILE" || exit_code=$?
 
-    if [[ $exit_code -ne 0 ]] || [[ ! -s "$transcript_file" ]]; then
-        warn "fabric transcript extraction failed (exit=$exit_code); trying fallback..."
+    # Try fetch_transcript first (fast, Python-based)
+    if command -v fetch_transcript &>/dev/null; then
+        debug "Trying fetch_transcript for transcript..."
+        local tmp_dir
+        tmp_dir="$(mktemp -d)"
+        (cd "$tmp_dir" && command fetch_transcript --quiet "$VIDEO_ID") 2>>"$LOG_FILE" || exit_code=$?
 
-        if command -v fetch_transcript &>/dev/null; then
-            local tmp_dir
-            tmp_dir="$(mktemp -d)"
-            (cd "$tmp_dir" && command fetch_transcript --quiet "$VIDEO_ID") 2>>"$LOG_FILE" || {
-                rm -rf "$tmp_dir"
-                die "All transcript extraction methods failed for: $VIDEO_URL"
-            }
-            mv "$tmp_dir/${VIDEO_ID}.txt" "$transcript_file" 2>/dev/null || {
-                rm -rf "$tmp_dir"
-                die "Fallback transcript file not found"
-            }
+        if [[ $exit_code -eq 0 ]] && [[ -s "$tmp_dir/${VIDEO_ID}.txt" ]]; then
+            mv "$tmp_dir/${VIDEO_ID}.txt" "$transcript_file"
             rm -rf "$tmp_dir"
-            info "  Transcript fetched via fetch_transcript (fallback)"
+            debug "Transcript fetched via fetch_transcript"
         else
-            die "Transcript extraction failed and fetch_transcript not available"
+            rm -rf "$tmp_dir"
+            debug "fetch_transcript failed (exit=$exit_code), trying fabric fallback..."
+            exit_code=1  # Signal to try fallback
+        fi
+    else
+        exit_code=1  # No fetch_transcript, try fabric
+    fi
+
+    # Fallback to fabric if fetch_transcript failed or unavailable
+    if [[ $exit_code -ne 0 ]] || [[ ! -s "$transcript_file" ]]; then
+        local transcript_flag="--transcript"
+        [[ "$OPT_TIMESTAMPS" == "true" ]] && transcript_flag="--transcript-with-timestamps"
+
+        exit_code=0
+        fabric --youtube="$VIDEO_URL" $transcript_flag --raw \
+            > "$transcript_file" 2>>"$LOG_FILE" || exit_code=$?
+
+        if [[ $exit_code -ne 0 ]] || [[ ! -s "$transcript_file" ]]; then
+            die "All transcript extraction methods failed for: $VIDEO_URL"
         fi
     fi
 
