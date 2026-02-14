@@ -533,7 +533,9 @@ check_dependencies() {
         fi
     done
 
-    [[ $missing -gt 0 ]] && die "Missing $missing required dependency(ies). Install them and retry."
+    if [[ $missing -gt 0 ]]; then
+        die "Missing $missing required dependency(ies). Install them and retry."
+    fi
 
     # Note: Skipping fabric --version check because Go fabric is extremely slow (~30s+)
     # Just verify the binary exists (already done above via command -v)
