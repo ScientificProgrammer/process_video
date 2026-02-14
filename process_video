@@ -547,10 +547,8 @@ check_dependencies() {
 
     [[ $missing -gt 0 ]] && die "Missing $missing required dependency(ies). Install them and retry."
 
-    # Log fabric version
-    local fab_ver
-    fab_ver="$(fabric --version 2>&1 | head -1 || echo "unknown")"
-    debug "fabric version: $fab_ver"
+    # Note: Skipping fabric --version check because Go fabric is extremely slow (~30s+)
+    # Just verify the binary exists (already done above via command -v)
 }
 
 check_optional_dependencies() {
