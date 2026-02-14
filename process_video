@@ -643,6 +643,57 @@ setup_output_dir() {
 
 VIDEO_TITLE="" CHANNEL_NAME="" UPLOAD_DATE=""
 
+# Fetch metadata using yt-dlp (fast) or fabric (slow fallback)
+# Args: $1 = output file path
+# Returns: 0 on success, non-zero on failure
+fetch_metadata_to_file() {
+    local output_file="$1"
+    local exit_code=0
+
+    # Try yt-dlp first (much faster than fabric)
+    if command -v yt-dlp &>/dev/null; then
+        debug "Trying yt-dlp for metadata..."
+        yt-dlp --dump-json --no-download "$VIDEO_URL" \
+            > "$output_file" 2>/dev/null || exit_code=$?
+
+        if [[ $exit_code -eq 0 ]] && [[ -s "$output_file" ]] && jq empty "$output_file" 2>/dev/null; then
+            debug "yt-dlp metadata fetch succeeded"
+            return 0
+        fi
+        debug "yt-dlp failed (exit=$exit_code), trying fabric fallback..."
+    fi
+
+    # Fallback to fabric (slow but sometimes works when yt-dlp doesn't)
+    exit_code=0
+    fabric --youtube="$VIDEO_URL" --metadata --raw \
+        > "$output_file" 2>/dev/null || exit_code=$?
+
+    if [[ $exit_code -ne 0 ]] || [[ ! -s "$output_file" ]]; then
+        return 1
+    fi
+
+    # Validate JSON -- fabric sometimes outputs non-JSON preamble
+    if ! jq empty "$output_file" 2>/dev/null; then
+        local tmp_json
+        tmp_json="$(grep -m1 '^{' "$output_file" | jq '.' 2>/dev/null)" || true
+        if [[ -n "$tmp_json" ]]; then
+            printf '%s' "$tmp_json" > "$output_file"
+        else
+            return 1
+        fi
+    fi
+
+    return 0
+}
+
+# Parse metadata from JSON file into global variables
+parse_metadata_file() {
+    local meta_file="$1"
+    VIDEO_TITLE="$(jq -r '.title // "untitled"' "$meta_file")"
+    CHANNEL_NAME="$(jq -r '.channel // .channelTitle // .uploader // "unknown"' "$meta_file")"
+    UPLOAD_DATE="$(jq -r '(.upload_date // (.publishedAt | split("T")[0] | gsub("-";""))) // "unknown"' "$meta_file")"
+}
+
 fetch_metadata() {
     info "Fetching metadata..."
     local start_time=$SECONDS
@@ -656,30 +707,12 @@ fetch_metadata() {
     fi
 
     local meta_file="${OUTPUT_DIR}/config/${BASE_FILENAME}.metadata.json"
-    local exit_code=0
 
-    fabric --youtube="$VIDEO_URL" --metadata --raw \
-        > "$meta_file" 2>>"$LOG_FILE" || exit_code=$?
-
-    if [[ $exit_code -ne 0 ]] || [[ ! -s "$meta_file" ]]; then
-        die "Failed to fetch video metadata (exit=$exit_code). Check URL: $VIDEO_URL"
+    if ! fetch_metadata_to_file "$meta_file"; then
+        die "Failed to fetch video metadata. Check URL: $VIDEO_URL"
     fi
 
-    # Validate JSON -- fabric sometimes outputs non-JSON preamble
-    if ! jq empty "$meta_file" 2>/dev/null; then
-        # Try to extract the first valid JSON object
-        local tmp_json
-        tmp_json="$(grep -m1 '^{' "$meta_file" | jq '.' 2>/dev/null)" || true
-        if [[ -n "$tmp_json" ]]; then
-            printf '%s' "$tmp_json" > "$meta_file"
-        else
-            die "Metadata is not valid JSON. Raw output saved to: $meta_file"
-        fi
-    fi
-
-    VIDEO_TITLE="$(jq -r '.title // "untitled"' "$meta_file")"
-    CHANNEL_NAME="$(jq -r '.channelTitle // .channel // .uploader // "unknown"' "$meta_file")"
-    UPLOAD_DATE="$(jq -r '(.upload_date // (.publishedAt | split("T")[0] | gsub("-";""))) // "unknown"' "$meta_file")"
+    parse_metadata_file "$meta_file"
 
     local elapsed=$(( SECONDS - start_time ))
     info "  Title:   $VIDEO_TITLE"
@@ -1785,31 +1818,13 @@ main() {
 
         info "Fetching metadata..."
         local start_time=$SECONDS
-        local exit_code=0
 
-        fabric --youtube="$VIDEO_URL" --metadata --raw \
-            > "$tmp_meta_file" 2>/dev/null || exit_code=$?
-
-        if [[ $exit_code -ne 0 ]] || [[ ! -s "$tmp_meta_file" ]]; then
+        if ! fetch_metadata_to_file "$tmp_meta_file"; then
             rm -rf "$tmp_meta_dir"
-            die "Failed to fetch video metadata (exit=$exit_code). Check URL: $VIDEO_URL"
+            die "Failed to fetch video metadata. Check URL: $VIDEO_URL"
         fi
 
-        # Validate and extract metadata
-        if ! jq empty "$tmp_meta_file" 2>/dev/null; then
-            local fixed_json
-            fixed_json="$(grep -m1 '^{' "$tmp_meta_file" | jq '.' 2>/dev/null)" || true
-            if [[ -n "$fixed_json" ]]; then
-                printf '%s' "$fixed_json" > "$tmp_meta_file"
-            else
-                rm -rf "$tmp_meta_dir"
-                die "Metadata is not valid JSON"
-            fi
-        fi
-
-        VIDEO_TITLE="$(jq -r '.title // "untitled"' "$tmp_meta_file")"
-        CHANNEL_NAME="$(jq -r '.channelTitle // .channel // .uploader // "unknown"' "$tmp_meta_file")"
-        UPLOAD_DATE="$(jq -r '(.upload_date // (.publishedAt | split("T")[0] | gsub("-";""))) // "unknown"' "$tmp_meta_file")"
+        parse_metadata_file "$tmp_meta_file"
 
         local elapsed=$(( SECONDS - start_time ))
         info "  Title:   $VIDEO_TITLE"
