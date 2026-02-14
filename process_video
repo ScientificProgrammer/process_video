@@ -34,8 +34,10 @@ get_version() {
     fi
 }
 
+# shellcheck disable=SC2155  # Intentional: get_version is simple and won't fail
 readonly SCRIPT_VERSION="$(get_version)"
 readonly SCRIPT_NAME="process_video"
+# shellcheck disable=SC2155,SC2034  # May be used in future; pwd won't fail
 readonly SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 readonly FABRIC_PATTERN_DIR="${HOME}/.config/fabric/patterns"
 
@@ -111,6 +113,7 @@ declare -A TIER_NAMES=(
 # Color Setup
 # ------------------------------------------------------------------------------
 
+# shellcheck disable=SC2034  # Colors used via variable expansion in logging functions
 setup_colors() {
     if [[ "${OPT_NO_COLOR:-}" == "true" ]] || [[ "${NO_COLOR:-}" == "1" ]] || [[ ! -t 1 ]]; then
         COLOR_RED="" COLOR_GREEN="" COLOR_YELLOW="" COLOR_BLUE=""
@@ -420,6 +423,7 @@ parse_args() {
 # ------------------------------------------------------------------------------
 
 # Config file variables (populated by load_config)
+# shellcheck disable=SC2034  # CFG_* vars used in option merging logic
 CFG_MODEL="" CFG_VENDOR="" CFG_STRATEGY="" CFG_TEMPERATURE=""
 CFG_SESSION="" CFG_RAW="" CFG_SLEEP="" CFG_JOBS=""
 CFG_TIMESTAMPS="" CFG_SKIP_PREPROCESSING=""
