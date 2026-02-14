@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ------------------------------------------------------------------------------
-# process_video v1.1.0 -- YouTube Transcript Processing CLI
+# process_video -- YouTube Transcript Processing CLI
 #
 # Extract YouTube video transcripts and process them through fabric patterns
 # to generate structured analysis reports.
@@ -8,6 +8,7 @@
 # Usage: process_video [OPTIONS] <YOUTUBE_URL_OR_ID>
 #        process_video --help
 #
+# Version: Derived from git tags at runtime (see --version)
 # Dependencies: fabric (required), jq (required), pandoc (optional), yt-dlp (optional)
 # ------------------------------------------------------------------------------
 
@@ -23,7 +24,17 @@ set -euo pipefail
 # Constants
 # ------------------------------------------------------------------------------
 
-readonly SCRIPT_VERSION="1.1.0"
+# Version from git tags (falls back to "dev" if not in a git repo or no tags)
+get_version() {
+    local version
+    if version="$(git -C "$(dirname "${BASH_SOURCE[0]}")" describe --tags --always 2>/dev/null)"; then
+        printf '%s' "$version"
+    else
+        printf 'dev'
+    fi
+}
+
+readonly SCRIPT_VERSION="$(get_version)"
 readonly SCRIPT_NAME="process_video"
 readonly SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 readonly FABRIC_PATTERN_DIR="${HOME}/.config/fabric/patterns"
@@ -938,8 +949,8 @@ generate_llm_slug() {
         | sed -E 's/_+/_/g' \
         | sed -E 's/^_|_$//g')"
 
-    # Enforce max widths
-    title_slug="${title_slug:0:40}"
+    # Enforce max widths (title_slug shortened to 20 for manageable filenames)
+    title_slug="${title_slug:0:20}"
     channel_slug="${channel_slug:0:20}"
 
     if [[ -z "$title_slug" ]] || [[ -z "$channel_slug" ]]; then
@@ -960,17 +971,42 @@ generate_llm_slug() {
 # Filename Generation
 # ------------------------------------------------------------------------------
 
+# Helper: sanitize a string for use in filenames (lowercase, safe chars only)
+sanitize_slug() {
+    printf '%s' "$1" \
+        | tr '[:upper:]' '[:lower:]' \
+        | sed -E 's/[^a-z0-9_]+/_/g' \
+        | sed -E 's/_+/_/g' \
+        | sed -E 's/^_|_$//g' \
+        | tr -d '\n'
+}
+
 generate_base_filename() {
-    local temp_filename
+    # Processed date in UTC: YYYYMMDD_HHMMSS
+    local processed_date
+    processed_date="$(date -u +%Y%m%d_%H%M%S)"
+
+    local channel_part title_part
 
     if [[ -n "$LLM_TITLE_SLUG" ]] && [[ -n "$LLM_CHANNEL_SLUG" ]]; then
-        temp_filename="${LLM_CHANNEL_SLUG}.${UPLOAD_DATE}.${VIDEO_ID}.${LLM_TITLE_SLUG}"
+        # LLM slugs are already sanitized and lowercased
+        channel_part="$LLM_CHANNEL_SLUG"
+        title_part="$LLM_TITLE_SLUG"
     else
-        temp_filename="${CHANNEL_NAME}.${UPLOAD_DATE}.${VIDEO_ID}.${VIDEO_TITLE}"
+        # Fallback: sanitize raw metadata (but preserve VIDEO_ID verbatim)
+        channel_part="$(sanitize_slug "$CHANNEL_NAME")"
+        title_part="$(sanitize_slug "$VIDEO_TITLE")"
+        # Enforce length limits on fallback slugs
+        channel_part="${channel_part:0:20}"
+        title_part="${title_part:0:20}"
     fi
 
-    BASE_FILENAME="$(printf '%s' "$temp_filename" \
-        | tr '[:upper:]' '[:lower:]' \
+    # Assemble filename: VIDEO_ID preserved verbatim (case-sensitive)
+    # Format: {processed_date}.{channel}.{upload_date}.{video_id}.{title_slug}
+    BASE_FILENAME="${processed_date}.${channel_part}.${UPLOAD_DATE}.${VIDEO_ID}.${title_part}"
+
+    # Final safety: remove any remaining problematic characters (but preserve case)
+    BASE_FILENAME="$(printf '%s' "$BASE_FILENAME" \
         | sed -E 's/[^-._[:alnum:]]+/_/g' \
         | sed -E 's/_+/_/g' \
         | sed -E 's/^_|_$//g' \
