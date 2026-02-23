@@ -1,8 +1,8 @@
 {
   "process_video": {
     "fabric": {
-      "model": "claude-sonnet-4-5",
-      "vendor": "Anthropic",
+      "model": "gemini-3.1-pro-preview",
+      "vendor": null,
       "strategy": null,
       "raw": true,
       "temperature": null,
@@ -12,32 +12,19 @@
       "llm_slug": true
     },
     "patterns": [
-      "analyze_claims",
-      "analyze_presentation",
-      "analyze_tech_impact",
-      "analyze_personality",
-      "extract_wisdom_large",
-      "extract_core_message",
-      "extract_ideas",
-      "extract_insights",
-      "extract_business_ideas",
-      "extract_recommendations",
-      "extract_predictions",
-      "extract_controversial_ideas",
-      "extract_extraordinary_claims",
-      "extract_questions",
-      "create_ai_jobs_analysis",
-      "prepare_7s_strategy",
-      "extract_alpha",
       "youtube_summary",
       "create_summary",
       "summarize",
-      "find_logical_fallacies",
+      "analyze_claims",
+      "extract_wisdom_large",
+      "extract_ideas",
+      "extract_insights",
+      "extract_recommendations",
       "explain_terms"
     ],
     "transcript": {
       "with_timestamps": false,
-      "skip_preprocessing": false
+      "skip_preprocessing": true
     },
     "output": {
       "preserve_artifacts": true,
