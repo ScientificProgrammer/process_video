@@ -14,16 +14,11 @@
     "patterns": [
       "create_5_sentence_summary",
       "youtube_summary",
-      "create_summary",
-      "summarize",
-      "extract_wisdom_large",
       "extract_ideas",
-      "extract_insights",
-      "extract_recommendations",
-      "explain_terms"
+      "extract_insights"
     ],
     "transcript": {
-      "with_timestamps": false,
+      "with_timestamps": true,
       "skip_preprocessing": true
     },
     "output": {
