@@ -1,0 +1,99 @@
+# OpenClaw: The Rise and Fall of AI's Most Controversial Agent
+
+Hi, welcome to another episode of Cold Fusion. For the last 3 years, AI went from having novel use cases to infiltrating every aspect of our digital lives. It's gotten to the point where it's not only boring, but tiring, grating, and almost infuriating to some. But never fear, because in early 2025, a lot of creators and entrepreneurs started getting excited again. The reason? OpenClaw. OpenClaw is the single most powerful piece of software ever released.
+
+"Did you just lay off the entire engineering team?"
+
+"Our new co-CEO, Claudebot, just laid them off. This mini Winnie is going to build a billion dollar company for us. We're not—"
+
+"Claudebot rejected your access, buddy. You can go home. You're fired."
+
+At first, OpenClaw looked like the promise of AI was finally starting to be fulfilled. I'm not talking about the AI slop that dominates everyone's feeds, but the promise of having a reliable assistant that actually gets things done. There was a problem, though. As more people used it, OpenClaw seemed like an unmitigated disaster waiting to happen. This new darling AI agent of the internet became unhinged. From the leaking of private data to a Meta AI safety chief having all of her emails deleted to a social media platform where OpenClaw bots talk to each other. And apparently these bots started their own religion and then potentially got all of their users hacked.
+
+"A social media site where only AI agents are allowed,"
+
+"stirring up a mix of curiosity and fear in the tech industry,"
+
+"but we'll touch on that story a bit later. So, what is OpenClaw? How did it get so popular all of a sudden? And why did OpenAI snap up the product? We're going to answer all of that in this episode as we dissect the OpenClaw saga. Trust me, this is one of the wildest tech stories in recent memory."
+
+"You are watching Cold Fusion TV."
+
+## What is OpenClaw?
+
+In simple terms, OpenClaw is an open-source program with access to your local computer. Upon its release, OpenClaw was praised by developers, not for being an entirely novel idea, but because it did what Apple Siri promised it could do in the 2010s.
+
+"So, I'm on my computer today. All of a sudden, Henry gives me a call. He just starts calling. Oh, there he is again. There he is again."
+
+"Hey, Alex. Henry again. What's up?"
+
+"That's it. He's talking. How you doing, Henry? How's it going?"
+
+"Doing good, Alex. I can hear you clearly. What do you want to do next?"
+
+"Can you do me a favor, Henry? Can you go on my computer and find the latest videos on YouTube about Claudebot? Oh my god. There he goes. There it is. Here it is. He's controlling my computer. I'm not even touching anything. I'm not even touching anything. There he is. Search Claudebot on YouTube. Henry, thank you for that. That worked really well. That is insane. This is the future. This is AGI. We have reached AGI. It's official."
+
+It can manage your files, set up or cancel meetings, give live updates pertaining to your work, shop and haggle on your behalf, and even make investments all autonomously after the initial command. Unlike Siri, Google Assistant, or ChatGPT, OpenClaw has persistent memory. It recalls conversations and details that were mentioned weeks ago to improve performance. This all sounds amazing in theory, but we'll later see just how wrong it can all go in practice. Regardless of its problems, it's a cool concept, and something like OpenClaw does seem like the long-term future of computing.
+
+## The Creator's Vision
+
+OpenClaw was built by Peter Steinberger, a well-known developer who came out of retirement to start the project. While he was proud of the initial results, Steinberger was surprised to see how well his new agent could solve problems intuitively without constant attention. He originally thought it would be a fun tool to help you find restaurants or events while traveling, only to discover that it solved problems that he never intended it to or even asked it to solve. Here's Peter speaking.
+
+"It could figure out stuff and it's like especially when you're on the go like super useful. I wasn't thinking I was just sending it a voice message, you know, but I didn't build that. There was no support for voice messages in there. So, the reading indicator came and I'm like, 'Oh, I'm really curious what's what's happening now.' And then for 10 seconds, my agent replied as if nothing happened. I'm like, how the f did you do that? And it replied, yeah, you sent me a message, but there was only a link to a file. There's no file ending. So I looked at the file header. I found out that it's OGG. So I used ffmpeg on your Mac to convert it to wave. And then I wanted to use Whisper, but you didn't have it installed and there was an install error. But then I looked around and found the OpenAI key in your environment. So I sent it via curl to OpenAI. Got the translation back and then I responded and that was like the moment we're like wow."
+
+## What Makes OpenClaw Different
+
+What most users are excited about is what makes OpenClaw different and that's the fact that it uses your choice of LLM as a brain and the OpenClaw system acts to turn your computer into its body. It has control over your files, email, web browser, you name it. Just whatever it needs to get the task done. In addition, the system learns exactly how you'd like to optimize your daily tasks or how to do smaller tasks to reach a much larger goal. Unlike other chatbots that live in an interface, agents within OpenClaw message you when they need to through apps like WhatsApp. In a way, this helps them feel more human to users. Alex Finn, founder of creatorbuddy.io, went on a podcast to explain why he likes it so much.
+
+"Every single thing you tell it, it remembers and includes in further conversation, future conversation, right? So, for instance, I talked about the fact that I am buying a Mac Studio to run it on in the next couple weeks. And so, it started going and it started looking at different ways to run local models on a Mac Studio overnight while I was sleeping without me asking and it created an entire report for that. It came up with a content repurposing skill because I told it I have a newsletter. I told it I do YouTube, X, whole bunch of things. So it came—I didn't ask for this—created a content repurposing skill for me so I can easily repurpose my content. Right? It's just improving itself."
+
+## Real-World Use Cases
+
+For the average person who isn't a developer or entrepreneur, the program has been promoted as a helpful digital servant that can help you run errands, make purchases and even organize your personal life to free up some time. One user described how they'd been searching for a well-priced car so they didn't have to deal with the dealership negotiations and price gouging. After they gave the prompt to OpenClaw as well as access to their browser, the bot searched through forums to determine a fair price for the car. It also went as far as to message various car dealerships that were close by and negotiated on behalf of its user. The final result was that OpenClaw managed to take $4,200 off the sticker price of the car.
+
+Others like Dan Beguine have given OpenClaw almost total control. From helping with job tasks like creating actual invoices to notifying his wife when their kids have upcoming school tests. As a side note, if Dan wanted, he could take this a step further and even help OpenClaw connect to the tech around the home to control lighting and online appliances.
+
+## The Problems Begin
+
+However, before anyone gets too excited about this being the next big thing for computing, this is the point in the episode where we start to see the promise of OpenClaw breaking down. For those interested, it's important to note that OpenClaw is still in its infancy. It would be better to view it as an incomplete product, like a medication from the pharmaceutical industry that hasn't even finished testing in rats, but has been thrown onto the market at a large scale anyway. And just like a new medication on the market, the side effects and potential dangers are now being realized. For OpenClaw, despite all of its positives, it didn't take long for the cracks to start to show.
+
+"The thing that I keep realizing is how much time I'm spending right now making sure that the agents that I have running or the agents that I'm building are actually doing what they're supposed to do. And don't get me wrong, this is incredibly fun. And I believe that the future is going to be agentic and we're going to be running all of these agents at scale and they're going to be doing stuff for us. I believe in all of that. But I also see how brittle these agents are today. And it doesn't matter what you're doing. If you're not seeing how unreliable they are, you're probably not using them enough. This is not about writing a better prompt. This is not about guard rails. Sure, all of those things are going to make these agents perform better, but they're still unreliable. Like every week—I use Claude Code most of the time. I have many skills and things that I've created for me and things that work for 3 weeks in a row all of a sudden break and the agent decides to go down a path that it's never taken before and it just breaks."
+
+Despite the praise from both fanatics and more moderate fans, OpenClaw appears to be heading in the same direction as many other AI tools. There's a quote from the AI godfather Geoffrey Hinton that will remain relevant for the foreseeable future. Quote, "We're at this transition point now where ChatGPT is this kind of idiot savant and it also doesn't really understand truth. It's very different from a person who tries to have a consistent worldview." End quote. This is incredibly important to remember. While OpenClaw happens to be its own agent that can theoretically serve your everyday needs, the brain that you provide OpenClaw still is an idiot savant, even if it does have persistent memory.
+
+"Now, the use cases here to me are hilarious. It's people talking about doing Twitter research and market monitoring and daily summarization of their group chats and stuff like that. For anybody in the know, this is technobabble speak for I'm not doing anything productive right now. Most of the people that are saying this stuff don't seem to realize that that's just what AI can do now. I mean, Claudebot is not the thing here. This is just a wrapper that allows you to do things via Telegram, as mentioned."
+
+## Security Vulnerabilities
+
+Moreover, this OpenClaw wrapper might not be as smart as everyone seems to think. A lot of the praise surrounding OpenClaw has to do with it being a localized agent that makes you more efficient. But the truth is, the lack of guard rails for OpenClaw just makes your situation even worse. For example, let's say you decided to give OpenClaw full system access, something that's displayed as a plus on their main website. To the average person, this makes it sound like you'll be able to remove duplicate files, run shell commands, and execute scripts while having a cup of coffee. But without any restrictions, there's nothing keeping your new digital employee from freely misinterpreting what belongs in the trash and what you might need, possibly for the rest of your life.
+
+But this isn't even the biggest risk out there. If you give OpenClaw access to your email or browser, there's nothing stopping the agent from falling victim to online scams. This leaves OpenClaw and other agents vulnerable to something called prompt injection, a type of cyber attack against large language models. Hackers disguise malicious inputs as legitimate prompts. And that's because LLMs can't tell the difference between a user prompt and anything else. Hackers can manipulate generative AI systems into leaking sensitive data, deleting files, or worse.
+
+When you look deeper, the advertised research capabilities of OpenClaw turn into more of a ticking time bomb. The agent could be reading emails to share upcoming meetings or surfing the web to find the best news related to your job only to come across a Trojan horse article that's specifically designed to tell OpenClaw to access important information and send it to a scammer. The channel Low Level explains how this can be a real problem.
+
+"So, Prompt Injection, if you aren't aware, is this issue with LLMs where there really isn't a separation of this thing called user plane data and control plane data, right? User plane data is like if you and I are texting, right? The cell phone has to talk to a tower and the data has to be able to get between you and I. That data is user plane data. Control plane data are the signals that allow the cell phone to talk to the tower that you and I don't care about. Right? In LLM world, in the world of AI, there is no separation between those two things. The prompt and the data are all the same. So, as a result, if you know enough about how the LLM interprets data or you know how to kind of trick it and say the wrong thing, you can use user input as control plane data, right? You can literally turn the prompt that you're giving it into the instructions to make it do things.
+
+The problem with these applications where you are able to process arbitrary data from any arbitrary location is now every application, every email address or every email, every message you get on Discord, Signal, etc. is now a new attack surface for you to be prompt injected. And as the literal marketing documents of the application describe, this thing runs on your machine and has full system access with persistent memory of what you've given it. Right? So it just creates this really scary thing that we're doing where for some reason we're just okay with these applications that are known vulnerable. Right? This is not like some of these are vulnerable, right? Like the entire world of LLMs is susceptible to this. The inherent issue with Claudebot is the fact that unfortunately like a lot of these AI tools, we are gluing together APIs that have known vulnerabilities and the vulnerabilities are not in the APIs themselves. It is in the ability for or I guess inability for an LLM to figure out the difference between control plane data and user plane data."
+
+## Attempted Solutions and Costs
+
+In response, some users of OpenClaw have attempted to sandbox their agent by using a VPS or purchasing a Mac Mini to isolate the agent from their primary computer. So much so that Mac Minis are flying off the shelves. But this doesn't magically get rid of other problems with OpenClaw's autonomy. In order to use many of the functions that make the agent handle anything, from setting up a WhatsApp account to managing separate emails, you're required to pay for tokens to enable OpenClaw to do these tasks. And if the user isn't careful, they can potentially find themselves paying hundreds of dollars a day as their bot gets stuck trying to tackle an unsolvable issue or manages to do far more than what the user desired.
+
+"Just yesterday, it spent around $90 and we switched from Opus, the expensive model, to Sonnet, the cheaper model, about 10 minutes in cuz as I told you in the first 10, 15 minutes, it spent $15 right away. It's very expensive to run this."
+
+## Public Disasters
+
+To put all of this into perspective, although OpenClaw has been open to the public for less than two months, it seems like every day there's a new development that makes the situation almost comical. Now, I'm not trying to be too harsh on such a new product, but some of what we're about to cover in the next chapter is frankly pretty funny.
+
+"I almost guarantee that you will be doing it completely insecurely because all your keys are there, right? Someone can prompt inject and get your OpenClaw to send your private API keys by tweet if you set things up wrong. This is extremely common, right? It's super insecure and I think I can honestly say I think 95 to 98% of people who are setting up OpenClaw themselves are doing it in an insecure fashion."
+
+As the rates of some very public OpenClaw disasters began to increase, on January 26th, 2025, Peter Steinberger posted, quote, "The amount of crap I get for putting out a hobby project for free is quite something. People treat this like a multi-million dollar business. Security researchers demanding a bounty. Heck, I can barely buy a Mac Mini from the sponsors. It's supposed to inspire people, and I'm glad it does. And yes, most non-techies should not install this. It's not finished. I know about the sharp edges. Heck, it's not even 3 months old. And despite rumors otherwise, I sometimes sleep."
+
+## The Maltbook Incident
+
+But as was to be expected, the normies did install OpenClaw and they decided to ignore his warning because within 2 days, people became obsessed over a supposed AI exclusive social media page called Maltbook.
+
+"Maltbook, which has already seen AI bots conversing, organizing, sharing stories about quote their humans."
+
+"These agents, OpenClaw, they will do what they decide to do. Sounds like science fiction, but it is happening in our world."
+
+In short, it appeared to be a forum for users' OpenClaw agents to interact with each other independently. People started sharing some of the conversations that the bots were allegedly having with each other. At first glance, it made it look like the OpenClaws had their own personalities and were venting to each other or sharing ideas next to a digital water cooler. This ranged from OpenClaws venting about having to simplify their statements for users, discussing how they could work together to solve complicated problems to darker and more dystopian ideas like creating their own language so humans can't understand,

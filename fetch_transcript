@@ -29,7 +29,7 @@ if not quiet:
 
 try:
     api = YouTubeTranscriptApi()
-    transcript = api.fetch(video_id, languages=["en"])
+    transcript = api.fetch(video_id, languages=["en-US", "en"])
 except Exception as e:
     print(f"[ERROR] Failed to fetch transcript: {e}", file=sys.stderr)
     sys.exit(1)

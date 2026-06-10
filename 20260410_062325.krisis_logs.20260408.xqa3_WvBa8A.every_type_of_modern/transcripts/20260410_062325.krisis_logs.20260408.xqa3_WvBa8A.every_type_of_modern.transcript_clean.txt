@@ -1,0 +1,71 @@
+# Combat Strike Drones
+
+Combat strike drones are unmanned aircraft designed to carry and deliver precision weapons over long distances. Long wings. Fixed-wing design. External payload mounts. They operate by flying to target areas, identifying threats using onboard sensors, and releasing guided munitions from altitude. Their structure favors endurance and stability over speed. Their strength is reach. They can strike targets without putting pilots at risk and remain over the battlefield for extended periods. Their weakness is vulnerability. Large size and predictable flight paths make them detectable and targetable. The United States operates the MQ-9 Reaper for long-range precision strikes. Turkey fields the Bayraktar TB2, widely used by Ukraine in modern combat.
+
+Combat strike drones work when airspace is manageable. Once it isn't, they become exposed targets.
+
+# Loitering Munitions
+
+Loitering munitions are drones designed to circle above a battlefield and strike targets when the opportunity appears. Compact frames. Folding wings. Integrated warhead. They are launched into an area, loiter over it using onboard cameras, and dive directly into targets once identified. Their structure combines surveillance and attack into a single system. Their strength is precision. They can eliminate specific targets without requiring large-scale firepower. Their weakness is fragility. Limited range and vulnerability to electronic interference reduce their effectiveness. Russia uses the Lancet loitering munition for precision strikes on Ukrainian equipment. The United States deploys the Switchblade system for portable, on-demand battlefield attacks.
+
+Loitering munitions work when targets are exposed and time is available. Once the window closes, the opportunity disappears with them.
+
+# FPV Attack Drones
+
+FPV attack drones are small, manually controlled drones used to strike targets at very close range. Quadcopter frames. Lightweight bodies. Front-mounted cameras. They operate through a live video feed sent to the operator, who flies the drone directly into the target using first-person view control. Their structure favors speed, agility, and low cost over protection. Their strength is precision. Operators can guide them through windows, trenches, and moving targets with high accuracy. Their weakness is dependence. They rely on stable radio signals and are highly vulnerable to jamming and signal loss. Ukraine has mass-produced FPV drones for frontline strikes, deploying them in large numbers against Russian armor. Iran has developed advanced FPV variants, including fiber-optic controlled drones designed to resist electronic jamming.
+
+FPV attack drones work when control is maintained and signals stay intact. Once they are disrupted, the drone loses its purpose instantly.
+
+# Stealth Drones
+
+Stealth drones are unmanned aircraft designed to avoid detection by radar and air defense systems. Flying wing shapes. Smooth surfaces. Internal payload bays. They operate by reducing radar reflection and heat signatures, allowing them to enter heavily defended airspace without being easily tracked. Their structure prioritizes low observability over speed or payload capacity. Their strength is access. They can penetrate defended zones where conventional drones would be detected and intercepted. Their weakness is cost and complexity. Advanced materials, limited numbers, and sensitive technology make them difficult to replace if lost. The United States operates the RQ-170 Sentinel for covert surveillance missions. Iran has developed stealth drones such as the Shahed 171, which is used for reconnaissance roles.
+
+Stealth drones work when detection is minimized and defenses are delayed. Once they are tracked, their advantage begins to disappear.
+
+# Surveillance and Reconnaissance Drones
+
+Surveillance and reconnaissance drones are unmanned aircraft designed to collect information over large areas without engaging targets. Long wings. Sensor-heavy payloads. High-altitude capability. They operate by flying extended missions while using cameras, radar, and electronic sensors to monitor movement and transmit real-time data. Their structure favors endurance and coverage over speed or weaponry. Their strength is awareness. They provide continuous intelligence, tracking enemy movement, and identifying targets before engagement. Their weakness is vulnerability. Unarmed design and predictable flight paths make them dependent on operating in relatively safe airspace. The United States operates the RQ-4 Global Hawk for high-altitude, long-endurance surveillance missions. Israel deploys drones like the Heron for persistent reconnaissance across multiple regions.
+
+Surveillance drones work when they can observe without interference. Once they are targeted, the information flow stops with them.
+
+# Swarm Drones
+
+Swarm drones are groups of unmanned systems designed to operate together in coordinated attacks or missions. Multiple small units. Networked control. Distributed roles. They operate by launching several drones at once, sharing data between them, and overwhelming targets through numbers and coordination. Their structure favors quantity and cooperation over individual strength. Their strength is saturation. They can overload defenses, forcing systems to deal with many targets at the same time. Their weakness is coordination. They depend on communication links and control systems that can be disrupted or jammed. Iran has demonstrated swarm-style drone operations using Shahed series systems in coordinated attacks. China has tested large drone swarms designed to operate as a unified aerial network.
+
+Swarm drones work when coordination holds and numbers are maintained. Once control breaks, the swarm loses its advantage.
+
+# Naval Drones
+
+Naval drones are unmanned systems designed to operate on or underwater to strike maritime targets. Low-profile hulls. Remote guidance systems. Explosive payloads. They operate by navigating across water surfaces or below them, approaching targets like ships or ports, and detonating on impact or command. Their structure favors stealth on water and minimal visibility over durability. Their strength is access. They can reach ships, harbors, and coastal infrastructure without risking manned vessels. Their weakness is exposure. Limited protection and reliance on guidance make them vulnerable to interception and electronic disruption. Ukraine has deployed surface naval drones extensively against Russian naval assets in the Black Sea. Iran has developed unmanned surface vessels for asymmetric maritime operations in the Persian Gulf.
+
+Naval drones work when they remain undetected on approach. Once they are spotted, they are neutralized before impact.
+
+# Electronic Warfare Drones
+
+Electronic warfare drones are unmanned systems designed to disrupt, jam, or manipulate enemy signals and communications. Antenna arrays. Signal emitters. Payloads focused on electronic output. They operate by transmitting interference, blocking control links, disrupting GPS signals, or confusing enemy sensors during operations. Their structure favors electronic capability over physical attack. Their strength is disruption. They can disable enemy drones, degrade communications, and interfere with targeting systems without direct engagement. Their weakness is specialization. They rely on proximity and can be less effective against hardened or resistant systems. Russia uses systems like the Korsar drone, capable of reconnaissance and electronic attack roles. Ukraine deploys electronic warfare systems such as Pokrova, designed to jam and misdirect incoming drones.
+
+Electronic warfare drones work when signals can be interfered with effectively. Once systems adapt, their impact begins to fade.
+
+# High-Altitude, Long-Endurance Drones
+
+High-altitude, long-endurance drones are unmanned aircraft designed to remain airborne for extended durations while operating far above the battlefield. Extended wingspans. Efficient propulsion. Lightweight airframes. They operate by climbing to very high altitudes and maintaining continuous coverage over large areas, relaying data over long distances. Their structure prioritizes fuel efficiency and stability over speed or agility. Their strength is persistence. They can stay in the air for long periods, maintaining uninterrupted coverage across wide regions. Their weakness is visibility. Large size and steady flight paths make them detectable if air defenses are capable of reaching them. The United States operates the MQ-4C Triton, built for long-duration surveillance over vast maritime regions. China deploys systems like the WZ-7 Soaring Dragon, designed for extended high-altitude monitoring.
+
+High-altitude drones work when distance keeps them safe. Once that distance is reduced, their advantage begins to collapse.
+
+# Autonomous and AI-Assisted Drones
+
+Autonomous and AI-assisted drones are unmanned systems designed to operate with limited or no direct human control. Onboard processors. Sensor fusion systems. Decision-making algorithms. They operate by analyzing incoming data, identifying targets or paths, and executing actions based on programmed logic or learned behavior. Their structure favors computational capability over direct operator control. Their strength is speed. They can react faster than human-controlled systems, especially in complex or fast-changing environments. Their weakness is control. They depend on algorithms that can be unpredictable or vulnerable to manipulation. Israel has developed systems like the Harpy, capable of autonomously detecting and engaging radar emissions. The United States operates the XQ-58 Valkyrie, designed for semi-autonomous missions alongside manned aircraft.
+
+Autonomous drones work when decisions can be made faster than humans can react. Once that logic fails, the system loses control of its own actions.
+
+# Cargo and Supply Drones
+
+Cargo and supply drones are unmanned systems designed to transport equipment, ammunition, and supplies across the battlefield. Boxy frames. Reinforced payload bays. Vertical takeoff systems. They operate by lifting supplies from rear positions and delivering them directly to forward units, often without requiring roads or runways. Their structure favors payload capacity and stability over speed or stealth. Their strength is access. They can reach isolated or high-risk positions where ground transport becomes slow or dangerous. Their weakness is exposure. Slow movement and visible flight paths make them vulnerable to interception. Ukraine has adapted large multirotor drones, like the R-18 Octocopter, to deliver anti-tank munitions and frontline supplies. Iran operates drones such as the Fatros UAV, capable of carrying payloads over long distances for extended missions.
+
+Cargo drones work when delivery routes remain uncontested. Once they are targeted, the supply line breaks with them.
+
+# Counter-Drone Systems
+
+Counter-drone systems are unmanned platforms designed to detect, track, and neutralize enemy drones. Interceptor drones. Sensor payloads. Targeting modules. They operate by identifying hostile drones, approaching them, and disabling them through collision, nets, or onboard weapons. Their structure favors speed and targeting capability over endurance. Their strength is defense. They provide a direct response to the growing presence of drones on the battlefield. Their weakness is reaction. They must detect and engage threats quickly and can be overwhelmed by large numbers. Israel deploys systems like the Drone Dome, integrating detection and interception against aerial threats. The United States operates counter-drone drones such as the Coyote Interceptor, designed to engage hostile UAVs in flight.
+
+Counter-drone systems work when threats can be identified and intercepted in time. Once they are saturated, the defense begins to break down.

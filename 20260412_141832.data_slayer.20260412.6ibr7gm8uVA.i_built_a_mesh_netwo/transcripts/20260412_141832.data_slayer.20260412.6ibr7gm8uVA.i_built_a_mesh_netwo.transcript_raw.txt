@@ -1,0 +1,1 @@
+YouTube rate limit exceeded. Try again later or use different yt-dlp arguments like '--sleep-requests 1' to slow down requests. Error: exit status 1

@@ -1,0 +1,36 @@
+{
+  "script_version": "4daa5da",
+  "timestamp_start": "2026-05-27T22:25:13Z",
+  "timestamp_end": "2026-05-27T22:32:52Z",
+  "duration_seconds": 459,
+  "video_url": "https://youtu.be/Gv4sDL9Ljww?si=ezt-HACVKDvlNgUL",
+  "video_id": "Gv4sDL9Ljww",
+  "video_title": "Why Fighter Jets Ban 90% of C++ Features",
+  "channel_name": "LaurieWired",
+  "upload_date": "20251203",
+  "model": "claude-sonnet-4-5",
+  "vendor": "Anthropic",
+  "strategy": null,
+  "config_file": null,
+  "patterns_requested": [
+    "extract_wisdom_large",
+    "analyze_tech_impact",
+    "extract_recommendations",
+    "explain_terms",
+    "analyze_claims"
+  ],
+  "patterns_succeeded": [
+    "extract_wisdom_large",
+    "analyze_tech_impact",
+    "extract_recommendations",
+    "explain_terms",
+    "analyze_claims"
+  ],
+  "patterns_failed": [],
+  "output_directory": "/home/eric/Projects/git-repos/github-repos/process_video/20260527_222516.lauriewired.20251203.Gv4sDL9Ljww.why_fighter_jets_ban.claude-sonnet-4-5",
+  "report_generated": true,
+  "pandoc_formats": [
+    "docx",
+    "pdf"
+  ]
+}

@@ -1,0 +1,655 @@
+Hi, welcome to another episode of Cold
+Fusion. A Cambrian explosion of
+creativity. That's the exact phrase Sam
+Olman used a few months ago when
+describing Sora. To him, it was an AI
+video tool so powerful, so unprecedented
+that it was going to fundamentally
+change how humans express themselves.
+Artists, filmmakers, everyday people,
+all of them apparently on the brink of a
+new renaissance. Then almost as suddenly
+as Sora burst onto the scene, it was
+gone. The app, the API, all of it
+scrubbed from the face of the earth.
+Only a few months ago, Disney had signed
+a billion dollar deal for Sora. But
+apparently, they were blindsided by the
+decision, too. According to Reuters, the
+Disney team was actively working with
+Open AI on a Sora related project on a
+Monday evening. 30 minutes after that
+meeting ended, they got the call that
+Sora was being discontinued. A person
+familiar with the matter called it, and
+I'm paraphrasing here, a big rugpool.
+Disney has since pulled its investment
+entirely. So, there's one major question
+that people have on their lips. Why
+would Open AI kill something this big
+this fast? As many of you saw in the
+episode, Open AI is suddenly in trouble.
+Financial pressures, scandals, and
+competition are really eroding
+confidence in the company's future. But
+the closure of Sora is more than about
+just saving money. It indicates a sharp
+change in strategy. Open AI is trying to
+ensure its own survival. But that's not
+all. Later in this episode, we'll see
+how Open AI somehow raised another $122
+billion. But strangely, their very first
+purchase was a podcast. [music] They
+paid reportedly hundreds of millions of
+dollars for it, a decision that leaves
+everyone scratching their heads. And
+beyond this, more top executives are
+either being shuffled around or leaving
+for health reasons. Among the absolute
+chaos, Open AAI is planning a pivot into
+robotics, but Figure Robotics, who
+previously partnered with them, gives
+them an F-grade. The Figure Robotics CEO
+called the Open AAI team virtually
+worthless. Pretty close relationship
+with Open AI. Correct.
+>> Yeah. I I ended up firing them and we
+had we just had a hard time getting them
+in the office. We just found that like
+that team we had internally uh we we
+just ran like kind of circles around
+them like every day. Then, as I was
+finishing up this episode, The New
+Yorker dropped a bombshell. It shone a
+light on what insiders of Open AI really
+think of Sam Olman. I'll give you a
+hint. It's not good. So, there's a lot
+to get through in this episode. So,
+let's get straight into it and break it
+all down. Beginning with Sora.
+>> You are watching Toll Fusion TV.
+And now to what's being touted as
+another giant leap in artificial
+intelligence. Sora is the latest tool
+released by the company behind the
+groundbreaking chatbot Chat GPT. It can
+create realistic looking videos based on
+a simple text prompt. [music]
+>> Open AI first revealed Sora in early
+2024 and the reception was strong. I
+covered its release back then. Although
+Sora is nothing compared to the quality
+of modern video models like Seed Dance
+2, visually the demos of Sora were
+genuinely impressive for that time
+period 2 years ago. The launch of Sora
+[music] sent tech companies across the
+US and China scrambling to expedite
+their own video generation models. Then
+in October of 2025, Open AI launched
+Sora as a standalone app. [music] And
+with that, the growth followed. A
+million downloads in just a matter of
+days. It hit the top of the app store
+almost immediately.
+Essentially a Tik Tok clone, Sora let
+users generate and share AI videos and
+even create AI versions featuring
+themselves or their friends. But it
+quickly became clear that giving
+everyone a free and easy AI video
+generation tool was more akin to giving
+a monkey a semi-automatic weapon. Not a
+good [music] time. According to
+reporting by The Atlantic, one
+journalist opened up the app one morning
+and scrolled through fake scenes of the
+Iran War, AI generated Trump clips,
+[music] and in what she described as her
+least favorite, a video of a man deep
+frying an infant. Like a virus, AI
+content from Sora found its way onto
+other social media platforms, polluting
+them with AI slob to an incredible
+degree. Despite an abundance of
+copyrighted cartoon characters in
+unfamilyfriendly situations, somehow
+Disney seemed to enjoy it. Instead of
+suing Open AI, in a bizarre deal, they
+agreed to shove over a $1 billion
+investment in Open AI as part of a
+three-year licensing agreement. Why
+Disney would pay Open AI to use their
+characters is beyond me. But regardless,
+the end result was over 200 iconic
+characters available for Sora users to
+generate AI videos with. Disney was also
+set to use Open AI's APIs across its
+platforms, including Disney Plus, and to
+deploy Chat GPT internally for
+employees. It kind of seemed like this
+was the next big shift in tech. Then 103
+days later, Sora was suddenly dead. The
+announcement was unceremoniously made
+publicly on a Tuesday. The Sora team
+posted on X, quote, "We're saying
+[music] goodbye to the Sora app. We know
+this news is disappointing." End quote.
+Looking at the overall reaction though,
+not sure I'd call it disappointing.
+Apparently, even some Sora staffers
+didn't see it coming. The announcement
+was made just 1 day after OpenAI
+published a blog post about Sora safety
+standards, which by the way was still up
+at the time of making this episode. But
+this all begs the most important
+question. Why did they do it? And why
+now?
+Later in the episode, we'll talk about
+the rest of the wild things going on
+behind the scenes at OpenAI. But for
+now, let's really focus in on Sora
+because there's more to the story the
+deeper you look into it.
+>> OpenAI is planning to shut down its
+popular video generation app, Sora.
+>> Sora is getting shut down. Yep, I saw
+the good news.
+>> For many, killing a big project like
+Sora, as well as some other side
+projects, means only one thing. Open AI
+is under pressure. But there's more to
+understand about the situation the
+further you look into it. Here are five
+likely reasons Sora got the boot. Number
+one, the compute problem, and it's a
+serious one. Generating video is
+extraordinarily expensive compared to
+generating text or even images.
+According to a Forbes estimate, Sora may
+have been costing Open AI up to $15
+million a day to run. At that rate,
+Disney's entire $1 billion investment
+would have been burnt through in about 2
+months.
+Bill Pebbles, who leads the Sora team,
+reportedly acknowledged that the
+economics were, in his words, completely
+unsustainable. And this wasn't happening
+in a vacuum. Reports suggest that Sora
+was chewing up valuable compute
+resources that could have been used for
+other teams within Open AI. Open AI is
+burning through cash and an alarming
+rate. The company is on track to lose 14
+billion in 2026 alone. Even as revenue
+has crossed 20 billion annually, you
+can't sustain a $15 million a day loss
+just for an AI slop side project. With
+those figures of millions of dollars a
+day in losses in mind, guess how much
+revenue Sora made throughout its
+lifetime. According to TechCrunch,
+[music] just a measly $2.1 million.
+Number two, weak monetization.
+Viral doesn't pay the bills. Sora was
+popular at the start, but making money
+turned out to be harder than expected.
+AI slop videos do go viral on social
+media, but getting users or advertisers
+to pay for it is another story. It's
+just not a solid revenue model. And even
+worse, interest in Sora was falling off
+a cliff.
+Comparing Sora to Open AI's coding
+products, the latter has a clear value
+proposition. Businesses pay for tools
+that hypothetically make their
+developers faster and more efficient,
+even though studies nowadays say
+otherwise. But still, the demand is
+concrete. But Sora seemed more like
+throwing a dart at the dartboard
+strategy just to see what sticks. As The
+Atlantic put it, open AI seems to be
+finally learning that slop is not a
+business strategy.
+Number three, a major strategic shift is
+underway. And here's where it gets
+really interesting [music] because Sora
+being shut down isn't an isolated event.
+Fiji Simo, Open AI's applications chief,
+reportedly told staff in a companywide
+meeting, quote, "We cannot miss this
+moment because we're distracted by side
+quests." She went on to say that the
+company needs to nail productivity on
+the business front end. Open AI was
+reportedly spreading itself thin across
+too many products, [music] too many apps
+with the quality suffering across the
+board as a result. And that's something
+I talked about in my last episode about
+open AI. But the business model that
+they're now copying comes from, drum
+roll please, Anthropic.
+Anthropic's claude code has gained
+serious traction among developers. Its
+enterprise market share grew from 18% to
+29% in 2025. Eight of the Fortune 10 are
+now customers. Open AI, which has
+historically had the stronger brand, is
+now playing catch-up to Anthropic. Open
+AAI taking the Department of War deal
+that Anthropic rejected on moral grounds
+only adds to the brand image problem.
+The company has even renamed its product
+organization to AGI development.
+According to some accounts, the Sora
+team has now been reassigned to World
+Model Research with a focus on robotics.
+And that's clearly where OpenAI thinks
+the next frontier [music] is. Now, you
+may remember a few years ago I did a
+couple of episodes on Figure Robotics.
+Back then, I talked about how Figer had
+partnered with Open AAI. Now, Figer CEO
+Brett Adcock [music] has come out saying
+just how poor the relationship was. He
+stated in a podcast that apart from
+brand recognition, close to a funding
+round, the collaboration with Open AI
+was useless. Uh Sam and Open AI led my
+series B and uh they were they joined my
+board and then we ended up spending
+basically a year with them working on um
+the goal was to like try to advance AI
+models for humanoid robots together. And
+at the time we had like a we you know we
+still do but we had our we had a full
+like AI team internally. So we were
+basically working weekly kind of like
+language models for robotics. Yeah. I I
+I ended up firing them. We just found
+that like that team we had internally uh
+we we just ran like kind of circles
+around them like every day and we had we
+just had a hard time getting them in the
+office. We had a hard time like
+basically like uh like basically you
+know advancing stuff together as a team.
+It also we just like got no value out of
+the whole relationship or very little. I
+mean listen it was helpful having them
+lead the route co lead the round. It was
+like there was some there was like some
+good brand association there, but like
+beyond like that there wasn't much.
+>> In fact, he insinuates that they were on
+their way to ripping off proprietary
+technology. We were like also week to
+week like showing them how we were doing
+all this work. And I got a call one day
+saying like, "Hey, [music] we're like,
+you know, we've been watching your
+progress. It's unbelievable." And um,
+you know, we're thinking about doing
+robotics work internally. And I was just
+like, "Uh, this is over." Like, yeah,
+just get out of here. like this is like
+we're we're like teaching you how to do
+like robot learning. You're seeing our
+progress. We had like a couple of the
+you know Sam and a couple of the
+co-founders on site at one point where
+they were still at a point where they
+continue want to work together after
+this and I was like there's no way we're
+going to teach you how to do this stuff
+anymore.
+>> Open AI is now a company doing a hard
+pivot before an IPO. Now I cover a lot
+of technology stories on this channel
+and one thing I see time and time again
+is how vulnerable our data is online.
+Well, in order to get that information
+about you, they get that data from data
+brokers. [music] These companies store
+your personal information that exists
+online, not just on social media, but on
+sites you've probably never heard of.
+Stories and events like that are exactly
+the reason why I started using Delete Me
+to protect my online presence. [music]
+There's an entire industry of data
+brokers collecting and selling personal
+information. Things like your name,
+address, phone number, even details
+about your relatives, often to anyone
+willing to pay. [music] And apart from
+surveillance, this can lead to scams,
+fishing attempts, or just a general loss
+of privacy. Delete Me is a hands-free
+subscription service that removes your
+personal information from hundreds of
+data brokers and people's search sites.
+And importantly, it keeps checking and
+removing it over time as it reappears.
+What stood out to me about it was how
+simple it is to use. You basically
+submit your details once, and within
+about a week, you start seeing privacy
+reports showing where your data was
+found [music] and what's been removed.
+So, it's not a one-time cleanup, but
+ongoing protection. They've been doing
+this for over 15 years. Everything is
+handled in-house, and if you need
+something specific removed, there are
+real privacy advisers that you can reach
+out to. [music] And then it just makes
+sense to And then it just makes sense to
+have something quietly working in the
+background on your behalf. If you want
+to take control of your personal data,
+you can get 20% off deleteme customer
+plans by going to
+joindeleteme.com/coldfusion
+and use the codefusion at checkout.
+That's joined deleteme.com/coldfusion.
+Links in the description and you can
+also use the QR code on screen. Thank
+you to deleteme for supporting
+Coldfusion. Now back to the episode
+number four. The legal and IP risk was
+becoming untenable. Let's get this
+straight. [music]
+Sora was a copyright lawyer's nightmare.
+From the beginning, questions circulated
+about the training data Open AI used to
+build the model. Sora could generate
+copyright infringing material at scale.
+[music] It was a huge liability. throw
+in deep fakes and illegal material on a
+platform that [music] was actively
+incentivizing users to generate as much
+content as possible and Sora was a
+content moderation nightmare. Number
+five, the competition pressure. Google's
+VO platform now supports 4K output and
+spatial audio. Adobe's Firefly is
+integrated directly into Premiere Pro
+and is trained on clean licensed [music]
+imagery. There's also Runway and Cling.
+And then there's the king and the newest
+player on the block, Seed Dance [music]
+2.0. Looking at all of this, the world
+of AI video is suddenly getting crowded.
+Whatever Edge Sora had last year is all
+but gone. In the end, all Open AI had
+left was an expensive, legally
+complicated slot machine [music] that
+made content moderation almost
+impossible. At that point, every dollar
+and every GPU hour spent on Sora was a
+dollar and GPU hour not spent on the
+stuff that actually matters for their
+future.
+In early April 2026, Open AI announced a
+$122 billion funding round. That sounds
+good on paper until you realize that the
+vast majority of the money raised are
+from the very same stakeholders [music]
+that need for-profit AI to succeed.
+Amazon invested up to 50 billion. Nvidia
+30 billion and SoftBank another [music]
+30 billion. Amazon needs AI demand to
+justify its AWS infrastructure buildout.
+Nvidia needs open AI compute [music]
+demand to sell their GPUs and the
+notorious soft bank has bet big [music]
+on the AI story and they can't afford to
+lose. This massive investment again
+boils down to yet more circular
+financing. [music]
+Outside investors are less keen.
+Bloomberg reports that private open AI
+shares are being sold off on the
+secondary market [music] and sometimes
+there's no buyers for these shares.
+Investors are much more interested in
+anthropic. Next round capital founder
+Ken Smay [music] tells Bloomberg, quote,
+"We literally couldn't find anyone in
+our pool of 100 institutional investors
+to take these open AI shares, buyers
+have indicated they have 2 billion of
+cash ready to deploy into Anthropic."
+End quote. The bottom line is unless
+there's a drastic change, it's going to
+be a hard road ahead for Open AI
+financially. As the Guardian puts it in
+relation to the latest funding round,
+quote, the startup Open AI is nowhere
+near being profitable. In fact, if
+things stay as they are, it will burn
+through half a trillion dollars by the
+end of the decade. End [music] quote. In
+order to have a chance to even make it,
+open AI absolutely has to cut the fat.
+And Sora was a big part of that waste
+is what I would say if things didn't
+keep moving so quickly. As this episode
+was being made, a new development
+occurred. After so much talk of cutting
+the fat and getting their house in
+order, Open AAI's first purchase after
+the funding round was a podcast.
+Although the exact dollar figure of the
+purchase isn't known, reportedly the
+range is in the low hundreds of millions
+of dollars. Axios interviewed Sam Alman
+and he seemed very koi about revealing
+the price he paid for the podcast. The
+Financial Times says you paid in the low
+hundreds of millions. Is that about
+right? [music]
+>> I I won't comment on that actually.
+Um,
+that seemed high, seem low.
+>> I think that was a complete sentence.
+>> The podcast is called TBPN. You're
+probably asking, "Now, who's that?" In
+short, it's a daily live show about tech
+and business that [music] launched in
+late 2024. They regularly feature some
+of the biggest names in the technology
+industry. Think Mark Zuckerberg, Satier
+Nadella, Mark Cuban, and so on. So,
+their audience likely comprises of
+individuals who are founders, CEOs, and
+business owners, essentially people with
+money who are well established in the
+tech world. But with 70,000 average
+daily viewers, according to some
+estimates, and 324,000 subscribers on X
+and only 70,000 on YouTube, the sheer
+size of the acquisition does raise an
+eyebrow. Why would Sam Ultman reportedly
+pay hundreds of millions of dollars for
+a podcast that's seemingly so small? I
+had to find out. So, I did some more
+digging. As it turns out, in December of
+2025, the New York Stock Exchange
+announced a formal partnership with
+TBPN. Apparently, a lot of investors
+watched the show. That's very
+interesting seeing that Open AI is
+trying for an IPO later this year. Must
+be a coincidence. So, what else? I
+decided to watch the episode of their
+podcast where they announced the
+acquisition by OpenAI. Besides the
+ecstatic tone, co-founder John Kugan
+mentioned that he'd known Sam Olman for
+13 years.
+>> We have some huge news. Uh this is from
+the OpenAI blog. OpenAI acquires TBPN,
+accelerating the global conversation
+about AI. Uh this is real. This is a
+very interesting deal. I think a lot of
+people will be interested in this. We're
+very excited about this. Uh I've known
+Sam for maybe 13 years. He invested in
+my first company in 2013. Once we
+actually started growing TBPN, he was
+one of the first people that I texted
+to, you know, say, "Hey, do you want to
+come on the show?" Uh and he was the
+first lab lead to come on the show. and
+we're excited.
+>> The bottom line here is that Open AI is
+buying a media company connected to the
+New York Stock Exchange to more
+effectively market AI to the public.
+That last part isn't my words. [music]
+That's what Sam Alman said in the same
+Axios interview.
+>> They are genius marketers. And [music]
+uh someone said to me recently that if
+AI were a political candidate, it would
+be the least popular political candidate
+in history. And given the amazing things
+AI can do, I think there's got to be
+better marketing for AI. So, with this
+podcast purchase, I'm not exactly sure
+what's going on here, but I'll [music]
+leave you to make up your own mind. In
+other things behind the scenes, OpenAI
+CFO had doubts about the 600 billion in
+spending commitments. She also doesn't
+think the [music] company is ready for
+an IPO this year. She admits that Open
+AI didn't have enough compute, and she
+spent her time trying to quote find any
+lastminute compute available. This could
+be because the data center buildout is
+going terribly wrong with buildouts
+either being scaled back or cancelled.
+for her efforts. Sam Olman reportedly
+kicked her out of attending any
+financial meetings with investors. The
+investors said that her absence was
+quote noticeable and awkward end. Then
+on the 6th of April, the massive
+bombshell from The New Yorker dropped.
+It was an expose of private emails,
+notes, and interviews indicating that
+Sam Oldman was ultimately untrustworthy.
+Some inside sources went as far as to
+say that the main problem with the
+company was Sam.
+>> Okay, there's new tech drama. So Ronan
+Pharaoh, the investigative journalist
+that broke Harvey Weinstein, just
+dropped an 18-monthlong investigation
+into Sam Alman. His own board member,
+called him a sociopath. There are
+internal memos saying that he's a
+consistent pattern of lying. His own
+mentor, Paul Graham, the founder of YC
+Cominator, the guy that made Altman the
+president of YC, told colleagues that
+Sam has been lying to them the entire
+time. So yeah, that's the guy that runs
+the most powerful AI company in the
+world, a sociopath with a pattern of
+lying.
+>> Now, let's get back to Sora and the AI
+video generation space. Even though
+Nvidia has promised more money, CEO
+Jensen Huang reportedly raised concerns
+about, let's say, OpenAI's lack of
+discipline in its business approach.
+Here's the nuance, though. This is not
+the end of AI video as a technology.
+When and if compute costs come down,
+other companies will step in. In fact,
+the Hollywood Reporter thinks that
+Google [music] will win IP contracts in
+the end because of its scale. And of
+course, Elon Musk has already said that
+XAI will double down on generative video
+in Sora's [music] Wake. They'll be
+upgrading Grock's video capabilities.
+Make of that what you will given Grock's
+complicated track record in the visual
+space. But we have to stop and ask
+ourselves, is big tech [music] still
+misreading the room. There's a real
+cultural reckoning happening that goes
+way beyond open AI. AI generated content
+is everywhere now. The copyright
+frameworks haven't caught up. The
+creative industries are pulling their
+hair out and deals like the Disney one
+are going to be scrutinized for years.
+For open AI though, the Sora shutdown,
+the AGI development rebrand, the push
+into enterprise, [music] Sam Alman
+stated focus on quote raising capital,
+supply chains, and building data centers
+at unprecedented scale. It all points to
+one direction. Open AI is positioning
+itself for an IPO possibly later this
+year. And for that they need a story
+that goes beyond we let you make AI slop
+videos. Sora simply had to go.
+To be fair here, Sam Olman did say in
+his blog, quote, the majority of users
+should feel that their life is better
+[music] for using Sora than would have
+been if they hadn't. If that's not the
+case, we will make significant changes,
+[music] and if we can't fix it, we would
+discontinue offering the service. End
+quote. In summary, Sora failed for a
+variety of reasons, but most of the
+reason was just a bad strategic [music]
+decision. It was the wrong product at
+the wrong time for a company struggling
+financially. Open AI is trying to cut
+the bloat [music] and get their act
+together. It's the same situation with
+their adult chatbot, and perhaps a few
+other projects are on the chopping
+block, too. Open AI built the most
+famous AI brand in the world. They have
+900 million weekly users. They've raised
+more money than most countries GDP and
+burn through cash like no tomorrow. And
+yet, they're one of the [music] least
+trusted companies and also have an
+identity crisis. The AI industry in 2026
+is going through a genuine identity
+crisis. [music]
+There's a question of what is AI for?
+How does it make money? Who is
+responsible when things go wrong?
+[music]
+All of these questions are still very
+much open. So, as always, what do you
+guys think? Will Open AI be able to
+overcome the majority of their
+challenges, or will the company continue
+to deteriorate? [music] With an IPO
+coming up, the clock is surely ticking.
+Anyway, that's about it from me. My name
+is Dogo, and you're watching Cold
+Fusion, and I'll catch you again soon
+for the next episode. Cheers, guys. Have
+a good one.
+>> [music]
+>> Cole's [music] fusion. It's new
+thinking.

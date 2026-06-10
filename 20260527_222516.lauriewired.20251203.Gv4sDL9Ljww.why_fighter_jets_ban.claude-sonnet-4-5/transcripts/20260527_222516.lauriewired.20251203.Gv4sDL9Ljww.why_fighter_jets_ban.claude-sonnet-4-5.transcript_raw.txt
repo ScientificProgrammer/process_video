@@ -1,0 +1,866 @@
+At Mach 1, you don't have time for a
+garbage collector.
+In most programs, a bug is just an
+inconvenience.
+A crash means you restart the app.
+>> What happens when failure isn't an
+option?
+When one bad line can be a catastrophe?
+And this is what stands in your way.
+It's not about what's in the code. It's
+about quantifying what you take out.
+Today, we're going to learn how to
+program like a fighter pilot. [music]
+June 4th, 1996. It's a warm morning in
+French Gana. The weather was acceptable.
+Hundreds in the crowd stood to watch the
+launch of Europe's newest rocket, the
+Arian 5. 9:33 a.m. local time. The solid
+boosters fired. For 36 seconds, the
+flight was perfect. And then a single
+unhandled exception was thrown deep
+inside [music] the flight control
+software. A 64-bit float of horizontal
+bias converted to a 16-bit integer. The
+language did exactly what it was allowed
+to do. It triggered an error. An error
+the system couldn't handle. Half a
+billion dollars destroyed in an instant.
+In this particular situation, an
+exception was detected, but it wasn't
+properly handled. So, when the designers
+of the F-35 came around, they decided
+that they weren't going to make any of
+those same kinds of mistakes. JSF C++
+standard section fault handling AV rule
+208 states exceptions shall not be used.
+This is a perfect kind of example of
+remove before flight. By cutting out
+certain features from a target language,
+we can actually build something that's
+safer. But first, we have to ask
+ourselves, how did we get to this point?
+What do I mean by program like a fighter
+pilot? Why does it matter? And why do I
+have a GameCube in front of me? It'll
+make sense later. I got my uh remove
+before flight earrings, too. [laughter]
+These look familiar. You probably should
+remove these earrings before flight. I
+can't imagine it's just going to be like
+slapping you in the face as you're
+trying to fly a plane. Now, this isn't
+just a history video because I think
+that the best way to possibly learn is
+to get your hands directly on the code
+itself. So, I'm going to be doing a
+demonstration in C++ following the
+strict JSF standard connected to my F-35
+inside of a flight simulator. But first,
+I want to talk about some really pivotal
+moments that made C++ even possible
+inside of aerospace. And it's actually
+harder than you think. I want to talk
+about the language wars that were fought
+inside of the Pentagon. And that's not
+as scary as it sounds. Now,
+fundamentally, modern aerospace,
+particularly military aircraft, are a
+lot more about software than they really
+are about hardware. And probably a lot
+of people are going to disagree with me
+on that, but you got to hear me out.
+It's not really like flying a plane that
+happens to have a computer on it. It's
+much more like you're flying a computer
+that happens to also be a plane. Back in
+the early '7s, military fighters like
+the F4 Phantom over here basically had
+no software. And you don't have to take
+my word for that because the DoD
+explicitly states that the bombing
+computer on the F4 was pretty much just
+a box of gears and cams, kind of like a
+precision watch. And then the the code,
+if you want to call it code, was pretty
+much just the shape of the metal cams.
+This all started to change, however,
+with a top secret Navy air superiority
+project, the VFX. Although you probably
+know it as the F-14 Tomcat. Now, not a
+lot of people know this, but the first
+microprocessor was not created by Intel.
+I know what you're thinking. But Lori,
+every textbook in the world lists the
+Intel 404 as the world's first
+microprocessor. But that is because it
+was actually a secret. Garrett I
+research created a microprocessor for
+the F-14 years before Intel did, and it
+was significantly faster. The main
+reason was the F-14's swing wing design,
+where manual pilot control would have
+been way too much for optimal
+performance. Wow, I hear a plane.
+Oh my goodness.
+Especially during hygiene maneuvers.
+This information wasn't declassified
+until 1998, however, since the Navy
+wanted to keep it from the Soviets. It
+didn't really have lines of code in the
+classic way that we think of it today
+since it was physically burned micro
+code that processed polomial equations,
+about 2500 lines of code. And thus began
+the first real software on a plane. The
+early software era was a mess. The US
+Army, Air Force, and Navy all had
+completely different coding standards.
+And I'm sure you haven't heard of any of
+them. The Air Force liked Jovial, which
+stands for Jules's own version of the
+International Algorithmic Language. And
+no, I'm not making that up. It was kind
+of like the military grandchild of Alol.
+Of course, the Navy had to be different
+cuz Jovial was an Air Force language for
+Air Force problems. And thus, the F-18
+became the poster child for the Navy's
+own language, CMS2. Two different
+languages, two different hardware
+architectures, and zero compatibility.
+Now, the military saw this kind of
+writing on the wall that the amount of
+onboard flight software was basically
+increasing exponentially. And to kind of
+put that in perspective for you from the
+original era over to modern era of code,
+you start out with like 125,000 lines of
+code over on the F-16A. And then you
+progress over to a million lines of code
+on the B1. And then if you come to the
+actual modern era of aerospace
+computing, you come to the F-35 with 9
+million lines of code on board, which is
+just like a crazy trajectory. You guys
+want to see exponential curve
+demonstrations like like that? That's
+[laughter]
+that's like the lines of code. Now, the
+problem was that the code was becoming
+kind of like this massive jungle to
+audit. At one point, they reported that
+there were like over 450 different
+programming languages being used and
+none of them had their own like proper
+standard for them. So what they decided
+to do is they decided to come up with a
+new high-level language that would
+replace all of these other different
+random languages actively being used and
+that highle language became ADA. So the
+department of defense really really
+wanted people to use ADA so much so that
+they they made this kind of mandate
+where if you did not want to use ADA in
+your task you had to physically prove
+that it was not possible to be used. So
+that's how much they wanted people to
+use it. And it's kind of like if you're
+not going to use ADA inside of your
+project, then you're not going to get
+the contract. Now, many of you might be
+familiar with coding in C++ every day,
+but you might not be as familiar with
+coding in ADA every day or even possibly
+ever. ADA is actually really good for
+safety critical applications. And of
+course, this is vital inside of
+aerospace. And this is going to kind of
+start sounding very familiar for you.
+Going back over to our history portion,
+that ADA mandate lasted about 15 years
+until some problems started kind of
+making an appearance. So basically in
+the '9s in aerospace, pretty much
+everything was run on ADA. But
+simultaneously, you have all of this
+cool stuff happening. You've got the
+internet, you've got Windows 95, and
+pretty much every [music] good game is
+going to be running on C++. So that's
+getting pretty boring to still be stuck
+inside of ADA. Not only that, but say
+you're a student in the '9s and you want
+to get some kind of highpaying software
+job. You're not going to be learning
+ADA. And I'm about to blow your mind
+here, but compilers used to cost money.
+Like a lot of money. So back in the day,
+ADA compilers cost like literally
+thousands of dollars. So you might be
+thinking, what are you crazy? Compilers
+cost money? We get all that stuff for
+free these days. So, it kind of makes
+sense that students back in the day
+jumped on board that C++ and GCC
+bandwagon of the the free software
+express. I like that. But that started
+to become kind of a problem when you
+enter the days of Loheed Martin working
+on the F-35 project because Loheed
+Martin knew this was going to be an
+extremely softwareheavy aircraft and it
+was going to have a lot of different
+complex concepts and calculations on
+board like a sensor fusion for example.
+In order to kind of start remediating
+all of these potential problems, they
+decided they were going to achieve the
+impossible. They were going to convince
+the Department of Defense to let them
+use C++ instead of ADA. And I honestly
+have a lot of respect for the person who
+decided initially to make this kind of
+proposal because they were either
+absolutely crazy or they were just so
+determined they were going to make this
+happen. And also would have been like to
+have been a fly on the wall during the
+Pentagon meeting for this because it's
+basically like the contractors coming
+over here saying, "Please let us break
+the law and do it with your approval.
+Please let us use this new unsafe
+language and ignore every single other
+software mandate you've made up until
+this point." But they didn't also go in
+completely unprepared because they
+decided they weren't just going to use
+raw plain C++. They had a plan to kind
+of tame the language. Now, who better to
+ask for advice at coming up with this
+kind of C++
+cherrypicking plan than BJ Strastrip
+himself, the creator of C++. And kind of
+fun fact for everybody, I actually have
+met him in real life at a conference and
+I'm proud because I did ask him a
+question. I asked him about C++ 26
+reflection capabilities. Spoiler alert,
+completely different and he really does
+not believe in the Java style of
+reflection. But yeah, anyway, going back
+over to our history, the details are a
+little bit fuzzy, but Bejorn himself did
+actually admit that he did have a hand
+in the formulation of the JSF rules. So,
+he said you had to consider him biased
+about the topic. Going back over to our
+remove before flight concept, you
+remember me talking about this? Well,
+this is exactly how the joint strike
+fighter or F-35 C++ standardization
+actually works. By kind of surgically
+removing specific portions of an
+otherwise extremely powerful language
+like C++, developers can create code
+that's much more likely to get mission
+or safety certified without also being
+shackled to a prehistoric language like
+ADA. kind of the craziest part is is
+that you can read the JSF standard
+completely publicly online if you want
+to see how the F-35 is actually
+programmed at least from a stylistic
+perspective. Now, the key for this
+openness kind of somewhat lies in the
+name itself, Joint Strike Fighter. And
+actually, it wasn't just Lockheed that
+was working on this aircraft. It was
+Lockheed, it was a ton of other defense
+contractors, it was a ton of
+governments, it was even a ton of
+different countries all working kind of
+in tandem together on this aircraft,
+which was pretty cool, like as a group
+effort. And not only that, but if you
+have the JSF standard just publicly
+online, you too theoretically could
+contribute compliant code to a
+billion-dollar aircraft project. Now, I
+think the best way to learn is just to
+get out there and start writing some C++
+code while following the JSF standard.
+And it might kind of sound crazy, but
+side note here, my actual job used to be
+writing C++ for aerospace systems and
+putting on demonstrations for the Air
+Force. So, I did live in this world for
+kind of a decent amount of time. And for
+today's demonstration, it's going to be
+a heavy heavily simplified version. I'm
+mostly going to be focusing on the
+quirks of C++ while following the JSF
+standard. Now, for the most fun part of
+this video, for me,
+I'm going to fly a flight simulator. So,
+I'm going to be using XPlane 12, which
+is a really popular flight simulator,
+and it is actually used in the industry
+pretty decently often. It's really good
+for software [music] integration testing
+or just general flight demonstrations.
+And I'm going to start a new flight over
+here. And I'm going to use the F-35B
+released by AOA Simulations pretty
+recently. And it's pretty accurate and
+cool looking. So I'm going to start my
+flight. Here we go. While [snorts] this
+is loading, this is my multi-function
+display that I built over here or my
+MFD. And this is F-16 style. And you can
+see it's got all of this data available.
+This is connecting to XPlane itself.
+[music]
+So XPlane very recently made this web
+API that you can subscribe to. So you're
+constantly listening to that live flight
+data that's being published over that
+web API. Now the front end portion of
+this UI is just in Python, but the
+backend portion of it is in the C++
+code. And that's we're going to be where
+we're going to be demonstrating the JSF
+standard at the moment. You can see I've
+got my main display here connected live
+to the aircraft from XPlane. And I can
+go over. I've got like my position data,
+got my wind data, envelope data,
+got questionable buttons. I've actually
+got some weird multi-threading problems
+happening in Python at the moment
+connecting to my buttons. It's kind of a
+process to get this to work. I've also
+got my navigation data. So, all of this
+backend calculation portion needs to be
+done in optimized JSFE C++ code. And I
+got to have my cool Top Gun glasses if
+I'm going to fly. They only slightly
+affect my visibility for looking at a
+computer screen. By slightly, I mean a
+lot.
+All right. So, keep in mind the aircraft
+data is live getting updated on my MFD
+over here. So, let's take off. I
+actually cannot see
+It's fine. I can still fly. That's what
+you want your want to hear your pilot
+say right before they take off. Yeah,
+guys, I can't see.
+Here we go.
+And my location data. It's getting
+updated. That was such a smooth takeoff.
+All right, let me see if I can show you
+if I can multitask and find. Yep, here's
+my position data. And remember, it's
+reading from that web API from XPlane.
+It's actually getting updated both at
+the same time. Starting to understand
+the concept of pilot load over here. I'm
+sure [laughter] that's I'm sure this is
+the same. Can I do a barrel roll?
+Oh, that's so easy. I'm such a great
+pilot at this. Wow. Okay. [laughter]
+Okay. Where's my up? Where's the up part
+of my plane? I can't actually see. Okay,
+we're good. Here we go. Nope. I need to
+pull up. Pull up. Pull up. Pull up.
+[laughter]
+Okay. I wonder if I could dip my fa my
+wing in the water just like a little
+bit. Nope.
+Okay. No, I cannot. What's that quote
+from Top Gun? When you're up there, if
+you think you die. Apparently, I was
+thinking too hard. We're going to go
+with that. Let's get on to the most
+important part of this, which is going
+to be the C++ code. Not as exciting as
+XPlane, but actually, no, it's more
+exciting. Take that back. So, I have my
+XPlane flight data plugin here, and this
+I'm going to link to in the description
+of this video. This is available on
+GitHub, and this contains all of the
+important code that's executing on my
+MFD over here. And if I go through this
+repository, I have my aircraft MFD.py.
+Not super interesting. It's really just
+the guey portion of this. But if we go
+on to our compliant and non-compliant
+folders, that's where the interesting
+C++ code actually lives. And of course,
+compliant and non-compliant relates to
+the JSF standard. I'm going to go into
+my non-compliant folder, and let's just
+see kind of what data we're calculating
+here. This is my density, altitude
+calculator, CPP. I've also got flight
+data, turn calculator, uh, V-NAV data,
+wind calculator. All of these important
+calculations that are either mission
+critical or safety critical are living
+inside of C++ code. So this C++ code
+needs to be 100% reliable 100% of the
+time and [music] that's why we have to
+follow such strict standards. So keep in
+mind our remove before flight tag
+because this is going to be a very
+important concept. Let's go on to the
+flight calculator. This file is really
+really long. I highly encourage you to
+take a look at some of the calculations.
+They're very interesting and very math
+heavy kind of fun. I think I had too
+much fun writing oh my gosh all of this
+code. [laughter] we have something
+related to memory allocation. So, see if
+you can find the potential issue here
+inside of the code. Like what could be
+going wrong if we hit this code and it's
+not following the JSF standard. There's
+a second one inside of here. This one's
+probably pretty obvious, but look at
+this function. This is a very unsafe
+function to have on a plane. Now, let's
+take a peek at the actual JSF or joint
+strike writer standard for C++. And this
+is extremely long. Like it goes on for
+forever. [laughter]
+If I go over to the table of contents
+here, you can see how many topics it
+actually covers. And these range from
+things about stylistic guidelines as
+well as kind of safety guidelines
+particularly related to I would say
+three main topics. Now, if you want to
+program like a fighter pilot, or rather
+kind of program for a fighter pilot,
+probably these three things that you
+need to keep in mind are related to
+memory allocation, exceptions, and
+recursion. And there are a lot more
+rules as well, but these are the three
+things that I'm going to be focusing on
+today. And in the end, the safety aspect
+of it really comes down to removing
+things from a language rather than
+adding things to a language so that you
+can have extremely predictable behavior.
+Now, side note, today I've been running
+on my Mac for simplicity, but what if I
+told you the real thing was a lot closer
+to this. I know you've been waiting for
+the whole time for me to come back to
+the Gamecube, probably on the edge of
+your seat.
+But the earlier block F-35s used mission
+computers based on Motorola G4 Power PC
+processors. And this is all public
+information. You can actually go back to
+the Aviation Today articles from like
+2003 and see this being discussed. Now,
+obviously, it's been ruggedized. It has
+special vector extensions and a lot lot
+of other cool stuff added on top, but
+kind of the core instructions set
+architecture is very similar. That's
+just a fun fact. If you want to get
+really technical about it though,
+technically the Gamecube is a generation
+old. And so kind of an even better match
+would be something like this.
+[snorts]
+But I'm not going to compile on this
+just to prove a point. Or am I? No. All
+right. Now, back over to our simulation,
+our C++ and our JSF standard. We're
+going to have to break out this remove
+before flight tag here because we are
+going to need it for the code that is
+actively executing right here, right now
+on our aircraft. So, picture this.
+You're a C++ contractor and you've
+written some C++ code. Good practice,
+but it's not been JSFified.
+JSFified.
+It's kind of fun to say. So, as a pilot
+right now, I'm actively flying my
+aircraft and I'm going through all of my
+data that's available to me. Going
+through numbers are looking pretty good.
+Oh no, we've encountered a C++ exception
+and instead of handling it properly, my
+computer has just completely given up
+and we have totally crashed and I'll
+probably crash my plane very shortly.
+So, what just happened inside of our
+program and how do we ever prevent this
+from happening on an aircraft again?
+Now, the first thing that might surprise
+you is AV rule 208 from the JSF
+standard, which states that exceptions
+shall not be used, which you might be
+thinking why that seems kind of extreme.
+But the core problem here is that they
+generate kind of an unpredictable flow
+of control. So, if you go back and you
+think of that Arian 5 incident that we
+talked about previously, the problem
+wasn't that the value overflowed. But
+the problem was is that it generated an
+unhandled exception that nobody had
+planned for. And that is just the worst
+possible thing that can happen inside of
+safety critical code. Just to be clear,
+Bja himself is actually a very big
+supporter of modern-day C++ exception
+handling and exceptions are fairly
+cheap. So why do we not have them inside
+of the JSF standard? And the answer to
+this is mostly just due to maturity at
+the time. And I think the best way to
+describe this is to quote BA himself and
+he said JSF++ is for hard real time and
+safety critical applications flight
+control software if a computation takes
+too long somebody may die and for that
+reason we have to guarantee response
+times and we can't with the current
+level of tool support do that for
+exceptions. So it just goes back to
+maturity like I said. And the funny
+thing is the JSF standard actually
+simulates exceptions kind of getting
+ready for a date when the tooling is
+capable of handling it. If we go over to
+our code and we want to fix our C++ code
+that generated the fatal exception
+during our flight scenario. Let's take a
+look at what that looks like. So if I go
+over to my density altitude
+calculations, this is where the
+unhandled exception was thrown. So now
+taking a look at the code, this is my
+non-compliant JSF version. You see we've
+still got our remove before flight tag.
+Very important. But what is actually
+happening inside of the code? If you're
+following AV rule 208 for no exception
+handling, you can see we've got a lot of
+keywords that are simply not allowed
+inside of the JSF standard. All of this
+try [music] and catch block over here
+with our stood exception as well as our
+throw statement over here. None of these
+are actually allowed. Now, what does it
+look like if we go through and fix it?
+Let's go over to our compliant version.
+And how do we handle exceptions in a
+fully JSF compliant manner? Well, what
+we're going to do here is we're using
+return codes instead. So, if you're
+throwing an exception, then that has to
+be handled by a proper exception
+handler. But if you're using return
+codes instead, you can see I have this
+code that is set to different values
+based off of what might happen inside of
+my density altitude calculations. With
+this return code though, that is leaving
+the handling portion in the hands of the
+calling function. So now the calling
+function can take in that return code
+that is being passed over and decide
+what it wants to do based off of this
+return code instead of just completely
+failing and breaking the entire program.
+And now we're back on board with our
+completely flights safe software. Here
+we are and we're flying along. And now
+we can take a look at our MFD and I can
+cycle through all of these values. Go
+over to my density altitude calculations
+and you can see we're not generating any
+unhandled exceptions anymore. So if we
+have that value that gets returned and
+it somehow misses its calculation time
+or we get like a completely empty value,
+it doesn't matter because we're
+returning that error code instead of
+just generating an exception and
+completely crashing our program. Not
+like I'm about to do with my plane right
+now. [laughter]
+Okay,
+talking and flying is very hard at the
+same time. The second big area that we
+need to address inside of our flight
+code is AV rule 119, which states that
+any function is not allowed to either
+directly or indirectly invoke itself.
+Aka, you can't use recursion. And you
+might be thinking, oh, that kind of
+stinks because I personally like
+recursion a lot. I think it's really
+cool. But the main problem with
+recursion is that it basically exposes
+you to the possibility of having Stack
+overflows inside of your code. Now, when
+you're calling a function, you're
+actually setting up a new stack frame
+for that new function. [music] So, with
+recursion, you're setting up frame after
+frame after frame. And all of these new
+in function invocations are getting
+added onto the stack. And the problem is
+with recursion, you often don't know the
+upper bound of the maximum depth that
+you're going to recurse inside of your
+function. And that's a big problem in
+these safety critical applications
+[music] where you need to know the
+maximum upper bound of how much memory
+you're going to use. Now let's go
+through and let's fix our recursive
+calls inside of our actual C++ program
+and make this JSF compliant. So I'm
+going to go over to my flight calculator
+and I am computing the binomial
+coefficient inside of my flight
+calculation for computing different
+alternative airports during my [music]
+flight plan. And if we want to take a
+look at the recursive portion of this, I
+have my binomial coefficient function
+declaration up here. And inside of our
+definition, you can see we're invoking
+our self two different times. We have
+the binomial coefficient invocation for
+n minus one k minus one plus another
+call invoking itself for binomial
+coefficient n minus1k. So this is like
+doubly not following the standard. But
+the problem is is that for each of these
+different recursive calls inside of this
+function, we don't know like the maximum
+depth. So this kinds of kind of opens us
+up to the possibility of running out of
+memory inside of the program. So let's
+go over to our JSF compliant version and
+see how we fix this. And I did mention
+that iterative approaches are usually
+not as pretty. And I stand by this
+because you can see this code a little
+bit longer. I don't know, feels kind of
+lame. Not as nice as the recursive
+calls, but you can see we are JSF
+compliant now because we have our
+binomial coefficient function definition
+and we have no invocations of itself
+inside of the function. Now we fixed our
+problems with exception handling. We've
+also fixed our problems with recursion.
+Now it's time to move on to the last and
+probably the most important thing that
+we need to remove before flight to be
+compliant with our JSF standard. And
+this is related to memory allocation.
+Now, AV rule 206 states that both memory
+allocation and memory deallocation shall
+not occur after initialization. And
+basically, this means that you can't go
+through and you can't be allocating any
+memory while your program is actively
+executing. And this is there for a
+couple reasons. Mostly because it
+introduces some unpredictability in your
+code. You don't know how long it's going
+to take the memory manager to find the
+memory that's available for your newly
+allocated data. Also, you don't even
+know if there is enough memory that's
+available for you to allocate this brand
+new memory. The issue is that as you're
+allocating memory, you're allocating it
+onto the heap. And that can cause
+something called fragmentation. So, as
+you're allocating more and more data,
+you're kind of fragmenting the heap into
+these tiny unusable chunks of data that
+you can't use when you're allocating
+something new and large that's not going
+to fit into that data. Now let's go over
+to our C++ code and let's see how we can
+fix our non-compliant memory allocation
+problems. So right now I have my history
+of my indicated air speed or my IAS data
+right here. This is being used to
+calculate gust. But the problem is this
+particular line right here. Now what
+this is doing is this is making a unique
+pointer and then returning this to our
+history buffer variable. But the problem
+is this specific portion. This is
+actually dynamically allocating new
+memory onto the heap like I mentioned,
+which is a big problem when following
+the JSF standard. So, how do we go
+through and fix this? Well, let's go
+over to our compliant version of our C++
+code. And the biggest fix, there are
+multiple different fixes that you can
+do, but what I decided to do is I
+decided to hardcode a maximum data size
+for our particular IAS history array.
+[music] So you can see we have this max
+IAS history and this is being used in
+our initialization of our data. That
+means we can use all of the available
+indices inside of our data array here
+[music]
+but we already pre-now the exact maximum
+size possible. [music]
+So we never have to dynamically allocate
+anything. And then we can still perform
+our calculations inside of this but
+we've completely fixed [music]
+our dynamic unknowns. Now I want to give
+you a bonus real quick and that's AV
+rule three which states that the
+cyclomatic complexity of a function
+shall not be greater than 20. And what
+does that mean? Well the cyclatic
+complexity is basically how many
+decision [music] paths there are inside
+of a function. So an if statement, a
+while loop, a for loop, even boolean
+operations like and and or or switch
+statements all count as points towards
+the overall cyclatic complexity of the
+function. to go to a hands-on example
+where I think it makes more sense. Let's
+take a look at our uh iterative version
+of our binomial coefficient function.
+Now the function declaration counts as
+one towards our cyclomatic complexity.
+And now we have this if statement right
+here. So if that counts as another plus
+one towards our cyclomatic complexity.
+Another if that also counts as another
+point. Also this or statement counts
+towards our cyclomatic complexity.
+Moving on, we have a couple more inside
+of here. Each of these are adding points
+towards our overall cyclatic complexity
+as well as our for loop down here. Now
+that means that each of these points
+that we're counting towards must be
+below 20 for the entire function. Now
+I'm able to fly my aircraft without any
+problems or any potential problems that
+might happen on my MFD over here with
+any of my plugins and I can fly with a
+peaceful mind. I'm feeling the need the
+need for speed.
+This is too much fun. Wish I had
+missiles on here. Okay, hold on.
+[laughter] Pull up. Emergency.
+I saved that. I really, really want to
+dip my wing into the water. I can do
+this. I think I just need to slow down.
+I can so do this. We're going to just
+dip our wing.
+Okay, hold on. Hold on.
+[sighs and gasps]
+There was a wall.
+Oh no, that's a highway.
+We do not dip our wings into the
+highway. Now, the coolest thing is that
+the principles of the F-35 C++ standard
+didn't just end with that standard
+itself. And you can kind of see the DNA
+of it spread through a lot of different
+fields and a lot of different other
+standards. For example, another one is
+the NASA standard, which is called
+F-Prime, [music]
+and that's their own standard for their
+own flight software. And this was also
+made publicly available back in 2017. If
+you take a look at it, it might look a
+little bit familiar because you've got
+no memory allocation. You've got no
+exception handling. You also have no
+recursion. So this is kind of like the
+sister standard to the JSF standard.
+This kind of idea of the coding standard
+for C++ isn't really just specific to
+aerospace. You also have it in a lot of
+other industries like the automotive
+industry. For example, you have things
+like Misra and AutoSAR, which stands for
+automotive open system architecture. And
+this actually references JSF by name,
+saying it's one of the influences for
+its C++14 standard. Now, being part of a
+much more modern version of C++, it has
+some benefits and some extra abilities
+that [music] the old JSF standard didn't
+have, like smart pointers, for example,
+are allowed inside of AutoSAR. If you
+think about it, cars are kind of like
+computers on wheels, especially with all
+of like the modern enhancements to
+vehicles and stuff. So, all of these
+companies are dependent on AutoSAR. You
+have BM, BMW, Ford, Toyota, basically
+all of the major companies. And like
+funniest thing to think about is that
+all of this language safety since it
+references like the JSF standard is
+basically dependent upon a decision that
+was made by the Pentagon like literally
+decades ago. So here we are. We've got
+our code running. Our systems are green.
+Our code is following the JSF C++
+standard. We have successfully coded
+like fighter pilot. But here's the big
+question. Should you follow the JSF
+standard inside of your C++ code? Here's
+a twist and it comes from Bja Strastrap,
+the creator of C++ himself. Now, even
+though he was part of the committee to
+formulate the JSF standard, he'd tell
+you that today you should be using C++
+core guidelines. And he's got a point
+because modern-day C++ has continued to
+evolve and grow and not just stay the
+same for the last 20 years. So even
+though the JSF standard was a really
+great engineering feat for its time, you
+should be using newer modern safe C++.
+Despite this, you should definitely
+still take a look at the JSF standard
+just because it's such an important and
+interesting part of history. And it
+managed to turn a really complex
+language like C++ into something [music]
+predictable that's safe for critical
+infrastructure. And it's not always just
+about being the smartest programmer in
+the room. It's about having the
+discipline [music] of knowing what
+aspects to remove before flight. Lori
+wired out.

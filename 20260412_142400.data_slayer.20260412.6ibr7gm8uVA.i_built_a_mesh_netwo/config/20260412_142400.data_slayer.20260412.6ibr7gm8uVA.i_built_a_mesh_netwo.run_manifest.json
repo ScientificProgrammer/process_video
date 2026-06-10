@@ -1,0 +1,30 @@
+{
+  "script_version": "af153fa",
+  "timestamp_start": "2026-04-12T14:23:57Z",
+  "timestamp_end": "2026-04-12T14:24:58Z",
+  "duration_seconds": 61,
+  "video_url": "https://www.youtube.com/watch?v=6ibr7gm8uVA",
+  "video_id": "6ibr7gm8uVA",
+  "video_title": "I Built a Mesh Network Across the World",
+  "channel_name": "Data Slayer",
+  "upload_date": "20260412",
+  "model": "claude-sonnet-4-5",
+  "vendor": "Anthropic",
+  "strategy": null,
+  "config_file": null,
+  "patterns_requested": [
+    "create_summary",
+    "youtube_summary"
+  ],
+  "patterns_succeeded": [
+    "create_summary",
+    "youtube_summary"
+  ],
+  "patterns_failed": [],
+  "output_directory": "/home/eric/Projects/git-repos/github-repos/process_video/20260412_142400.data_slayer.20260412.6ibr7gm8uVA.i_built_a_mesh_netwo",
+  "report_generated": true,
+  "pandoc_formats": [
+    "docx",
+    "pdf"
+  ]
+}

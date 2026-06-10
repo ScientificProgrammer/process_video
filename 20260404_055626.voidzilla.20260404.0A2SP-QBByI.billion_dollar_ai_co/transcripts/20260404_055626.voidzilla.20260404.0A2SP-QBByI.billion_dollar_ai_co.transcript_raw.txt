@@ -1,0 +1,316 @@
+Today I want to talk about a $ 1.8
+billion company that's mostly built on
+lies. But you wouldn't know it from the
+New York Times article which went viral.
+And honestly, I was as deceived by it as
+many people were. I'm not a total AI
+skeptic. I have my criticisms, but when
+I saw the New York Times say that AI
+helped one man and his brother build a
+1.8 billion company, I was interested. I
+wanted to know how they did it. And to
+be honest, based on how the article is
+written, I was really impressed. You
+know, this guy has Medv. It's a
+tellahalth provider of GLP-1 weight loss
+drugs and the business just takes off
+right away because this guy has figured
+out the power of automating tasks with
+AI. And by 2025, Medvy's first full year
+in business, the company generated $400
+million in sales. This year, they're on
+track to do $1.8 billion. Now, that is
+just mindblowing. And in a big way, this
+article credits AI. It says AI
+turbocharged it. It's not an AI company,
+but I did it with AI, a $ 1.8 billion
+company with just two employees. In the
+age of AI, it's increasingly possible.
+And it really pres on this kind of big
+prophetic idea from the AI bros,
+specifically Sam Alman, that this is
+sort of destined to happen because of
+how powerful AI is.
+So, it's kind of the first version of a
+oneperson billiondoll firm. And this
+article mentions that explicitly. In an
+email, Mr. Alman said it appeared he had
+won a bet over whether such a company
+would appear and he would like to meet
+the guy who had done it. So, on the
+surface, right, it seems like the
+American dream. A guy goes from not
+being very successful to all of a sudden
+out of nowhere he has this
+billion-dollar company all because he
+prompted you know Chad GBT or whatever.
+But this is what they don't tell you
+behind the scenes right behind all the
+gloss. They don't tell you about the
+shady billing fake doctors warning
+letter from the FDA snake oil class
+action lawsuit fake before and after
+pictures and fake ads that this whole
+thing is basically built on. I'm not
+going to argue that in this story.
+You're also going to see a lot of
+allegations from actual customers of the
+company, which the New York Times
+doesn't spend a lot of time on. In fact,
+they mention very briefly that like, oh,
+they did fake before and after photos
+with AI. But when some of these
+practices are discussed, it's mostly
+done under the guise of, oh, they were
+just faking it till they made it, and
+now they're going to, you know, stop
+taking those shortcuts. Specifically,
+they say they were going to fix some of
+the shortcuts he had originally taken,
+like swapping out some of the before and
+after weight loss photos for ones with
+real customers. And really, the question
+for me is, is this a legitimate company?
+Are they scamming people? Did they do it
+the right way? Is this just AI applied?
+And that's that's kind of the conflict
+at the heart of this. So, I'm going to
+walk you through a lot of the evidence
+that the New York Times either glossed
+over or just explicitly didn't mention.
+And I want to credit an amazing
+investigation by Futurism which
+basically investigated all of this in
+2025 and specifically calls out things
+like their website featuring AI
+generated photos, things like their
+product photos having AI generated text
+solution faux injection and futurism
+also are the people that actually found
+that this website was using fake photos.
+Well, specifically they were changing
+the photos. Here's a weight loss photo
+that had been circulating around the
+world. It was hosted by the Daily Mail.
+This was apparently a Redditor who in
+2016 engaged in a weight loss challenge
+and over a period of time lost 35 lbs in
+one year. Now, over on Medv's website,
+they used the same guy. They added
+glasses to his face and a beard and said
+it's Michael P and he lost 48 pounds in
+5 months. So, they increased the amount
+of weight he had supposedly lost. He was
+not their customer and they shortened
+the amount of time he took to do it. But
+I actually wanted to add on to
+Futurism's investigation here because I
+found they then later in the archive
+changed the picture entirely. Okay,
+you'll see though that even though it's
+a completely different picture, totally
+different guy, totally different thing,
+it's still definitely a lie because they
+kept the guy's name, the amount he lost,
+and the amount of time he lost it in.
+They just changed the guy. They took
+their fake testimonial and just swapped
+out the photos. So, this whole thing is
+built on lies. By the way, if you dig
+into this, you're going to hear a lot
+that they blame affiliates for a lot of
+the shady marketing, but I just want to
+be clear that these before and after
+photos were hosted on their website.
+Like, this wasn't someone else who did
+this. They had this on their website.
+And although the New York Times goes
+through lengths to say, "Oh, they're
+fixing they're taking those shortcuts
+away. They're going to fix all of this
+stuff." I just want to point out that as
+recently as last month, this photo was
+on here. Okay? As recently as March. So,
+the idea that, oh, they're fixing it up.
+To me, it seems like they're fixing it
+up for a New York Times profile, because
+this is where we need to get to the ads
+that are still running right now to this
+day for these GLP1 drugs that they're
+selling online. Because in addition to
+fake testimonials from customers, they
+also have a bunch of fake doctors
+promoting this stuff. This is the meta
+ads library where you can see a series
+of Dr. Dr. Sarah Martin, Dr. Monica
+Ashford, Dr. Lena Fischer, all promoting
+guess who? Medvie, and specifically, I
+want to show you that some of these ads
+are once again lying about before and
+after photos. Here's one about Medvy.
+>> I got this Tzepide pen to try so you
+don't have to. Been reading on it for
+months. Finally made the move. Ready to
+start. Feeling pumped. A bit nervous,
+but mostly excited. 60 days in and
+feeling great. Look how much weight I've
+lost. All right. So, these are
+supposedly the before and after videos,
+and it's obvious that this is AI
+generated. This is not a real doctor.
+It's also not a real patient. This is
+just lies. And again, it's hard to
+distinguish. Is this an affiliate? Is it
+not? But I just want you to understand
+this is still happening to this day.
+It's just a bunch of scammy Facebook ads
+of fake doctor accounts showing you AI
+slop, fake patient testimonials. And
+this is supposedly the great
+breakthrough in AI, right? This is
+supposedly the power of AI. I also want
+to show you this is an allegation from a
+class action lawsuit filed specifically
+against Open Health, Inc., which is one
+of the partners of Medvy. And you'll see
+that a lot of the doctors that are on
+some of these websites, because you have
+to understand, Medv is just one of the
+most successful versions. There's a
+bunch of kind of copycats and they all
+kind of site this Dr. Anna Lisa Carr and
+Dr. Kelly Tinbrick, Dr. David Mansour.
+But here's what these same doctors look
+like on Medvy's website. Dr. Analisa
+Carr, Dr. David Mansour, Dr. Kelly
+Tinbreak. It's the same name, but
+different photos of these supposed
+doctors. Now, unlike the Facebook fake
+doctors that are in all of these ads,
+these actually appear to be real people
+that exist, although their exact
+involvement is unclear. This is the
+Futurism article who actually contacted
+each doctor to ask if they could confirm
+their involvement with Medv. And one of
+them insisted he had nothing to do with
+either company and they need to remove
+him from their sites. There's also a
+massive allegation in this class action
+lawsuit which is that one of the key
+compounds that they're selling they
+claim is snake oil actually and just
+doesn't work explicitly. This is the
+tzepatide tablets. I don't know if I'm
+pronouncing that right, but that is a
+real compound that exists in some of the
+injectables, but they're saying that
+this is an oral formulation. But the
+classaction complaint alleges that the
+oral turzepatide is a product that's
+never been approved, has no demonstrated
+mechanism of absorption or efficacy, and
+functions as modern-day snake oil, a
+pharmacologically inert compound when
+delivered via a pill. The idea is that
+as an injection, it would actually work,
+but because they're selling it as
+something you take like a pill, which is
+obviously more appealing to a lot of
+consumers, it is inert. And look, this
+is where I'll have to say I'm not a
+doctor, but Eli Liy, the people who
+actually manufacture this stuff, says
+there are no human studies, let alone
+clinical trials involving any oral
+terspatite product. Meaning anyone
+selling it is making unproven claims and
+is experimenting on unsuspecting
+Americans. Now, that's a little bit
+different than, you know, the New York
+Times glowing article. Sounds a little
+bit different than the way this has all
+been framed as some like American dream
+story. I mean, I I think that should
+have been included. Now, I also want to
+mention that Medby has gotten an FDA
+warning letter. Specifically, the
+warning includes quote, "Your website's
+false and misleading claims concerning
+compounded semiglutide and tzepide
+products." So really, when you dig into
+this stuff, this is a really shady
+website that took advantage of a loose
+regulatory regime to shove down a bunch
+of AI slop down people's throats in
+order to get them to buy products that
+in some cases, according to the people
+who actually make the product, allegedly
+don't work in that form, or at least
+there's no evidence that it works. This
+is further borne out by some of the
+reviews where April, for example, who
+reviewed this product, says, "Almost
+$2,000 spent, and not only did I not
+lose weight, but I gained. Finally,
+someone said that the oral doesn't work
+and I should do the injection." That was
+when I knew I was done. This person
+says, "I took the oral tursepide. Then
+at the appointment, they said orals
+don't work and switch me to injections."
+This review gives one star and they say,
+"I'm beyond frustrated with this
+company. I chose the oral medication for
+ease of use of the product. It was
+delivered very wet and immediately
+started melting and was finally told on
+the third week that I should not be
+taking a defective product. Wendy gave
+it one star and said medication was
+deemed ineffective. Trina says, "Do not
+buy oral tursite. It doesn't work. They
+don't tell you this during the
+appointment. They accept your money and
+let you find out for yourself." And
+maybe just as bad, some of the billing
+practices of course are shady, which is
+what you'd expect from a company like
+this. Horrible buyer beware. They
+doubled the price and charged my credit
+card without sending any medication.
+Like many people in these reviews, I did
+not receive the product, but was charged
+$3.99 and then told I would get a
+refund, then later was told they don't
+refund. So, I hope by now you can see
+why I'm a bit annoyed and feel like I
+have to give the other side of the story
+when I see an article like this that
+uncritically lifts up a company for
+getting a massive amount of sales, for
+sure, but how they got those sales is
+just as important, if not more
+important. I mean, this is the exact
+opposite of a success story other than
+their dollars. And that's what's so
+worrying is if anything, this is a
+warning sign about where we're going
+with AI, where all the doctors, all the
+lawyers you see online are fake. All the
+reviews you see are totally fake. The
+person who's telling you this product
+saved their life. They're completely AI
+generated. It's just not a great
+outcome. And this story, if anything, is
+a sign of that. So yeah, I've taken
+pains to avoid mentioning the author of
+this article's name, as well as the
+person who ran Medv. Instead, I
+specifically want to shout out Maggie
+Dup Prey, who did a great job
+investigating this back in 2025. Her
+work, unfortunately, got a lot less
+attention, but uh it's a great piece of
+journalism. So, anyways, that's
+basically it. Tap.

@@ -1,0 +1,1427 @@
+and you know helping people understand
+like what did we learn from Iraq if
+anything and I mean I it's just
+>> yeah absolutely
+>> what a strange time we're living in but
+um so as you know on Substack people
+join in progress and I'm excited to
+really first of all uh Ronin is is a
+great person and an incredible reporter
+and so I'm really thrilled that he was
+willing to hop on this Substack and give
+us really preview because we do want
+people to go to the New Yorker and read
+your entire article which took you how
+long to write?
+>> A year and a half. And I really
+appreciate you're leading with that,
+Katie, because we were just talking
+before you all came on about the way in
+which the media landscape is
+increasingly becoming consolidated in
+the hands of really powerful tycoons and
+businesses with, you know, specialized
+interests uh that make the environments
+they acquire ultimately inhospitable to
+this kind of accountability reporting.
+So, it's fewer and fewer spaces and it's
+one reason I really respect what you do,
+Katie, cuz this enterprise of getting
+highquality information directly to
+people and what all of you in the chat
+are engaged in of like joining arms in a
+community of people who care and want to
+think critically about what's happening
+to their country and the world. Uh, that
+matters a lot. And I have a and now
+since we're all just spawning all over
+everybody, I have a tremendous amount of
+respect for David Remnik because you
+know um investigative reporting is
+expensive and timeconsuming and as Ronan
+just said it took Ronin and his
+co-author Andrew Morance am I saying
+Andrew's last name correctly? a year and
+a half to work on this piece about Sam
+Alman and uh the head of Open AI and to
+really really dig to to come up with a a
+good portrait of who this person is who
+has really unprecedented power and is
+going to change the world as we know it.
+So, um, obviously, uh, Ronan Pharaoh,
+for everyone who's joining us, is, uh, a
+a reporter for the New Yorker, and he
+and Andrew pulled the curtain, uh, open
+on Open AI and Sam Alman, and some
+questions about his leadership, his
+personality, his ethics um, and and
+morality really when it comes to this
+whole enterprise. Um, you know, before
+we before we talk specific, well, this
+is specifically about him, Ronan, but
+but where is Sam Alman in the pantheon
+of AI of the world of AI? I think, you
+know, some people may be very familiar
+with him, some less so. So, how would
+you describe his position in this brave
+new world? Well, he and Open AAI really
+are the market leaders still and there's
+stiff competition, a competing firm
+where actually we tell the story of how
+some of these same concerns about
+Altman's trustworthiness and the
+sincerity of his commitments to keeping
+this technology safe fed into a rift
+with one of his colleagues Daario Amode
+who was there at the company early on
+and they created Anthropic which is now
+also a major player. Um, so there are a
+number of these AI labs, but OpenAI
+because they pioneered the consumerf
+facing large language model space that's
+chat GPT, the the chat bots that you use
+or you'll feed a search query into. Um,
+they really cemented themselves as a
+very meaningful first mover. And I think
+the important thing for all of you to
+understand is what this company was at
+the beginning that gave it that first
+mover advantage.
+OpenAI was founded as a nonprofit and at
+a time when other for-profit entities
+like Google already had a lead, already
+had more money, Sam Alman went to Elon
+Musk, who now has his own competing
+for-profit AI entity, XAI, and said,
+"Listen, I see that you're tweeting that
+this technology could be more dangerous
+than nuclear weapons. I agree. Uh this
+is a technology that you know if it
+becomes sophisticated enough and it's
+like its own competing species and if it
+falls out of alignment with its human
+creators you could have a Terminator
+Skynet science fiction scenario where it
+wipes us all out. You know it's
+integrated in our financial systems in
+our security systems. Um and the risks
+are very high. Uh and and by the way, we
+can get to this later, but there are
+more immediate risks, I think, that are
+already playing out and don't require
+you to buy into all of that fantastical
+high level of risk. On the basis of that
+pitch, Musk put in a lot of money. Other
+people put in money. This was founded as
+a 501c3. People, engineers, the best and
+the brightest, took pay cuts to join.
+And so the the standard by which Sam
+Alman asked to be judged was a scenario
+in which there needed to be an elevated
+level of integrity that this was a
+nonprofit with a board that could fire
+any CEO that wasn't trustworthy with
+this sacred mission to protect humanity
+and the actual structure and uh charter
+of the company were all oriented around
+we are not here to grow fast. We are
+here to do this safely. We will slow
+down if we need to to do it safely. We
+will throw in our lot with a competitor
+even if we have to to do this safely.
+And so everything that came after the
+questions about integrity, the fact that
+colleagues tried to fire Sam Alman uh
+over those questions of integrity, uh
+it's against this backdrop of a debate
+about what the standards should be for
+AI. Should it be like any other
+technology or should it be something
+that's special because of the ways it
+affects all of us?
+>> Well, what happened to these lofty
+ideals? You know, the initial embryionic
+stage of open AI, you know, there was a
+lot of behindthe-scenes drama. So, how
+did it shift from a nonprofit to the
+behemoth that is today?
+Well, this is where the personality
+trait that ultimately led to this
+attempt to fire Alman at and he was
+indeed fired for a few days before he
+was able to undo that. Um, this is where
+that trait comes in. We document how in
+an early period of the company where Sam
+Alman was saying publicly and to
+recruits, you know, this is a nonprofit,
+that is all it will ever be.
+Simultaneously,
+the internal communications of this
+company show he and his co-founders were
+talking about how to get out of that
+structure and really aggressively
+talking about growth. We have, you know,
+a journal entry from uh one of his
+co-founders, Greg Brockman, um saying,
+you know, okay, what do I want? How do I
+get to a billion? Um and even actually
+wondering in writing like, is this a lie
+that we're saying it's a nonprofit and
+then turning around and trying to make
+it into something else? Do you think he
+was disingenuous from disingenuous
+rather from the start? I mean, why and
+how did the worm turn or do you think he
+never really wanted to have it as a
+nonprofit? Ronin,
+>> well, I think an important thing for you
+all to know as you go into reading this
+is this isn't a hit piece where we're
+just carrying any old criticism for Sam
+Alman. In fact, it it was done with
+tremendous sensitivity and even
+generosity to to Sam. Um, as with any
+complex large-scale investigative story
+like this, there's a lot that doesn't
+make it into the piece. And over the
+course of a lot of intensive
+conversations with Sam, I really heard
+out any argument he had on any subject.
+Was there anything that was going to
+feel too sensationalist? I'm at a point
+in my career where it is more important
+to me for it to feel sober and
+even-handed and to note if something is
+a criticism that feels like it's being
+amplified by competitors with sour
+grapes
+>> or in headlines for clickbait. Right.
+>> Yes. Exactly. Um, which, you know, thank
+you all of you for giving this time and
+space and taking the time to read it.
+It's a long read because, uh, the market
+doesn't naturally reward that kind of an
+even-handed forensic appraisal. But
+that's what we did here. And on the
+question of whether this was
+disingenuous from the start, because of
+that approach, we carry a full range of
+interpretations. Um, there's Sam Alman's
+defense, which is like, look, I'm just
+adapting to changing circumstances. The
+race to achieve the next level of
+complexity of artificial intelligence
+requires an almost unthinkable amount of
+capital. I mean it is barely an
+exaggeration to say all the money in the
+world. Um this is a technology whose
+development is just sucking up every
+resource you can imagine because of the
+way making smarter and smarter models
+requires so much hardware power. Um it's
+exponential. And Sam says, you know,
+look, it became apparent that we needed
+more money and so this structure didn't
+work anymore. The problem is you then
+talk to a lot of the people who were at
+this company and they weren't in on that
+evolution. They were being told
+something different. He was saying
+multiple things to different people
+sometimes at the same time. And that is
+the trend line that we document. Sam
+Alman ultimately a few years after the
+founding of OpenAI, this was in late
+2023,
+was fired by board members and
+executives who simply felt he was lying
+too much. This is an extraordinary
+thing, Katie. Silicon Valley is built on
+hype, empty promises, right? Valuations
+that skyrocket long before there's a
+product that actually works for anyone.
+This is on such a scale that even with
+that baseline expectation where frankly
+I think we've entered an era where
+people just embrace as a cost of doing
+business a degree of dissembling, Sam
+Alman appears to have been doing it so
+much that it was almost all anyone could
+talk about after dealing with him. And
+we interview more than 100 people and we
+uncover hundreds of pages of internal
+records. A majority of those people
+really did say some variation on the
+theme of he's a pathological liar. that
+actually multiple people unprompted by
+us used the term sociopath and this is
+everything from um very minor things. We
+document earlier cases in his career
+where also there were efforts to force
+him out of jobs amidst allegations of
+dishonesty. And at one earlier startup,
+you know, he was claiming to everyone he
+was a champion ping pong player and then
+they played ping pong in the office and
+he was one of the worst players in the
+office. And and Sam, you know, his
+responses on each of these are
+documented in the piece. I hope you'll
+look. He says on that, I was probably
+joking. But then it also extends to
+serious cases. you know, before his
+firing, there was a situation where he
+assured board members that um the most
+controversial features of a new model
+had been safety tested. Turns out they
+hadn't when they looked into that. Um
+there was a breach where a new untested
+model was leaked into India to the
+public and he didn't mention that in
+hours of briefing with board members. Um
+we talk about how these concerns about
+honesty deepened the rift with that
+competitor I mentioned, Dario Amade.
+There's a moment in this piece where um
+there's been an investment uh from
+Microsoft. They're doing a big deal with
+Microsoft and Sam is assuring Daario
+Amade that Microsoft has not inserted
+any provisions that override the
+company's safety provisions that are in
+their own charter. And Sam says this
+provision that might threaten the safety
+concerns is not there. and Daario
+literally points to it and brings in
+another colleague to verify that it's
+there. And then Sam says, "Oh, well, you
+know, sure, but who cares?" There's
+another scene amidst their deepening
+fights where he calls in Daario and
+Daario's sister, Daniela, who also
+worked at the company and is also now an
+anthropic. And look, they're competitors
+now, but at the time they were inside
+the company, and this is based on
+contemporaneous notes and accounts. Uh,
+he said, "You're plotting a coup against
+me. I have it on good authority from
+this other senior executive. They called
+in that senior executive who said, "I
+never said that." And then Sam,
+according to the accounts we have, said
+right there in the room, "Well, I never
+made the claim in the first place." And
+Daniela said, "You just said it." So
+there was this situation where people
+really don't feel like they can stand on
+firm ground. There's two contingents.
+There is a group of people who say this
+is just so much lying that it's
+dysfunctional for any senior executive
+at a major company. And then there are
+people who say again AI is special and
+in this case it's about more than the
+fate of this one company. The whole
+economy is wrapped up in it. It has all
+of these applications that may affect
+all of our lives. We need people who
+have an elevated level of integrity and
+this in that context is not just
+dysfunctional, it could be dangerous.
+So, we carry that full range of opinions
+as well as Altman's defenses and
+explanations about where this trait
+comes from.
+>> Well, and I want to talk to you a little
+bit about his origin story in a minute,
+but how was he able to return to power
+in less than a week after being fired?
+Because I know you open up the piece and
+you have this drama, this big dramatic
+internal struggle with OpenAI's former
+chief scientist, a woman named Ilia
+Satskver
+>> man. Ilia Satsk,
+>> I'm sorry, a man. Sorry, Ilia Scott.
+Anyway, so so this was the chief
+scientist and he really was kind of
+spearheading, right, the effort to get
+Altman fired. So he gets fired and then
+he comes back in less than a week. How
+does he do that?
+>> So Ilia, the chief scientist, as you
+say, uh is one of these people around
+whom we just obtained all of these
+documents of what they were writing at
+the time. Um, and one of the kind of
+fabled documents around this is a set of
+memos, around 70 pages of them that he
+sent to the board, uh, that helped to
+precipitate the firing. It was a straw
+that broke the camel's back situation. A
+bunch of board members had been through
+these interactions where they felt Alman
+had concealed things, told people
+conflicting stories, been deceptive
+about safety standards within the
+company. Um but this set of memos which
+have not been reviewed in full before
+and which we look at and report on here
+in a newly detailed way. Um you know
+they have right at the beginning uh a a
+list that says Sam exhibits a consistent
+pattern of and then the first item is
+lying. And so you know Sgzgiver was
+acting at the behest of board members
+who had this mounting concern. It wasn't
+just him. Um, others at the company
+submitted material, screenshots of Slack
+messages and other pieces of evidence
+that they felt documented this
+persistent troubling pattern. And what's
+really interesting is exactly the
+question you ask. This incident is one
+that we led with because it's not just I
+think about Sam Alman. This was a moment
+where uh sort of noble-minded people who
+really wanted to champion the safety of
+this technology and keep things as a
+nonprofit ran headlong into the fact
+that this was becoming an incredibly
+valuable business. And it was a lot of
+very junior people on that board, a lot
+of people without experience in uh the
+cutthroat world of Silicon Valley
+politics. And they fell silent. uh they
+got what I think a lot of them now
+acknowledge to be bad legal advice to
+not fully explain the firing other than
+they put out a euphemistic statement
+saying he wasn't sufficiently candid
+>> I remember that
+>> we all wondered right and and in Silicon
+Valley people wondered so Microsoft
+which by then had this you know very
+intensive business relationship had
+invested a lot in open AI didn't get a
+call about it until essentially as it
+was happening still even then didn't get
+a full explanation so you had all of
+these you know, nuts and bolts,
+pragmatic investors running around
+saying, "What the hell happened?" Uh,
+and not getting answers and searching
+for overt criminality and not at all
+clocking this steady accumulation of
+alleged dishonesty and the question of
+whether it should matter a in general
+and b especially with respect to this
+technology. So Sam Alman was able to,
+and we tell the whole detailed story of
+this from his and other people around
+his perspective, get into a war room,
+rally all of those investors. There's
+some allegations, which you know we
+carry his disputing of those that there
+were sort of threatening calls made to
+opponents. Um, but the the main thing
+that happened here is capitalism
+prevailed and there were people who
+didn't have persuasive arguments being
+made to them about the safety concerns.
+Um, trumped Trump profit trumped ethics.
+>> Yeah. Well, I I think there are critics
+in this piece that certainly feel that
+way and I think there's a fair case for
+it. Uh there is no doubt that the
+community of investors around Sam Alman
+carried the day and this integral part
+of the structure that Sam himself had
+set up, right, that you would have a
+nonprofit with a board that could remove
+a chief executive on the basis of these
+kinds of trust issues. um that fell away
+and he came back and I do think Katie
+that it's it's an inflection point for
+the whole industry because it was a the
+death of the kind of situation where
+such a firing could have even happened
+and the fact that it was sort of swept
+under the rug. We talk about a law firm
+investigation that was actually kept out
+of writing. Um no one ever got answers
+and everyone just moved on and made a
+whole lot of money. Uh and they continue
+to. It does speak to the way in which uh
+when something is strongly incentivized
+by the economics uh the rest of us don't
+get the accountability and the oversight
+on the safety concerns that could affect
+all of us.
+>> Yeah. This opens up so many important
+questions about AI and regulation and
+ethics and um all those things that
+we're thinking about as this technology
+really starts to take over. I'm curious,
+Ron. And by the way, you should turn
+this into a book, don't you think?
+>> Not a bad idea. There is a lot of
+material that did not make it into this
+article and it's such a fast moving uh
+topic. I I do think
+>> Yeah, that's the problem. I that's the
+problem. I think when you're writing a
+book like this, by the time it's
+published, like a lot of this stuff
+there, it has to be constantly updated.
+But but I I'm curious about his origin
+story, right? He comes from a pretty
+liberal family from and he was raised in
+St. Louis. Is that right?
+>> That's right. and um you know so was
+there anything in his childhood I'm so
+interested in kind of what circumstances
+make someone the way they are and and
+did you did you discover anything that
+would have created a person who has such
+a really um challenging relationship
+with the truth
+>> well you know I approached conversations
+with him about this subject exactly the
+way you're just describing I was
+fascinated I of always feel for someone
+when I'm reporting on them and there's
+all this criticism of them out there.
+And so, you know, we had very bracing
+personal conversations where I said,
+"Listen, what what is your human
+experience of this?" Because for me, if
+so many people close to me said, "He
+lies all the time." It would be
+devastating and it would be cause for a
+lot of introspection and work on myself
+and trying to
+>> and I actually said like what's the
+story you tell yourself? How do you deal
+with this in therapy? Are you in
+therapy? And I think this goes to the
+wider question of of where does this
+come from? because his answer
+um you know I I don't want to
+editorialize too much but was not
+certainly the answer of someone who has
+deeply worked on this in therapy. Um you
+know there there was a lot of sort of
+west coast platitudes um about you know
+I like breath work. I've tried therapy
+here and there. Um not a lot of at least
+that he was willing to reveal to me. Um
+>> what about his parents Roman?
+>> His parents are both very wellconed. His
+father was a uh worked in real estate
+and was a housing rights activist. Um
+his mother is a a very well- reggarded
+and well-connected uh dermatologist.
+They had this you know suburban very
+comfortable uh life. Um he went to a
+very fancy prep school. Um, I think
+further to this, uh, sort of resistance
+to too much self-reflection on some of
+these topics, when we talked about the
+factors in his upbringing that might be
+have be formative in retrospect, he was
+quick to dismiss them, but also
+sometimes would slip in an
+acknowledgement that he was dismissing
+them uh, too quickly. Uh there's a a
+moment in this story where I ask him
+about how his sexuality cuz he's he's
+gay um might have formed uh any part of
+him and might connect even to this trait
+because his explanation of this is he's
+not denying that there's some truth to
+the charge. He is saying uh yes I've had
+some problems in this respect. He's
+attributing it to being a people pleaser
+uh and being conflict avoidant. And I
+asked what in his childhood might have
+led to that. And at one point he did
+say, um, well, I don't think my
+sexuality has informed who I am in in
+any pertinent way. Uh, there was this
+one time when I was, you know, uh,
+beaten up. And he essentially described,
+you know, a horrific hate crime. We
+didn't find any records of this. He
+hasn't talked about it before. Um, he
+didn't want to get into details about it
+on the record, uh, as we say in the
+piece. Um, but, you know, he has this
+quote where he kind of says both things.
+He says, "Uh, well, maybe that led to a
+a deep-seated desire to please and fit
+in more, um, and not antagonize people.
+Uh, but I'm sure not." And, you know,
+maybe it's something I just haven't
+fully reckoned with. Uh, but I'm sure
+not. I'm sure it's nothing.
+So doesn't sound like I mean he revealed
+much about
+or as you said that he's deeply
+introspective or has kind of and to your
+point like if people said that about
+most of us I think we would be comp
+devastated right or or you know and
+maybe that's part of the
+sociopathic
+behavior I don't Now
+>> I'm you know there there are multiple
+people who use this term unprompted in
+the piece. I'm always reluctant to I'm
+not going to you know armchair
+psychologize that specific diagnosis.
+And I think the piece reckons with the
+fact that especially against this
+cutthroat competition to win in AI which
+is very often how Alman frames it
+himself. Now um there's a lot of sour
+grapes. There's a lot of interested
+parties who are pushing criticism. So I
+really try to fil through that. I I
+think on the lack of introspection or
+apparent lack of introspection,
+one of the the analyses that we get in
+this piece is there's a a former board
+member um named Sue Yun who's on the
+record here talking about working with
+Sam and she says, you know, look, there
+are these people who say say he's
+Makabell and he's sociopathic. Um it's
+all this like evil mastermind approach.
+Uh, and then there's these people who
+say, I mean, really it's very few of
+them and it's his his ardent defenders
+he sends out, but like he's just a great
+businessman and this is a feature, not a
+bug. What she describes is a view in
+between, which is she says, I think it's
+overstated to say he's Mchaveellian. Um,
+she uses the term to the point of
+fecklessness. He is someone who believes
+the shifting realities of his sales
+pitches as he's saying them. and she's
+one of several people who talked about a
+disconnect with reality that is driven
+by some version of that trait, a kind of
+um prednatural lack of doubt or
+reflection.
+>> And I think it's interesting to reflect
+on how that trait is really rewarded by
+capitalism, right? If you look at the
+whole Silicon Valley hustle,
+>> it's it's very often this shell game,
+right, of pumping up a valuation and
+getting all this venture capital money
+and it's about promises. And we've seen
+one story after another where those
+bubbles burst. The problem here is that
+the bubble is now inshing the entire
+global economy.
+>> So the stakes are very very high. And
+that's where I thought it was worth
+spending this much of my life looking at
+this particular trustworthy question as
+a as a kind of um you know a metaphor
+for a much wider question.
+>> Does he have any governors around him or
+is he really surround himself with
+enablers? You know, I think the best
+leaders are people who don't surround
+themselves with yes men and women,
+right? somebody who listens to
+criticism, you know. Gosh, I can't help
+but think of like what what's happening
+in the White House right now when I'm
+talking about this, but who listens to
+con, you know, conflicting ideas and
+criticism and can evaluate things, you
+know, taking taking stock of a lot of
+opinions and is he it doesn't doesn't
+sound to me like he's that kind of guy.
+And I just want to pause and comment on
+that wider comparison to what's
+happening in Washington because the two
+entwine, you know, Sam Alman, one of the
+many about faces we describe in the
+piece is he compared Trump to Hitler. He
+was a staunch Democrat. Um, you know,
+he's gay, he's Jewish. He talks about
+taking from his Jewishness specifically,
+um, a fear of autocrats, um, and an
+aversion to overconentration of power.
+And now he is, you know, perhaps Trump's
+favorite tycoon. and you know talks to
+him with some regularity uh and more
+than that has publicly sung his praises
+and you know sits across from him at at
+state dinners. And so
+this is a situation where the
+transformation of Sam Alman has been
+embedded by a transformation in America
+and in policy. We are living in so many
+ways culturally in a post-truth moment
+>> and we are living in a moment where the
+kinds of guard rails you just asked
+about are falling away. writ large. Um,
+and the value you talked about of checks
+and balances and those of us who try to
+be good people and work on ourselves
+knowing that you have to have people
+around you to tell you no. Um, falling
+away. Uh, you know, I in my own work,
+I'm sure you have a version of this. I
+think about that constantly when I'm
+doing work that's this sensitive and has
+stakes this high. I I am always thinking
+about who do I have in my chain of
+command from you know um researchers,
+fact checkers, editors who are uh you
+know not overly impressed by me and are
+going to say
+>> and your and your co-au and your co
+co-author
+>> co-author in this situation you know
+people who will form a community around
+you and check you when your instincts
+are not your best. Um Sam Alman in that
+moment of coming back from his firing
+and undoing it also undid a lot of those
+structures. So one of the things we
+document is that he demanded the
+resignation of some board members that
+had moved to fire him in their place. he
+really actively was involved in
+selecting replacements and he brought in
+Brett Taylor who was formerly a Facebook
+executive and Larry Summers who's a name
+that some of you in the audience might
+know who's a former um treasury
+secretary
+>> president Harvard and and and featured
+featured prominently in the Epstein
+files but
+>> um he recently stepped down from the
+OpenAI board because of extensive
+Jeffrey Epstein emails including ones
+where he asked Epstein's advice on how
+to pursue a romance with a young uh
+mentee. Um but prior to that he was seen
+as giving credibility to the effort to
+bring Sam Alvin back and and both
+Summers and Taylor, this other new board
+member. Um you know we have the texts of
+of Sam and Satia Nadella, the head of
+Microsoft basically picking these
+people. Um and and actually Taylor had
+previously uh not been put on the board
+because he was considered too close to
+Sam. And what happened was in the place
+of the board that could ensure this kind
+of accountability, you got two me board
+members who exclusively oversaw an
+outside law firm investigation where we
+report it was it was kept entirely out
+of writing. Um, and you know, I'm a
+lawyer by training and I had a lot of
+very deep conversations with a lot of
+lawyers and other figures around this.
+Um, and the lawyers who defend this, uh,
+their arguments are carried in full. It
+is true that in some cases at private
+companies um legitimacy restoring
+investigations uh are kept out of
+writing, but you know the preponderance
+of legal analysis here Katie is that if
+it's being kept out of writing, it's a
+red flag. It's often done to avoid
+liability uh and accountability and that
+particularly in a case like this where
+it wasn't a for-profit company at the
+time. It was owned by a nonprofit 501c3
+and where the scandal was very public,
+which this was. It was the biggest story
+in Silicon Valley at the time. Um,
+there's a big contingent around it that
+I think with some grounds says this was
+a whitewash. This defeated the purpose
+of an outside investigation that was
+supposed to restore trust. So, so all of
+the mechanisms that could have been
+people to say no, people to ensure
+outside accountability,
+>> any guard rails, right? a lot of it has
+fallen away. Of course, the company
+would dispute that and say their board
+is more robust and professionalized than
+ever. Um, but I do think that was a
+significant moment where a lot of the
+efforts to keep AI as something that was
+governed by more than just economic
+incentives uh died.
+You know, uh I I know a lot of the
+people you spoke to describe him as
+uniquely persuasive, able to convince
+all these different audiences that, you
+know, their goals are the same as his
+and he's sounds like he's like a
+championship sch smoozer. I met him very
+briefly a few years ago. I found him to
+be very socially awkward. Um
+>> uh I don't know, maybe he was
+intimidated by me. Ron,
+>> it had that effect on us. Katie,
+>> I'm kidding. But I I'm just curious like
+did he seem like a confident guy? Was he
+did he smoo you? Did he try to work you
+over? You know, so much of interviewing
+a public figure like this is is
+performative, right? I mean, you don't
+really quite know. Are you getting the
+real person? Are you getting the guy or
+person or girl putting on a show, right?
+>> Completely. And it's funny that you
+frame it in this exact way because I've
+had internal conversations with, you
+know, my co-author and others in the
+editorial process about this very
+question. The answer is this is another
+one where opinions vary. My mom called
+me after reading this piece and said,
+you know, well, you know, I watch
+interviews with him and I do I just I'm
+charmed. he has this sort of boyish
+vulnerability and um you know and I read
+the piece and I I can't say that I
+dislike the guy which by the way I'm
+very happy that we constructed a piece
+that is so assiduously fair that people
+are coming out of it saying everything
+from like the facts show that this is a
+monster who should be kept away from uh
+having a finger on the button to uh I
+like the guy. We really try to stick to
+the facts. I think my own impression is
+I I I find myself recalling the comment
+about fecklessness from that former
+board member. Uh in many hours of long
+conversation,
+Sam Alman appeared to just get over his
+skis a lot with me. I perceive the same
+awkwardness you do, Katie. Um, and I
+don't know that it always redounds to
+the kind of sympathetic vulnerability in
+my experience of it that my mother
+talked about. Um, you know, in fairness,
+it's a unique context to be dealing with
+someone around a story like this. Uh, I,
+you know, there's less opportunity for
+charm when someone is uh, pushing back.
+And look, I won't talk about a lot of
+specifics of conversations that aren't
+in the piece, but even unground ruled, I
+can say there was plenty of contention,
+as you might imagine, around a story
+like this, and we talk in the piece
+about some claims that he can be
+retaliatory or have some menace to him.
+Um, I certainly saw aspects of Sam uh
+that, you know, were not in keeping with
+the charming boyish profile. Um, and I I
+think that uh I have a lot of sympathy
+for anyone who's in a situation like
+this where these kinds of documents are
+being surfaced, colleagues are saying
+these kinds of things and uh you know
+therefore I I have a lot of patience for
+it. Uh but I would not say that I'm one
+of the people who says some of the
+things that are said in this piece of
+like he's this Jedi of charm offensives.
+>> Okay. I I I want to ask you and and then
+I really want people to read the piece.
+you guys, Ronan and and his co-author. I
+want to make sure I get your co-author's
+name right.
+>> Andrew Morance. Is it Morance or
+Morance? How do I say it?
+>> Morance. Okay. Uh let's give Andrew some
+props here, everybody. But um who worked
+alongside uh of Ronin. But um I I want
+to just ask you a couple more questions
+and then I'm going to really encourage
+people to read your excellent piece. But
+let's talk about um the whole thing that
+happened at the Pentagon cuz honestly I
+kind of remember I kind of read about
+this but there's so much stuff hitting
+us in the face newswise but it was
+Anthropic said basically to the Pentagon
+we don't feel comfortable with the way
+you're using our technology. The guy
+who's the head of anthropic who's I saw
+he was interviewed by Andrew Ross Sorc
+in a dealbook. I'm not sure if you went
+to that. You must have watched a video
+at some point. He's he's he's very
+interesting and was very like jumpy and
+anyway kind of like a cat, sort of
+skittish. Um but but they pulled out
+right uh of the this Pentagon contract
+and Open AI was like we have some
+ethical concerns but hey we'll do it.
+Can you kind of just give us a sense of
+what hap what transpired there? Yeah, we
+report on this deeply in the piece and
+you know I I think I mentioned before
+that this is a long read. Block out some
+time if you can because we also did
+something that is not automatically
+rewarded in the current detention
+economy and we didn't frontload scoops.
+So it is purely narrative and some of
+the biggest stuff is towards the end and
+and one of those episodes is this
+standoff with the Pentagon where you had
+a situation where the Trump
+administration uh now so-called war
+department was seeking to overhaul its
+contracts with AI vendors and uh a bunch
+of those vendors just went along with
+what the Pentagon wanted and Anthropic
+which had this unique origin story that
+I mentioned earlier right it was formed
+by people open AI who were concerned
+that Sam Alman was not trustworthy
+enough and that the grave safety risks
+of this technology were not being
+safeguarded. Um and related to that when
+it came to the overhauling of these
+contracts, Anthropic was at the time the
+only vendor within the Pentagon's
+classified systems. So they were being
+used in critical operations and they did
+not want to back down on two red lines.
+They didn't want their technology used
+uh for mass surveillance domestically
+and they didn't want their technology
+used for autonomous weapons, weapons
+that fire without human operators. And
+these are both, you know, very real
+concerns. And we talked to a bunch of
+the Pentagon officials around this. The
+main under secretary who was responsible
+for these negotiations, Emil Michael, is
+on the record in the piece talking about
+it. When the going got tough in the
+negotiation with Anthropic, they felt
+Anthropic was being slow. They were
+pushing back. They didn't want to sign a
+blanket assurance that the Pentagon
+could do anything it wanted or viewed as
+legal. Um, what Emil Michael did was
+called Sam Alman and said, "Hey, we're
+having these problems with anthropic.
+You want to jump in?" And Sam said,
+"Yeah, I'm ready to jump in." And what
+is interesting about this story is that
+it's another case where Sam appears to
+have been telling different things to
+different groups of people. Um, he was
+telling the public, you he went on CNBC
+in this period. He was telling his
+company in memos and in all hands
+meetings, we support Anthropic in this
+standoff. Uh, we don't want to do
+anything to undermine them. and
+simultaneously he was privately
+negotiating to swoop in and take their
+place. Um, and you know, we carry
+OpenAI's responses in this. They
+describe it as uh noble that they
+thought if they could resolve the
+standoff by stepping in, it would spare
+some of the negative repercussions for
+Anthropic. Obviously, uh, anthropic and
+many spectators have disagreed with
+that. Um, but the long and short of it
+is that you had a situation where Sam
+was working against, it seemed, a
+competitor that he was simultaneously
+claiming to support. And the outcome of
+this is also one where we should raise
+some of these trustworthiness questions
+because Katie, the way that the deal
+that Sam Alman and OpenAI ultimately
+secured with the Pentagon has been
+framed by them is that they solved all
+the problems that they got in place
+asurances um that these technologies
+would not be used in these ways and that
+those two red lines that Anthropic cared
+about are safeguarded. But the great
+>> that
+>> well you talk to legal analysts who are
+wellversed in this field and they're
+really skeptical because basically they
+did sign on to the same language
+Anthropic didn't want to which is that
+the Pentagon can make any lawful use of
+this technology and we know from recent
+history that things like surveillance
+drag nets are uh deemed nominally legal
+uh you know by government lawyers and
+then undertaken and later there are
+questions raised about legality. So, you
+know, the piece does not carry water for
+anthropic. Uh it carries criticism that
+they too are engaged in a race to the
+bottom. Um but I think a sadness in this
+story is that there is just a shrinking
+space for them or for anyone else to
+stand their ground. And you know, there
+are critics who assert that Sam Alman is
+a part of that race to the bottom, a big
+catalyst of it.
+>> Yeah. Well, that's because he is sort of
+the leader of the pack, right? And you
+know, I know there were rumors, you
+touched on them briefly. And by the way,
+anybody asking, you know, you've got
+this award-winning journalist here,
+everybody. So, if you have any questions
+for Ronin about AI, about Sam Alman,
+about anything, please put them in the
+chat, and I I am here. I am I am your
+conduit. I'm your vessel. Anyway, um so
+there were a lot of uh insinuations that
+he had sexually pursued minors. Um, and
+I wondered if you ultimately found they
+appear to be untrue, but I wonder if you
+had any sympathy because the knives are
+out for Sam Alman in an unprecedented
+way just by virtue of the fact that he
+is in the position he's in. So, so I'm
+curious um if you can just speak to that
+and how you kind of got to the bottom of
+it and and again if you had any sympathy
+for him having to deal with some of
+these accusations.
+>> Absolutely. And I see Sue asking where's
+the article available. Um please do uh
+go to the new yorker.com and read this
+article there in full. uh it is very
+hard to actually direct people to the
+source of the information. You lose a
+lot of nuance when you read like a chat
+GPT summary on social media. Um, and
+also the entire business model that
+allows us to get this kind of detailed
+factf finding is dependent on, you know,
+read it. There's a few free articles a
+month um from the New York support the
+New Yorker. I mean, it's one of the
+places where just such top top
+journalism is done and we have to
+support these institutions and these
+organizations and companies like the New
+Yorker. though and and you guys, you
+know, I think about it, Ronan and worked
+on it and Andrew for a year and a half.
+So, uh, we can give our time to read the
+article in full um and and to support
+publications like The New Yorker. Okay.
+All right. Go on.
+>> Yeah. And it it is worth a subscription
+and think about other publications that
+do careful good work. You know, maybe
+that's ProPublica or somewhere else for
+you. And just
+>> Publica is awesome. The Atlantic is I'm
+still a big fan of the New York Times. I
+mean, I like The Economist because I
+like to get a less, you know, uh, US-
+ccentric perspective and the articles
+are short.
+>> Absolutely. To to all of that, you know,
+>> Financial Times. I think I'm going to
+get a a a subscription to the Financial
+Times, too. But anyway, go ahead. So,
+back to
+>> and feeling sympathetic. Absolutely.
+Yes. Um, you know, one of the ways in
+which this piece is over evenhanded
+throughout is I was also looking for
+things that were not true. Um, and
+whether I could knock those down. There
+is an astonishing thing happening around
+Sam, which is that some of these more
+evidence-based critiques comingle very
+readily um with things that are
+amplified by uh rivals that just don't
+seem to have a factual basis. as far as
+we found in months of looking. I have
+seldom been on a story with such a wild
+pivot. I'm looking at these honesty
+questions that got him fired. And I
+learned that at the time of that firing,
+everyone involved in asking questions
+about it was also hearing about claims
+that he pursues minors. Um I myself in
+the course of moving through these
+Silicon Valley circles reporting on this
+story um you know just getting calls
+from figures in this field was just
+hearing over and over again this
+allegation repeated like it was an
+assumed truth and you know Sam readily
+admits having had some you know younger
+uh partners or younger looking partners
+we talked all of the ones we talked to
+were of legal age you know and I was But
+what about his sister? Like his sister
+Annie I mean that's why I mean listen
+you've been into this for a year and a
+half but his sister Annie uh said that
+he or alleged that he sexually abused
+her as a child. So like what's that
+about?
+>> Well one of the things that makes this
+difficult to get to the bottom of is
+just this ecosystem of rivals amplifying
+things. We report on extensive dossas
+circulated by Elon Musk's people um
+where they're laying out the kitchen
+sink of all of these personal
+allegations. They're amplifying
+everything. They're amplifying the
+claims about underage boys. They're
+amplifying this allegation from his
+sister. They're amplifying uh claims
+that he killed a whistleblower. This is
+something that Tucker Carlson has
+championed. So, there is a lot of
+misinformation to cut through. Now,
+Annie Alman, Sam's sister, is, you know,
+a subject really for its own body of
+reporting. Um, it was important to me to
+acknowledge it, and I did talk to her
+for this story. Um, I'm very moved by
+her story. I think it's important to
+note that Sam's whole family has denied
+this. Um, she is someone who has
+acknowledged that these allegations are
+based in part on uh memories from early
+childhood recovered later in life.
+There's a whole body of complex detailed
+literature on how that impacts the
+credibility of claims um you know not
+just blanket uh recovered memories but
+early childhood specifically
+>> and obviously this is something you know
+so much about Ronan
+>> so deeply and I know that it requires
+great care and sensitivity and I
+actually you know made sure that I I
+called Annie and said listen I just want
+you to know while it is really important
+to acknowledge your allegation in this
+story. This is not an investigation into
+your allegation. I think it's important
+to sound notes of skepticism. Um, as I
+do around any allegation of this type,
+um, that's always been something I've
+said. It's something I said about Harvey
+Weinstein. It's something I've said, you
+know, when my own family has been
+affected by allegations of sex crimes.
+You want to apply all due skepticism to
+the claim. You want to listen closely as
+well and not ignore it. So that is
+mentioned and it is mentioned that it's
+been amplified by um rivals
+um and that is a the credibility of that
+claim is a complex question that I you
+know won't dispose of in a in a quick
+answer in an interview like that. Um but
+I think that we strike a very careful
+balance in the piece in terms of the
+treatment of it.
+So I want again everyone to read read
+your work but sort of a as a closing
+question Ronan I'm I'm curious you know
+you did this deep deep dive into Sam
+Alman's life right you spent a lot of
+time with him and as a result I think
+you you spent a lot of time really
+exploring the world of artificial
+intelligence
+and and the people who are controlling
+it right which is you know this this
+technology that is going to be
+transformative, but you know, toward the
+beginning of our conversation,
+you know, can be, you know, could
+potentially be incredibly destructive,
+right? Um, and so I'm just curious when
+all is said and done and you write this
+piece and you think about the future and
+you think about artificial intelligence,
+did you did you leave this whole project
+feeling scared shitless or were you
+feeling like
+this can this this ultimately is going
+to be a posit a net positive for the
+world? I'm just curious how you kind of
+think about this technology now that you
+spent all this time in it.
+>> I did have to form exactly my opinions
+on on what you outline sort of a new cuz
+I'm not a beat reporter on the
+technology and I was parachuting in. So
+I'm something of a pair of fresh eyes
+and I took a very evidence-based
+approach and I really was able to
+immerse myself in deep conversation with
+essentially all of the leading
+technologists in the field. It is worth
+acknowledging that some of the promise
+of AI is real and is here that it is
+transforming you know uh various forms
+of cancer diagnosis. Um
+>> no I'm I'm very very excited about AI
+and medicine uh but that's you know I'm
+I'm worried about it in other arenas.
+There's cancer diagnosis. There's
+there's drug development. There's uh
+early emergency weather warning. There's
+practical applications that are are
+proving out as real. That is not what
+the lion's share of the inflated value
+of this technology is driven by. um and
+a lot of the utopian promises that Sam
+Alman offers. You know, just the day
+that this piece launched, he was out
+there um you know, making what to many
+critics sound like fantastical claims
+about how this technology will change
+everything and everyone will be able to
+uh start their own startup that will
+solve all the problems in the world. You
+know, and I'm really only lightly
+paraphrasing. Um
+there are serious technologists that I
+spoke to who talk about the upsides that
+Sam and some of the other market leaders
+promise uh being years away. Um the risk
+is that a bubble could collapse before
+then and really affect all of us. Um, at
+the same time, I also emerge from this
+technology
+convinced that some of the warnings from
+the safety-minded folks that forced out
+Sam in the first place are more real
+every passing year. You know, that we
+have seen uh a rise in the applications
+of AI in battlefields. um that we have
+already seen what seems to be the first
+documented case of uh a drone going
+rogue without a human operator. Um that
+you know we are seeing already political
+disinformation uh being accessible to
+basically anyone in a cost-free way. Um
+you know there were like roocalls in Joe
+Biden's voice happening in the last
+election cycle um that may have been
+affected. Um, this is going to be a wild
+west of uh destruction of intellectual
+property structures that protect
+creators, um, new warfare applications
+including chemical weapons, uh,
+political disinformation and exposure to
+massive economic costs. I was going to
+say the job market, you know, I think
+that that I don't think our leaders in
+Washington or elsewhere have any idea
+how to make this transition in terms of
+what it's going to do to jobs and you
+know how it's going to change the way we
+live and work and exist, right?
+And and part of the problem here is the
+the transformation that we document in
+this piece with Sam Alman from a kind of
+doomsayer and a safetyist to a no
+holdsbred accelerationist is also
+happening in the wider policy
+environment. So the kinds of steps that
+we could apply the kinds of policy moves
+that we know can work from looking back
+to the history of the industrial
+revolution you know reskilling people
+subsidies for workers who lose jobs.
+these kinds of measures are just not
+being put in place and any effort to
+slow the technology, create in
+international consortiums that might
+cooperate around the technology, um it's
+all falling away. Anyone in Washington
+who invokes the well, we've got to go
+fast to beat China on AI prevails in
+every argument now. And you know there
+obviously there are people who would
+dispute this who defend the kind of
+accelerationist tendencies and say it's
+plenty of regulation already. But I
+think there is a really valid critique
+that we document in the piece that
+meaningful regulation is not coming. I
+do not emerge from this reporting
+feeling it's net positive at this point
+in time and I think the dangers are real
+and I think we have all got to engage
+with our representatives in Washington
+about this. There are simple steps. You
+know, in Europe, they have more
+mandatory pre-eployment safety testing
+for new models. Um, there could be
+written public records requirements for
+internal investigations of executives at
+companies whose products have these
+public safety stakes to prevent the kind
+of thing we saw with this investigation
+at OpenAI. Um, there could be a more
+robust national security review of AI
+infrastructure being built in
+autocracies, particularly autocracies
+that have leaked American technology to
+China. This is a big part of the piece.
+Sam Alman has pushed very aggressively
+to get Middle Eastern money for more and
+more infrastructure being put in that
+part of the world, including in UAE,
+where data centers are they're exposed
+to conflict. There's grave concerns
+about leaks to China. Um, this is all
+feeling very much like a runaway train
+and we are in a moment where the
+legislative branch is severely
+disempowered, but those guys still care
+about votes. And I think if we all stay
+attentive and we keep trying to get good
+strong information on this and we stay
+in touch with people in Washington and
+push them and force them to be engaged
+on this uh and not just be cheerleaders,
+there's a chance at getting more
+meaningful regulation in place. The
+fears that we feel in this piece are are
+often from people who think that
+incentive will only fully fall in place
+when something really bad happens. And I
+just hope we can head that off.
+Yeah, seriously.
+>> So many reasons to call the so many
+reasons to call the Capitol Hill
+switchboard at 20224
+3121. Everyone, I have that memorized
+from my days in Washington cuz I I would
+always call the switchboard to get to
+various offices. But, you know, I want
+to be uh mindful and and then I promise
+I'm going to let you go and I have to go
+too, Ronan. But Gretchen asks, and since
+I encourage people to ask questions in
+the chat, how much of Peter Teal's
+influence affected Sam Alman?
+>> Oh, it's it's a significant
+relationship. Um, you know, he we talk
+about him meeting his husband in um a
+hot tub at Peter Teals. Um there is a
+small community of insiders in this
+business. Peter Teal's tendrils are all
+over Silicon Valley and now all over
+politics. Um,
+>> right. Well, he's he's he's the one that
+uh really pushed for JD Vance, right?
+>> Yeah. Yeah. And and is espousing some
+frankly radical and anti-democratic
+ideologies and really uh funding
+structures to make those ideologies a
+reality. So, that's something everyone
+should be aware of. Um, you know, I've
+engaged with Teal across various stories
+and uh I think we need to be watchful, I
+would say, writ large about the power
+brokers in Silicon Valley and the way
+they're flooding Washington with money.
+Um, AI is a great example of this. All
+of those questions about regulation that
+we just talked about are directly
+affected by these tycoons
+just flooding politics with money. Um
+Sam Alman's co-founder, Greg Brockman,
+uh gave millions and millions of dollars
+to a pack that is designed to knock down
+AI regulation. Um, if you are a
+candidate running for office in this
+country right now, you are probably
+going to be on the hook
+trying to navigate so much of the money
+being from these AI companies because so
+much of the economy is from it. So, you
+really need to look as you vote for
+candidates at whether they are
+independent and stand up to Silicon
+Valley.
+>> On that note, Ronan Pharaoh, Ronan, so
+great to see you. Thank you so much for
+doing this with me. I know it was kind
+of a lastm minute uh arrangement, but
+I'm really grateful. And again,
+everyone, please read Ronan's latest
+piece in the New Yorker and and support
+the work of the New Yorker. And uh Ronin
+is also now on Substack and he's going
+to be he's going to be uh using that. So
+follow him on Substack.
+>> Brand new. I literally made the account
+today, but also have been just stating a
+strategy to get you guys good
+information directly through this
+platform. I'm so encouraged by seeing
+all of the productive discourse and
+questions here in the chat and this is
+kind of my first spin and I'm going to
+rely on Katie for some mentorship. I
+really love
+>> I'm going I'm going to have lunch with
+Ronin and he can pick my little brain.
+Meanwhile, I think I learned 12 new
+vocabulary words, Ronin, in the course
+of this conversation. Um, thank you so
+much again and everyone who joined us. I
+really appreciate you being here. Uh, as
+I said, follow Ronin and I'll see you
+tomorrow. We're doing a Substack show
+tomorrow. Uh, and we've got some
+terrific guests, including a former FBI
+agent, uh, who's high up in the FBI,
+very concerned about terrorism and the
+threat of terrorism and the leadership,
+current leadership at the FBI. Just
+something else to be worried about. Hey,
+come to me to just increase your anxiety
+level. That's what I'm really good at.
+Anyway, Ronan, thanks a lot. Talk to you
+soon. Okay, bye everyone.
+>> Bye everyone.

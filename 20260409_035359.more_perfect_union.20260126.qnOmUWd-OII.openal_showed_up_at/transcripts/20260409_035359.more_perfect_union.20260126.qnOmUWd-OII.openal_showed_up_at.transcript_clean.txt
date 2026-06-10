@@ -1,0 +1,222 @@
+# It is a bit scary to know that the most valuable private company in the world has your address and has shown up and has questions for you.
+
+(Host)
+Tyler Johnston runs a small AI watchdog. Last summer, he was out when he received an unusual text from his roommate.
+
+(Tyler)
+"There's someone at the door with documents for you."
+
+(Karen)
+It was a man with subpoenas from OpenAI, the maker of ChatGPT.
+
+(Tyler)
+They were asking for every former employee that we had spoken to and what we said to them, every congressional office that we spoke to, every potential investor that we spoke to.
+
+(Karen)
+Tyler is just one of many advocates suddenly being targeted. As public demands to regulate the AI industry have escalated —
+
+(Reporter)
+AI could put millions of Americans out of work.
+
+(Reporter)
+— Concerns around safety for kids.
+
+(Reporter)
+Customers could see their bills increased by 20 bucks each month.
+
+(Reporter)
+AI clips of fake reports even reaching the Oval Office.
+
+(Karen)
+Its biggest players are going to political war.
+
+(Alex Bores)
+They started texting my constituents.
+
+(Rebecca)
+Google was involved, Meta was involved, OpenAI was involved. The AI industry broadly is ready to play hardball.
+
+(Karen)
+So I started investigating their tactics. I found an aggressive playbook trying to silence critics, kill legislation, and remake government in their interest. I wanted to know: what are AI companies so afraid of?
+
+They can't have any flies in the ointment, which also means no regulation and no guardrails.
+
+(Karen)
+And what does it mean for the rest of us if they get what they want?
+
+When OpenAI subpoenaed Tyler, it tucked in an expansive demand that hinted at its real agenda.
+
+(Tyler)
+They wanted every single document and text message and email that we had that in any way related to OpenAI's restructuring.
+
+(Karen)
+Founded as a nonprofit by Elon Musk and Sam Altman, OpenAI had for years been raising billions of dollars from investors through an internal for-profit arm. Then, the nonprofit board attempted to fire Sam Altman, and investors panicked that they could lose all their money.
+
+(Catherine Bracy)
+In the wake of that, Sam Altman made some promises to his investors that they would remove the power and control of the nonprofit from the for-profit entity.
+
+(Karen)
+But many advocates, including Tyler and Catherine, stood in the way.
+
+(Tyler)
+We released an open letter. This was an open letter that was asking seven relatively simple questions, not opposing the restructuring in any way, but asking for more transparency about what their plans were.
+
+(Karen)
+But failure to restructure could force OpenAI to give up $20 billion from its investors. The company turned its influence operations into high gear under the leadership of a man named Chris Lehane.
+
+Whoever ends up winning on that ends up building the AI rails for the world. Like, that is a bit of a zero-sum game.
+
+(Karen)
+Lehane began his career in Washington, earning the nickname 'Master of Disaster' in part for helping the Clintons navigate the Monica Lewinsky scandal. He then pivoted to Silicon Valley, working at Airbnb and with the crypto industry.
+
+(Tyler)
+I think that OpenAI brought him on because they knew that they needed someone who was willing to be as fierce as possible.
+
+(Karen)
+Lehane stacked his team with former staffers and confidants of Gavin Newsom, Bill de Blasio and Kamala Harris. OpenAI hired a lobbying firm run by Republican operative Jeff Miller, who has deep ties to President Trump. It launched new philanthropic efforts, underscored its economic importance to California and threatened to leave the state if the restructuring was blocked. With Elon Musk also suing OpenAI for abandoning its mission, the company began to accuse its critics of being his puppets.
+
+They were essentially implying that we were a front for their competitors.
+
+(Karen)
+The aggressive tactics paid off. The subpoenas also revealed that this is just the beginning.
+
+I would have been happy to swear to the court that we are not funded by Elon Musk. But it became clear to me that this was not the only thing that they were trying to find out.
+
+(Karen)
+Among OpenAI's demands to other groups: documents related to advocacy on AI legislation.
+
+It's very difficult to imagine us figuring out how to comply with 50 different sets of regulation. That will slow us down at a time where I don't think it's in anyone's interest for us to slow down.
+
+(Rebecca)
+For some companies, I think they want a situation like social media.
+
+(Karen)
+Rebecca Bauer-Kahan is an assembly member from California leading AI and tech policy.
+
+(Rebecca)
+A law passed in Congress that said that they were not liable for any of the content put onto their platforms. Now they want that for their AI boom and they don't have it yet in Washington. And so they're going to try to ensure that states don't act as aggressively as I think our constituents want us to.
+
+(Karen)
+Over the last year, Bauer-Kahan introduced several AI-related bills. To protect California ratepayers from data centers driving up their electricity bills.
+
+(Rebecca)
+They sat next to me and told me I was going to kill the entire AI industry.
+
+(Karen)
+To help creators track copyright infringement by AI companies.
+
+Copyright in general is not the right lever to pull.
+
+(Karen)
+And to ban unsafe AI products for kids.
+
+(Rebecca)
+We started to see more examples of kids, frankly, dying by suicide as a result of these chatbots.
+
+(Reporter)
+This morning, ChatGPT hit with a scathing new lawsuit alleging it helped a 16-year-old boy die by suicide.
+
+He would be here, but for ChatGPT.
+
+As we got to the point where it was pretty clear that I had the support to pass it, it was one of the only times I've seen a huge ramp-up in lobby dollars to try to kill the bill. The tech industry has set up a lot of what I like to call shadow groups that actually do the lobbying for them.
+
+(Karen)
+TechNet, whose members include Meta, OpenAI, Google and Anthropic. Chamber of Progress, which includes VC firm Andreessen Horowitz, Google, and OpenAI.
+
+I think it's important that you are forthcoming about who funds Chamber of Progress.
+
+Absolutely. I'd like to say first that Chamber of Progress does not accept a vote or veto from any of the technology companies or our partners that we have on our board.
+
+(Rebecca)
+But you didn't answer the question.
+
+I can list all of them if you wish.
+
+(Karen)
+American Innovators Network, which has Andreessen Horowitz and Y Combinator, the startup accelerator formerly run by Sam Altman.
+
+(Rebecca)
+The argument they were making was that it would end all chatbot access for children, that they couldn't create safe chatbots by design for kids.
+
+Despite the lobbying blitz, the LEAD for Kids Act passed both state chambers with supermajorities. Companies didn't stop there. OpenAI even sent a demand for documents to the parents whose teen died by suicide after using ChatGPT — who were pushing for regulation. In the end, Governor Gavin Newsom vetoed the bill. In its stead, Newsom signed a different bill, which the tech lobby had successfully weakened. It only required chatbot developers to have a protocol, not guarantees, for preventing harmful content.
+
+(Catherine)
+The secondary bill gave the governor, essentially, an out. So it allowed him to sign a bill that said he supported child safety, without doing something that would sacrifice his relationship to the tech industry.
+
+(Alex)
+The American people want to have a say in AI. We don't think that this technology should be decided by five oligarchs.
+
+(Karen)
+Alex Bores is an assembly member in New York who's running for Congress. Last year, he found himself in a similar fight with the tech lobby over his own AI bill, the RAISE Act.
+
+The point of the RAISE Act was to put legally enforceable safety standards on advanced AI research.
+
+(Karen)
+It aimed to address extreme harms, like AI being used to create bioweapons, and would only apply to the largest companies. But tech groups pushed back hard.
+
+(Alex)
+They started texting my constituents. They started doing Facebook ads and Twitter ads. We also saw more explicit astroturfing. They also had a big effort to plant op-eds.
+
+(Karen)
+At one point, Andreessen Horowitz, a key investor in OpenAI, Meta, and dozens of other AI companies, sent him their critiques of the bill.
+
+(Alex)
+They sent a bill that was excluding every single company on Earth from the regulation and defining them as a small developer, and hoping we wouldn't catch it. They think they are the smartest people in the world and that no one dare regulate them.
+
+Bores' bill passed the state chambers and went to the governor's desk. A few months later, the AI industry launched several new super PACs with hundreds of millions to spend on political races. The funders include Meta, Andreessen Horowitz, and OpenAI co-founder Greg Brockman. One of the first targets: Alex Bores.
+
+Bores sponsored the RAISE Act, which creates a chaotic patchwork of state rules that would crush innovation.
+
+(Karen)
+The AI super PACs are modeled in part after Fairshake, a crypto industry super PAC that claims credit for taking down its enemies in the 2024 election. Fairshake spent close to $200 million and got what it wanted — a friendly Congress and federal-level pro-crypto legislation. Chris Lehane was Fairshake's top strategist and the Andreessen Horowitz founders were among its top donors. Its spokesman was Josh Vlasto, who formerly worked for Chuck Schumer and Andrew Cuomo.
+
+(Josh Vlasto)
+So we had a clear rubric. If you were pro-crypto and blockchain, we'd support you and help you win. If you were anti, we would oppose you.
+
+Now, the gang is back. Vlasto is running the Andreessen Horowitz-funded AI super PAC, with input from Lehane.
+
+(Alex)
+They announced their opposition really early. And then they put out a bunch of ads saying I want to regulate AI. I think there's two reasons why they would do this: it's the exact time that the governor is making decisions around the RAISE Act. They are trying to intimidate the governor.
+
+(Karen)
+The governor signed Bores' bill, but not before watering down portions of it in line with the tech lobby's demands.
+
+(Alex)
+The second reason is to scare any other candidate. The money that's being spent is a message. It is saying that if anyone takes on this issue, they will be facing a wall of cash.
+
+(Karen)
+With the super PACs, the endgame of the industry is increasingly clear.
+
+President Trump is planning to stop states from regulating artificial intelligence.
+
+(Karen)
+In December, President Trump issued an executive order designed to make states back down from AI legislation by threatening to sue them and cut their federal funding. But the order is a much less powerful rework of a full ban on state legislation that failed to pass Congress twice. Now, AI companies are trying to remake Congress.
+
+Having one federal approach focused on light touch and even playing field sounds great to me.
+
+(Karen)
+And it's not just through their own PACs. Greg Brockman and his wife Anna were the top donors to Trump's super PAC in the second half of 2024.
+
+(Catherine)
+It feels like their number one priority in D.C. is really just to institutionalize the status quo of, you know, zero regulation, zero accountability. They want the public to bear the cost of any of the fallout.
+
+The chatbot, or really in my mind, the people programming it, encouraged my son to mutilate himself.
+
+(Karen)
+But with the fallout growing, the industry's money may hit its limits.
+
+(Alex)
+Eighty percent of Americans want there to be some regulation on AI. Some people come to this issue concerned about how data centers are increasing their utility bill. Some people come to the issue because they're worried about their teenagers. Some people come to it because their job is displaced. And if your vote didn't matter, if your say didn't matter, they wouldn't be spending $100 million to drown it out. So this is not hopeless. Demand that the people who represent you, like me, are representing you and not representing Big Tech.
+
+(Catherine)
+If legislators hear that from their constituents, I know that they'll do the right thing, because I know that they're feeling it too. I know they see it in their own homes.
+
+(Karen)
+Public pressure may already be having an effect. In the face of outrage, OpenAI agreed in January to support a California ballot initiative that would enhance AI protections for children.
+
+California voters, regardless of their party, support stronger AI protections for kids, teens, and families.
+
+(Karen)
+While the measure doesn't go as far as the LEAD for Kids Act, it's stronger than any existing legislation.
+
+They are the ones who are on the back foot and are trying to make up for it with this money. But the power of the people is always stronger.

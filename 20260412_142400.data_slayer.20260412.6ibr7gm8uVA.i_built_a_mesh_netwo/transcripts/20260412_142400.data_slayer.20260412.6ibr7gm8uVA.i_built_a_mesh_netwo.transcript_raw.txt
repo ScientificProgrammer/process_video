@@ -1,0 +1,675 @@
+This node might be able to reach anywhere in the world, which definitely shouldn't be possible.
+Not because the antenna is magical, but because each node like it forms a mesh network automatically.
+Now, in my last video, I discovered something called Reticulum, an open-source internet protocol
+that might let you build networks without ISPs. And that video ended up reaching over 2 million people,
+which I'm sure caught the attention of even my most loyal viewers. There was just one problem.
+All those tests were between two nodes about this far apart. So yeah, of course it worked.
+They were basically touching. So naturally, people started wondering, "Cool, but how far can this
+actually go? Across a house? Across a neighborhood? Across a city? What about across the entire United States?"
+Because if the tech delivers, we might be able to build an open-source internet. One that doesn't
+depend on ISPs at all. There's just one rule for this video. The data must flow solely through the
+Reticulum network. So the challenge is simple. Can I be here in Florida and talk to someone in, say,
+Venezuela, all using Reticulum? Let's find out. Now, I've spent the last few years building what I
+like to think of as a parallel economy of tech. Basically, open-source, decentralized, and
+affordable tech that almost anyone can run. And the whole point is to get rid of subscriptions,
+gatekeepers, and middlemen, and put the power back into the hands of the people. And if you're watching
+this, you probably want the same thing I do, which is a network you don't need permission to use.
+So let's see if we can even get the first brick to hold. We're going to do two nodes, one text message,
+and no ISP. This is the house test. Quick heads up, today's video is sponsored by ClawStage,
+an open-source personal assistant that runs on a Raspberry Pi 5. But more on that later. Okay, so
+for our first test, we're just going to see if we can send messages across my house. Very, very
+modest test, but it'll lay the found works for some future, more exotic tests. So let me give
+you the mental model here. So for the home base node, we have a green Haven node, which is
+essentially a Raspberry Pi. It's running a fork of open-source routing system called OpenWrt.
+The specific variant is called OpenMana. And it has traditional Wi-Fi, it has Ethernet, but what
+makes it special is that it has a sub-gigahertz, 900 megahertz, Halow chip. Halow chip and Halow
+antenna, or sub-gigahertz antenna. And so what that lets us do is it bridges all those different
+Wi-Fi interfaces, but it's able to make a connection at a lot longer of a distance than traditional
+2.4 or 5 gigahertz Wi-Fi. So when we send these two Reticulum messages, they're going to be going
+across the Halow radio. That's why we're going to hopefully be able to get more distance. So
+Reticulum is actually not running on this router. It's just going to be making use of this router's
+network, and it's going to be a mesh network. There's technically backhaul that goes out to
+public internet, but that's actually not fundamental to what we're doing here. So
+it would be able to function either way. But we're going to be doing a little bit of internet
+testing here and there, so that's why I want to have that. So where does Reticulum run then? Well,
+Reticulum is going to run on the client. So my computer right here is going to be running a
+program called MeshChat, which is a messenger, but it runs the RNS service, which is actually
+like Reticulum itself. This is where we'll send messages, but it makes use of this network. So
+my computer is going to connect to this guy's regular 2.4 gigahertz Wi-Fi. The network name
+is green, and you can see I'm connected to it. My computer has no other connections, no ethernet,
+nothing like that. So the only way it's able to get a network connection is from this guy's Wi-Fi,
+and we're connected. We should be good to go. And what we're going to be doing is using the
+auto interfaces. With Reticulum, you can define interfaces on the actual hardware, like on a USB
+serial, on a radio itself. It's quite flexible and quite agnostic. But you can also just do this auto
+interface, where if your device has ethernet or Wi-Fi, it'll just automatically discover that and
+make use of that, which is nice. And I think this kind of keeps the overhead here pretty minimal. So
+mental model, base node, base network node, Reticulum client. Now there's nothing stopping
+us from, we could add other devices to the setup that also connect to this node here, but you need
+at least one Reticulum device, and then you need a network for it to make use of. And so that's the
+setup we have here. Now for node number two, because it's something that we're going to be
+moving with, like on the go, I'm going to use a much smaller device. What we have here is,
+this is technically the Helltech HD-T01, which is a, it looks like an MCU. It's not. It's actually
+a full Linux board. So this also runs OpenWRT. It doesn't run OpenMana, but it runs OpenWRT,
+same software as what's running on our Raspberry Pi here. It's not going to have the speed that
+the Raspberry Pi has because it's a much smaller footprint, but it does have the Halow radio. It has
+an Ethernet jack. It has an onboard 2.4, just like this, and it has our SMA connector. So what we can
+do is we can take another sub-gigahertz antenna, same sort of antenna we'd use for Meshtastic,
+MeshCore, et cetera, because it's at sub-gigahertz, pop that on here, and this is going to bridge to
+the Halow on the Haven. Now the question is, how do we get Reticulum working on this? Well, we don't
+need to get Reticulum working on this, the same way we didn't put Reticulum on this. This is just
+going to provide the connection to our network, and then Reticulum is going to run on another
+client app. The best sort of on-the-move app is an app called Sideband. It's a public APK,
+meaning you can just download it off the GitHub releases page. You can put it on your Android
+device. This device is going to connect to this. We're going to use the same sort of auto interface
+on Sideband. We're not going to do anything fancy there. And Sideband runs RNS, which is Reticulum,
+but it also gives you the chat interface. So we'll be able to send messages to our base node here. So
+I should be able to type on my desktop, receive messages on my Android, type on my Android,
+receive messages on my desktop. Now, a couple of things about this setup. This setup is not
+something you've probably seen a whole lot, but there's something that's kind of cool that I've
+been messing around with, which is this. So put this aside for a sec, but let's just take my
+iPhone. That Android device is something I use for testing, but my iPhone is something that I use day
+in and day out. And I actually forgot I had this around my neck. Something that's really interesting
+that you can do is if I go into my iPhone and let's turn this down a little bit. So I go into
+my iPhone and I turn off the network connection. So I'm turning off Wi-Fi, turning off cellular,
+and I'll turn off Bluetooth, just an airdrop. So this guy has no network connection.
+Okay. But what's interesting is if I go over to the settings page, what I can do is I can actually
+plug this guy directly into my router using a USB-C to Ethernet cable. And when I do that,
+we see Ethernet pop up here as soon as it's plugged in. And I get an IP address and all that good
+stuff. And what's cool about that is you get internet speeds like this. I actually didn't
+know that. I didn't know that the smartphone supported Ethernet like that. So are we going
+to be putting our phone in our home router over Ethernet? Probably not. But what we can do
+is we can take that same concept and we can actually plug our Halow board into our phone.
+And so that's exactly what I'm going to do here. So let me just situate this and turn on my phone
+here. Okay. So I'm going to just go over to settings and I'm going to do the same thing.
+I'm going to turn off Wi-Fi. So Wi-Fi is off. So what we're going to do is we're going to have to
+turn this guy on. And what we did just to show you up close here is that this guy has Ethernet
+like that. And we just plug it in like that. And all we have to do now is power this guy up.
+And I'm going to be using to do that an 18650. And actually it's similar to what we have inside
+the Haven. The Haven is actually 21700s, but this is an 18650. And what's interesting about it,
+it actually has a side USB-C port. Seems weird, but actually very practical. And I actually get
+a lot of use out of these. So I'm going to plug a USB-C in there. And then I'm also going to,
+if I can, I'm plugging this dongle in here just so that we can monitor the rate of the power,
+but it's definitely not needed. So don't get hung up on that. But like, for instance,
+it will allow us to see the energy drawn, things like that. And we see five volts,
+less than a watt of power draw, which is cool. Certainly not going to get those kinds of numbers
+from the Raspberry Pi. So good to get those numbers. So that router board is starting up.
+And what we're waiting for is for our connection to show up here. And I'm just going to give it
+a second. It usually takes a second for it to show up. And then on my computer over here, I have
+MeshChat going. I've already set up some messages with the device. So hopefully I can just keep
+using that conversation in MeshChat. But let's get this guy connected to this guy's network and see
+if we can't send some messages. And then I'll go across the house with this. And we should be able
+to get those messages to go. So one way to know how you're looking in terms of the network is to
+go to something like Wi-Fi Man. Wi-Fi Man will tell you if you're getting any reads yet. Okay,
+so we just saw it show up on the mesh. So that's looking good. No IP address because funny enough,
+the mesh is actually Batman ADV, which is layer two. So it's actually working off Mac addresses,
+not IP addresses. But that's beyond I think, what's relevant to this video. So now we should
+get a connection up here. I'm going to go over to settings. Okay, there it goes. You see the
+ethernet just showed up there. It doesn't give you a whole lot of details, because I don't know
+how many people are using ethernet on their phone. And we'll talk about you actually don't need to
+use ethernet. I just thought it was neat. This guy could actually use this guy's 2.4 just fine. And
+that's probably a better way to do it. And then this would just need to be like in your backpack
+or something. And you could just work off your phone like you normally would. But I just thought
+the ethernet part was cool. And we're exploring new, new ways to do things today. So anyways,
+so do we know if we have a network connection? So we go back over to Wi Fi man. When it says
+gateway there, that's the hell tech. And it's, it's got an IP address 10 410.3. You can see we're
+on a slightly different subnet than like traditional home network, right? In most cases. But
+you also see we have an upstream router. So the hell tech is a mesh node on the mesh gate, which
+is the haven. And because the haven has internet, we can do a speed test. And we should get a
+connection. Let's try just going to a website. Let's go to Amazon. And we can see that it does
+work. But we can see it's crawling. And we can also see that Wi Fi man doesn't even register it
+as a connection. So what's going on there? What's happening is we're using the one megahertz channel
+with for Halow, that's configurable. But the thing about one megahertz is it has the best range,
+but it has the lowest bandwidth, it actually caps out at I think it's around three megabits per
+second, but in reality, it's more like one or two. So I think Wi Fi man's kind of saying you don't
+have an internet connection for the most part. But if we change that to like eight megahertz,
+you can get as high as like 43 megabits per second, which is more akin to high speed internet.
+See if we can't get something it should be able to why is it giving us a hard time with that?
+Well, you know what we could do? Let's do an internet speed test just on like Google that
+should work. Come on, you can do it. Look at that internet speed. But the thing about one megahertz
+is like it's still pretty capable for like IoT stuff. And funny enough, I was actually doing
+like I would I facetimed Amelia yesterday using the one megahertz channel and she said the quality
+was like perfect, which is kind of bizarre. So you can do a lot with a couple megabits per second. I
+mean, it's orders of magnitude more than like Laura and Laura does text messages, GPS and stuff like
+that. So yeah, so it's and it's real internet, right? Where Laura is just kind of its own
+protocol. This Wi Fi Halow is like true internet. So yeah, those those upload speeds are pretty
+modest. But you can do a lot with that. And we can always tweak that later. So I wouldn't get
+too hung up on that. So let's do the reticulum stuff, right? So we have a mesh, we have two
+different devices. So on my computer, I'm going to go over to mesh check because that's what we're
+going to need. And on my phone, I'm going to go over to sideband. And we're going to see if we
+can't send a message. So sideband, you know, has runs reticulum has all the configurations around
+that but also has the actual messenger itself. So if I go to conversations, I see mesh chat,
+so I select that. And I'm going to say,
+Are you with me? And it's going to try to discover a path. Well, it already says it was delivered.
+And I see a dot over here. So actually, that was pretty, that was pretty quick. Let's see if we can
+do something a little bit more here. I'm going to do a voice note. So it's a high quality voice.
+We're going to do allow while using app. Testing 1234. This message is being sent across reticulum.
+And I think you send a note with that. It's gonna put voice. Okay, the note came across but where
+is voice message? Oh, I didn't click Save to message. Okay, let's do it again. Testing.
+This is a voice message that will be sent across reticulum. Stop recording. Save to message test.
+Okay, I think that's gonna work here. Sometimes you got to refresh. Yep, there it is. Testing.
+This is a voice message that will be sent across reticulum. Cool. So we just sent a voice message
+across reticulum. And then maybe we can do an image real quick. So we're going to do
+high res image, DCM camera. Alright, and there are our images. It says it was attached. I'm
+going to do IMG. Just showing you a little bit kind of what you can do with reticulum, right? So
+I just sent a message. It looks like on MeshChat, you kind of have to like navigate away and then
+navigate back. And there it is. There's our image. So all right, we're successfully sending messages
+across reticulum from client to client. But what's cool is the clients are powered by our Wi Fi
+Halow Mesh Network. And everything here is basically open source. So pretty impressive what we're doing
+already. But I recognize antenna number one, it's very close to antenna number two. So let's go
+across my house and see if we can't continue to get these messages to send. Mr. Bruno,
+code name Silver Fox. The world needs you, Mr. Bruno. We have a very important mission for you,
+Mr. Bruno. I know you've been in retirement for several years, Mr. Bruno. But you are the only
+one who can help us. We need your expertise for one last mission to save the world, Mr. Bruno.
+Will you help us? Will you help us, Mr. Bruno? Okay, so can we get a message to send through?
+Let's take a look here. So just go ahead and try something out here. So I'm going to do
+test 123. And it was immediately delivered. So that's really what we'd be looking for.
+And then I guess for fun, let's go ahead and take a picture of Bruno. Bruno's going crazy over there,
+but he's helping us with our mission. I just snapped a little picture of Bruno.
+So I should be able to come back over to sideband. And then insideband should be able to do one of
+these. We're going to do high res image, DCIM, camera. And then it's that, I believe. I'm going
+to say Silver Fox because that is his code name. There it is. Oh my God, look at that shot. Okay,
+so we are able to send messages across just fine. I can even open up sideband here. We see our
+picture of Bruno that we sent to Mess Chat. And then when I go back up to my office, I should see
+these messages on the Mess Chat chat. Oh my God, Bruno. So across the house, pretty trivial,
+actually. It seems to be working fine. So what we're going to do is we're going to push this
+a little bit further and we're going to try to do messages across my neighborhood, so like several
+kilometers, and see if this continues to hold. Okay, so now we're back up here and I'm just
+taking a quick look at Mess Chat. I'm going to refresh it. Okay, and we see that the messages
+came through. So there Bruno is fighting some imaginary... I don't even know how he contorts
+like that. But anyways, I don't think people understand just how disruptive this space is
+going to be over the next couple years with things like Leo from Amazon, Starlink is already a
+multi-billion dollar company, and just the advent of AI and LLMs when it comes to coding. I mean,
+the barrier to entry to this stuff just keeps going down and down and down. And we're here
+to take advantage of that. Okay, so across the house, we have been able to achieve. The next
+mission is going to be to send messages across my neighborhood. So in order to make that work,
+I want to actually upgrade our antenna setup here because my house is a cement brick. So yes,
+sub-gigahertz can penetrate dense material, but we're not exactly giving it kind of the best
+advantage by permeating the signal from within an enclosed structure like that. So what I want to do
+is I want to mount an antenna outside my house just so that it is able to go even further. So
+let's do that. Okay, so like I mentioned before, before we do the neighborhood test, I want to put
+an antenna outside my house because again, house is made out of cement bricks. So if I put the
+antenna inside, it immediately kind of hits the brick and starts reflecting and it can penetrate
+through the brick, but it's not going to be optimal if we could just get it on the other
+side of that concrete. I think we're pretty much going to extend the range considerably.
+So the way I'm going to go about that is this is a fiberglass outdoor antenna with 9 dBi gain.
+And this is, I think the center frequency is 915 for this one. I got it on Amazon. I think in
+retrospect, I probably would have gone with just a reputable antenna supplier because it's hard to
+verify if the antenna is actually tuned properly and what the center frequency actually is. And
+they probably expect most customers not to do that. So I've been getting good results out of
+this, but I would probably just go with a vendor that has a really good reputation as opposed to
+just sort of like a generic brand on like Amazon or something like that. But this has been working
+well, so we can stick with that. Now, I don't immediately want to start drilling holes in my
+house or the facade or anything like that because I don't know where I'm going to put the antenna
+ultimately. And this is really just for an initial test. So what I'm actually going to do is this
+antenna uses a BNC connection. And so it mounts a particular way. But what I'm thinking is this,
+I have a kind of a windowsill here. And what I think we could do is put a tension mount
+between the two sides of that. And so this will run because there's like two pretty solid concrete
+sides that we can set this up against. And it's a tension mount, so I don't have to drill any holes.
+And then what I'll do is once this is up, I can use something like this. This is just an antenna
+bracket mount. So I can use something like this to actually get the antenna on. And it's going
+to look something like, let me take this off. And we will set that up something like this.
+And then now that we have this like that, we'll be able to, if I unscrew this,
+it's not real quick, we'll be able to get this fiberglass antenna fixed onto this that comes
+down like that. And then all we have to do is put this nut on that will secure it in there.
+Okay, right. So you have something like that. Okay. And then, and then the final piece is this
+needs to run into the Haven node. So now because this is a BNC connection, and our Haven node is
+SMA female, we're going to need to convert those two. And I just have a BNC male to
+SMA male, which will work with the Haven. So apparently, the longer the cable, the more loss
+you have. So try to keep that cable as sort of short as you can. But I'm not sure what that loss
+looks like. I'm sure it's not. It's not that bad. Okay, so what we'll do is we'll screw
+in the BNC connection here. Right. So that looks like that. And then this guy just goes right into
+into the Haven node on top. And we'll put that right down here. So anyways, that's our mission.
+And this should allow us to get sort of a temporary antenna on the outside of my house.
+Okay, so first thing I do want to grab a chair so that I can actually reach outside the house.
+So I'm going to put this right here. And then now that I'm going to get up here. Okay.
+And then we want this to be like that. So let's make sure that that is like that.
+Come back in here. Come back over here. Okay, and then now we need to tension this up.
+All right, I think we're good for a temporary mount. So the next step is,
+let's get this, let's get this antenna put in here. And then the final step is going to be
+running this guy, running the BNC connector into here.
+So ideally we have a flat cable. We don't have a flat cable. So this guy's just going to get
+squished a little while we have this going, but that's okay. So, okay, so now we would just have
+to hook the Haven node up to this. So I'm going to have to probably put it over here. Let's see
+if it can reach there. Yeah, should be able to reach. So before I turn her on, that comes off.
+That is SMA female. And hopefully get this guy. It's barely going to reach right on the edge.
+Okay.
+Okay, cool. And then
+plug this guy in. Okay. And because we turned on the Haven node, I should be able to log in over
+here. I can. Looks like everything is up and running. We don't have any other mesh devices
+right now because they're powered off, but I should see some information here. Yep. 915 megahertz.
+And so now the Haven green node is making use of the fiberglass antenna with the 9 dBi that is
+outside the house. It's still not perfect because it's pretty close to the wall, but should give it
+a fighting chance once we start moving around the neighborhood. So anyways, we have our antenna set
+up outside. It is a high gain, a high altitude, probably, I don't know, 20 or 30 feet off the
+ground, which is pretty decent. But to run the neighborhood test, we're going to have to have a
+node that is mobile, a node that we can use on the go. And for that, I have something up my sleeve
+that I want to show you. Which brings us to today's sponsor. I'm not going to lie, when this
+thing arrived at my house, I didn't really know what to expect, but I was pretty sure I was about
+to experience a real life episode of Black Mirror. But once I started playing around with it, I was
+pretty impressed. This little guy is a Kickstarter that brings open claw and home assistant to a
+raspberry pie and pairs it with natural language understanding to give you a powerful local agent
+without buying expensive Mac minis or sending your chat data to Bezos or Tim Cook. Claw Stage runs on
+OpenClaw, which if you haven't heard, recently got acquired by OpenAI for reportedly around a
+billion dollars. So there's definitely interest in this space. But beyond queries, weather,
+and calendar integrations, OpenClaw has a hub of skills. So I decided to download a Tesla skill
+to see if I could control my car. OpenClaw guided me through the entire process, including creating
+a virtual key and provisioning access. Miko, what's the battery on my Tesla right now?
+It's battery is currently sitting at 53%, which gives you about 119 miles of range.
+Plenty for now, unless you are planning a spontaneous road trip.
+Miko, can you honk the horn on my car?
+Consider it done. So if you are anywhere near Smog, you should have just heard him growl.
+So that's kind of wild. And yes, I named my car Smog from Lord of the Rings. Miko gets the joke.
+So now I'm controlling my fantasy dragon car from open source software running on a $65 computer.
+This timeline is so dumb. And I love it. Anyways, guys, this project is really a great entry point
+into OpenClaw and their Kickstarter is kind of going bananas right now. So check it out in the
+link in the description below. All right, back to the mission. Okay, so I may have done the
+unthinkable. Yes, I have put a node on my car with a magnetized antenna like this. And it was actually
+kind of funny because this week I was washing my car. And I kind of forgot that I had this guy on
+here. And the guy had to had to take it off. Thankfully, he reminded me. Otherwise, this thing
+would have end up probably with a circuit fried on it. So anyways, the way this works is we have a
+magnetized antenna board here. This is currently running a kind of an experimental antenna. It's
+a right hand circularly polarized antenna built for the sub gigahertz frequency. Now, we'll mess
+around with that later. It has certain properties, it doesn't immediately give you like way better
+range, but it does have some certain interesting properties. Particularly if you pair it with an
+LHCP and do MIMO, then you can get a lot of new capabilities. But just for this test, we're going
+to use the standard linearly polarized antennas because if you're going to use these circular
+ones, and you want them on both sides, and the one we have on the side of the house is linear,
+so we're going to stick with linear linear. So I'm actually going to just unscrew this.
+And this is just a standard, standard SMA female connector. And so what I can do here is,
+if I reach into my pocket, we're going to go ahead and just use one of these stub antennas.
+This one actually works pretty well. It's not exotic, but it actually like when I do the RSSI
+reads and things like that, it's pretty good. So like you end up with, I don't know,
+pretty clean look. You're still running a cable into the trunk, which is probably not ideal, but
+it gets the job done. And I'll show you what I got going on on the inside. So if I just pop this.
+Okay, so throw the antenna in here. I don't need that right now. So the Tesla has a 12 volt,
+one of these, right? So I can just pop that in there. But what I then have is just a USB-C.
+So what I'm thinking is this will power the, the health tech that we got going on,
+that that is going to be our mobile node. And then right here, we can just see we have
+the SMA male connector, which will just go right into the health tech. So I guess,
+let me just show you that set up real quick. So really all we do is we don't need the battery
+on this guy now, because we have stationary power here. So I'll put that to the side. But
+again, right, we have our, this is the same device that we were using upstairs. It is
+this guy. We'll keep the power read on there because I like to just keep optics around
+the energy. So okay, so now we just need to hook up the SMA. Again, this is the one that's
+magnetized on the hood of the car. So we'll just get this in there like so if I can,
+I can get that to work. I like the right angle one because it just doesn't put as much pressure
+on as much strain on it. And then the USB-C will just go into here like so. Yeah, so it's already
+kicking out power. You can see like the LED going and all that stuff. Okay, so it's already going
+now. Okay, in terms of getting this connected to the reticulum client, like I still have my Android
+phone here. And we could ethernet it in like, like we did last time. And what that would look like
+is just getting well, we would just grab this cable here. We would plug that right into the
+Haltech. And then we would get the USB-C side. And we would just plug that into the phone like so.
+See if this works. Okay, we just saw ethernet come through.
+So we should be good there. Let's do a real quick test.
+Okay, Wi-Fi Man doesn't like that for some reason. Let's just go to Amazon, see if we can get any
+internet. Okay, so internet is working. It's slow, but that's what we'd expect. So let's do
+internet speed test. I think Wi-Fi Man just says, "Oh, it's so slow,
+it's probably not working." But it actually is working.
+Okay, so we do have internet, it's just crawling, which is fine. So let me show you guys another
+thing real quick. The Haltech actually has a 2.4 gigahertz Wi-Fi network. So if I actually take
+this out, right, so I just took out ethernet, but I go back over to network. So we're not at the
+mercy of that ethernet. I just thought that was cool. But we can also, if we go to Wi-Fi, so we
+turn on Wi-Fi, this guy should have a local, see Haltech naked, I call it naked because it doesn't
+have any enclosure. So look, we're already connected. And now if we do the same thing,
+we have internet. So you don't have to use the ethernet. This thing can just be in the car,
+and that's actually fine. Let's actually just do that. Let's get rid of the ethernet cable.
+So this guy's just going to be in the back, I'll be up front connecting over, it's 2.4.
+And then the Wi-Fi sub gigahertz antenna is what's going to end up doing sort of like the backhaul to
+our network that actually has the internet. Hopefully that makes sense. Okay, so before
+going out, I just wanted to validate that we're able to send messages right here. And we are. So
+let me show you the setup real quick. So again, this guy's connected to the green node upstairs,
+connected to the green node upstairs. It's running reticulum right here in an application called
+mesh chat. And I'm going to say, mesh chat, and we're just going to send that across, right?
+Says it was delivered right away. Cool. This guy, this guy is connected to the Hell Tech over its
+2.4 Wi-Fi. And you can see we just got the message, mesh chat. So they are talking over reticulum.
+And that's what we're looking for at this stage. And the antenna that it's doing that talking over
+reticulum is our, the antenna that's on top of the car, which is what we're looking for. So
+I can say, you know, hello, delivered pretty quickly. A little quirk of mesh chat is you have
+to, you have to like go away and then back. But there it is, right? So okay, so they're talking
+to each other. I'm going to leave this computer up in my office. And then this one, I will just
+take with me into the passenger seat and we will see how far we can send messages. And again,
+these messages are going over Halow at a one megahertz channel width. And yeah, we'll see how
+it does. Okay. So I'm literally in my driveway. Let's just make sure that we can get a message
+through test one delivered. Okay. So we're still in business. Okay. So we're about a thousand feet
+out. Let's see if we can't get another message to go through. Okay. Delivered, delivered at about
+a thousand feet. So that's pretty sweet. Okay. Just got another message through. You can see
+test three probably at about 1400, 1500 feet. And we're going to keep pushing it here. And yes,
+I have full self driving on. So all I have to do is pay attention.
+All right. It looks like we might've hit our limit here. Yeah. Just failed. Yeah. We hit a limit at
+about like 2000 feet. There's quite a few things you could do to like improve the range and stuff
+like that, but you're not going to get like orders of magnitude, uh, further range. Um,
+so I think like you get messages around your neighborhood that seems doable, even with the
+same setup we had before, like the wifi Halow, but how do we actually get messages across a city?
+That's like a lot more challenging. So anyways, that's our next objective. We got messages
+reasonably across the neighborhood. So now we're going to up the ante here and try to get some
+messages, uh, to the neighboring city. And just to reiterate guys, like the reason we're doing
+this here is that we have a really cool open source protocol on our hands. That's very dynamic,
+very capable, very flexible. It's called reticulum. Um, and frankly, there's a lot of
+interest there, but we're trying to figure out like practically speaking, like what could this
+actually look like in practice? Could it scale up to something like the internet? I mean, we know
+that the architecture of the meshing algorithm should be able to support that because it doesn't
+do repeat flooding and it does, it stores routes and it scales linearly and not exponentially.
+These are all very key things that frankly, aren't true of other mesh networking technologies,
+um, that are out there. Uh, like a lot of those mesh networking technologies kind of, uh,
+they basically stop working once you get past several nodes because, uh, the overhead just
+gets more and more complicated and complex. So technically reticulum, uh, kind of excels in that
+regard, but you know, can we spin up this sort of open source internet across the country that
+could actually go toe to toe with sort of the, uh, big ISP, big telco sort of legacy internet?
+That's the question. Theoretically it should be possible. Um, but, uh, you know, we want to kind
+of push it to the limits here on that channel and answer that final question. And then just like,
+why does this matter? It matters because reticulum is kind of like the blockchain of communication.
+No one owns it. It's decentralized. It's community run. It's unstoppable. It's uncensorable. Um,
+you know, countries can make it illegal. I mean, just like, uh, I think in the U S like
+the smart contract, a tornado cash, I think to, to interact with that smart contract, I think is
+technically illegal. So, you know, they can make legislation, but they can't physically stop you,
+which is interesting. Um, and they certainly can't impose their agenda on you, um, and kind of limit
+your action potential in the digital world, which is something that Mark, the, um, the founder of
+reticulum, the creator of it, uh, kind of, um, emphasizing it rightfully so. So, you know,
+for me, it's, it's good to see reticulum kind of getting the attention that I think it deserves.
+And I also think that, uh, you know, this is the, this is the next model, the V2 of communications.
+It's not going to be centralized. Everything's going decentralized and there's a reason for that.
+Um, but the power is that be the incumbents are going to push back just like we see, uh, with
+some of the legislation coming across in California around like three printers and stuff like that,
+solar 3d printers, cryptocurrency, um, decentralized mesh networks, these things
+all threaten the incumbents, but they benefit the people. So, you know, what side of that equation
+do you want to be on? I think it's interesting and helpful and useful and ultimately good for
+humanity to, um, to put the power back in the hands of the people. I mean, the whole part of
+one of the founding tenants of America is that, um, government should serve the people, uh, and
+people shouldn't serve the state. Right. Um, and you have checks and balances and you have, uh,
+decentralized, even within the government of having different States, right? Like we don't
+have to have different States, but we do so that they can kind of govern themselves. And then it
+kind of bubbles up into, um, you know, what makes up the, uh, the entire government of the United
+States that has worked pretty well for, for a hundred years. So anyways, um, this kind of just
+takes that ethos into the technological realm and brings it into the communication space specifically.
+So the main question I get from people is really just how to get started with all this stuff. So
+I finally put together a course called the parallel primer that walks you through the
+entire tech stack, the software, the hardware, the radios, the physics, and gets you capable
+with the technology. We build a node from beginning to end, and we even use some of the
+most cutting edge AI techniques to move as rapidly as possible. We remove all the fluff
+and just bake in all the hard one insights that we've learned over the years. So if you want that
+check out the link in the description below. So we were able to get a couple thousand feet,
+maybe one or 2000 feet around my neighborhood. I will say that all the houses in this development
+are cement brick. So it is pretty dense with obstacles for the signal to have to penetrate.
+So probably not ideal, but technically we were able to get a signal around the neighborhood
+and this is Florida. So there's always something going on with the weather, which honestly just
+makes this whole project feel a lot more necessary. So for the next test is the city test.
+And we're basically trying to see if we can get a signal to go from one city to the next.
+Okay, so usually when I go aerial, I try to use the kite. I like the kite because it's low tech,
+you can keep it up there for as long as you want. And frankly, it can go really high up.
+But there's literally no wind today. So we're actually going to use my drone, which should
+also work. So I decided actually, I'm going to bring my computer with me. So this is Amelia's
+computer. And this will be our base reticulum client. It's also running MeshChat. It's connected
+to the Green Haven node upstairs. And then the Haven node has the Wi Fi Halow antenna that's
+hanging outside the house. So that's the network that this is on. And it's we already have a
+conversation going with the Tesla node. So we're able to get messages through here. But now we're
+going to go several miles out kind of across the city. And we're going to see if we can't get a
+message back to our base node right here. So now we're going to run the city test. And I know some
+of you might be thinking, well, to get, you know, data across several miles, like just use ham radio.
+And I can definitely appreciate that. In fact, there's even a project out there called a red
+in which is amateur emergency radio disaster network. And that's basically the idea behind it.
+But the technology we're using is different than ham radio. So ham radio, first off, you need a
+license because you're going above the four watt EIRP that our technology has to adhere to. But
+second off, you can't encrypt ham radio. So anyone who intercepts those signals can can basically
+can get in on your conversations, your conversations are not private. Also, it's
+analog and it's not full internet. So what we're talking about here is the ISM band, which is
+unlicensed. It can be encrypted, and it's going to be full internet, we're leveraging the Wi Fi
+Halow protocol, but it's the same band as things like Laura mesh tastic, that sort of thing.
+So I think ham radio has a place and I'm definitely going to get my license. And I think it'd be
+really cool to make a IP mesh radio that was just like 50 watts or something. But we're at the mercy
+of keeping this unlicensed. But we also want to keep it secure. And that's what reticulum really
+excels with everything's like cryptographically complete. It's encrypted by default. So it has
+all that sort of privacy baked into it. So I have a script here that basically tells you the health
+and status of your mesh. So right now I am near my house. So you see all three devices by MAC address.
+And that beeping says that there's a good signal you see an SNR of 73.
+But this is what we're going to be checking. Once we kind of go several miles out to see if we can
+get okay, so now we can only see two nodes. That's because the gate fell off. We are now where we
+want to do our range test. We're out kind of in the middle of nowhere. We want to do our range test
+out here. We're going to pop the drone up. But we only see two nodes by MAC address. That's the Tesla
+node. That's the drone. And we hope that when the drone goes in the air that we get a third node
+here. That is kind of the hope here. So we shall see. Okay, so this guy is going in the air. Should
+be pretty intuitive as to what's going on here. With the HN650 we have another Heltech mesh node.
+We have the Muziworks 915 antenna. And this is going to be able to reach my base node at home.
+But when this is in the air, I need a way to get sideband onto this network. So that's where the
+Tesla node comes in. So we'll have a three-way mesh sideband. We'll run Reticulum. So none of
+these devices run Reticulum. Reticulum is just going to make use of this network. And again,
+because it's sort of protocol agnostic, it doesn't care that we're running everything over Wi-Fi,
+Halow, or whatever. And you could even do more exotic things with like mixing radios with Laura
+and Halow and traditional Wi-Fi and stuff like that. So yeah, it's a pretty cool setup. And
+if it all works, sideband on my phone is going to connect to the Tesla node over 2.4. The Tesla
+node is going to connect to this over sub-gigahertz. This is going to connect to my base node over
+sub-gigahertz. My base node is going to connect to my MeshChat desktop over 2.4. And we should
+be able to get a message back to base across the city here. Okay, so we're getting node number one
+set up here, which is the Tesla node. This guy is just going to sit in the car. And then we'll
+have another node. Let me just get this guy plugged in first. We'll have another node that goes into...
+Okay, we see this guy booting up. So okay, so that's the Tesla node. And the second node that's
+actually going to give us the range to be able to reach back to our house, which is about four
+miles away, is going to be actually this guy.
+Battery level is low. Aircraft will return to the home point in 10 seconds.
+Okay, so yesterday we tried to get the signal at about four miles using the drone. The drone
+wasn't going past 100 feet because I needed to update the firmware and I needed to log in. And
+by the time I did all that and then got it back into the sky, it was dying. It was like low battery.
+So anyways, we're back. We're going out to our spot today. But as fate would have it, we're having a
+bit of weather today. So hopefully, hopefully there's not so much rain that we can't get up
+there. But what's interesting is there's wind. So I might pivot and try to use the kite instead of the
+drone to get our node up into the sky. So let's see how it goes. All right, and then...
+So I want to show you real quick
+what we got going on here. All right, so we only got two nodes on the mesh right now.
+Kind of as expected. We're hoping when we get the kite into the sky though
+that we end up getting three.
+[wind]
+[kite flying]
+Okay, so you can see our kite is way up there. And what do we have here?
+We have our third node. So now the question is, can we send a message over Reticulum?
+Okay, so I spent the last couple days really trying to make the the Halow test work. We put
+a node in the sky with the kite. I tried all different things. I was able to get a three-node
+mesh working. The problem is the kite would see the home base node. It would spot it for like a
+second and then it would take like another 10 seconds until it would see it again, which just
+isn't adequate to actually send data. There's a bunch of things going on, right? Like when I was
+in Miami, when I was in Brickell, I would turn on these radios and I kind of took for granted that
+they would just kind of work. But the difference was I was hundreds of feet in the air in a high
+rise apartment. Now I'm here in a kind of normal home and I don't have the same sort of altitude.
+And yes, we have our antenna right there, but it's still on the side of the house. The house is made
+out of concrete. It's not above the house. There are other houses like in the vicinity that are
+kind of blocking the signal. So it's just not as advantageous, like a sort of vantage point
+as a lot of the stuff that I was doing when I was in Miami. So anyways,
+I think what we're going to do, by the way, I think if you did a better setup with Wi-Fi Halow,
+you could still get the cross city test to work. But I just I don't really have the time right now
+to get that working. We'll come back to it at some point. But what I'm thinking is because
+these antennas are all sub gigahertz, like same band as Laura, I want to pivot to trying Laura.
+Laura works fine with Reticulum. Actually, Reticulum doesn't care what radio you use.
+And Laura has a lot of special properties that really make it the king of range. It can operate
+below the noise floor, which Halow just can't do. So it can like tease out the data as long as it
+can identify a pattern, even when there's just tons of noise around it, which is something that
+yeah, Wi-Fi Halow just can't do. So we're going to try Laura. And also with Laura, you have a bunch
+of like kind of levers that you can tweak, like things like coding, right, spreading factor,
+bandwidth, stuff like that, that you can kind of optimize the signal to go even further.
+So we can use the same antenna, I just need to set up a bunch of
+Laura nodes, which is going to take a second. And then hopefully we can get a message to go
+across town. Now the trade off is we don't get quite as much bandwidth. It's not real internet.
+But that's fine. We're just trying to send messages over Reticulum. So anyways, we're going
+to get working on setting up those nodes and seeing if this doesn't solve our problem and
+seeing if we can't finally send a message across town. So I'm still trying to get these devices to
+work. So I'm trying to, because I don't have the highest power devices, or even frankly,
+like the latest chips, I'm going to try to get Reticulum provisioned on some of these devices
+here so that we can try to get this cross city test working. I've been having a lot of trouble,
+but I think it all has to do with like my setup, because technically, it should all work the
+physics of Laura and all that. So anyways, still chugging along here, but putting Reticulum on a
+couple new devices here to see if we can't improve our range. Okay, so just wanted to give a little
+update here. So we've switched over to Laura, I have the R node running here. And it's actually
+hooked up to our external antenna that's outside the house. It's a high gain omnidirectional antenna.
+But right now I'm just doing a little like local troubleshooting. We have our other device here.
+This is another essentially it's an R node, a different board, just messing around different
+antennas, but I don't think antennas are the issue here. And then two mesh chat clients.
+And I'm just not getting the range that I should be able to get these two to talk like it when I
+go out to the neighborhood, but I should be able to go much, much further. So I'm not 100% sure
+what's wrong here. I'm starting to look into like the RSSI, which is the signal. And I might recruit
+some other boards, I do have some newer boards that have higher transmit power. But something
+and like we can also configure different things like the coding rate, the spreading factor.
+What's the other one, bandwidth, stuff like that. So I'm going to keep tweaking here. But Laura
+should be able to go much further. And like with mesh tastic, I've been able to get way more
+distance. So I'm not 100% sure what's going on here. But I'm going to continue to iterate here
+until we can get the city test to work. Okay, so I didn't have much luck in my neighborhood. I
+don't know what it is. I think there's a lot of dense cement brick houses. And
+yeah, it's just, it's a lot of cement to try to penetrate. So what I'm going to do instead is
+there's a big long straightaway section in a certain part of my town. I'm going to try to
+set up one node on one side. And then I'm going to drive the car down this straightaway and see
+how far we can try to get a signal. And there's no major obstructions here. Like there is a bend.
+So it's not perfect line of sight, but it should be better than the neighborhood I'm hoping. So
+we'll see. And then this time, so we have two Haltech v4s, which are running 27 dBm. We've
+changed the parameters so that the bandwidth is 125 kilobytes. The spreading factor is 12,
+which is the highest. The coding rate is eight. And yeah, I think those are the major things for
+the parameters. So we're really trying to optimize range here. And we're just sending text messages.
+So I'm going to go place the first node and then we can drive with the second one attached to the
+car and see if the messages keep coming through. We have a script on the Haven node that's driving
+one of the reticulum instances. There's a script that sends a ping every 60 seconds. So as long
+as we get those pings, we are connected. Okay, so I have it elevated. It's probably about seven or
+eight feet. And I'm on a bit of a sort of berm here. So I'm hoping that I'll be able to get a
+signal going all the way down there because there's really no major obstructions. So that should help
+with Laura not having to penetrate all this cement brick. And then on the car, we just have the Muzi
+whip. And it's going to be right on the back of the car like that. Okay, so I'm in the car.
+And I don't want to disrupt this too much. But we do have ping 23. So we should continue to get
+ping. So I'm gonna start driving out. Okay, we are now driving and we just got another ping RSSI was
+negative 44, which I don't think is too bad. And SNR was five dB and that was ping 25. Okay,
+so we're at about a half a mile. And I just got a ping. ping 26 at about a half a mile.
+Okay, we just got ping 27 at one mile, negative 85 RSSI and negative 3.2 SNR. So we'll see how
+far we can keep pushing it. So I'm going to try with the alpha on there. And then I'm also going
+to go in a different direction and see if we can't get more distance. Okay, so putting it on a little
+berm, we were able to get over a mile. The problem is, if I go in one direction, then there's a school
+between me and between the two nodes. If I go in the other direction, then there's a factory between
+the two nodes. Metal always acts as a bit of a Faraday cage. So I'm going to try one more thing.
+So I'm not going to elevate the node, but there is a straightaway that's basically unobstructed for a
+long period. I'm going to try just putting one node on one end and then driving out the other
+end. And the only potential thing that might be an obstacle is other cars on the road. But anyways,
+this is the last thing I'm going to try. So we'll see. All right, finally having some success. So
+we just got a message at one and a half miles. RSSI is negative 92, which is not great. SNR is 3.2,
+which should be okay for now. And that was ping 67. Okay, we just got two miles. Ping 68. SNR is
+4 dB, which is pretty good. RSSI is negative 91. So that's two miles with line of sight. Just got
+another ping at 3.4 miles. So finally having some success. We're at negative 6.2 SNR. So I'm
+expecting it to fall out pretty much any time now. It's just interesting. This node isn't even
+elevated. I mean, it's elevated on a tripod, but it's in a flat. It seems to be a little bit more
+sensitive to obstruction than needing the elevation. So I don't know. You never know
+with these things. There's always some element of randomness, but good to finally be getting
+some success here. Okay, so it seems like it really likes line of sight. We knew this, but
+I had had success in the past with like reflection and urban settings. So I was a little confused.
+And also elevation didn't seem to help us as much as I thought it would. So just interesting. I'm
+going to continue to play around with like these antennas and radios and positioning and stuff
+like that. Ideally, I would have liked to get one on a kite or a drone because then you can really
+just like crank it as far as you want. But anyway, so we got three and a half miles that dropped out
+on my way out. Then when I was coming back, it reacquired a signal at about three miles. So
+I'm pretty happy with that. Is it a true citywide test? I don't know. Depends what city we're
+talking about. But I think you get the gist there. And if you can get more line of sight,
+you would get more range as well. So I feel pretty confident about that. So I think the next thing is
+how would we get it from one state to another state or like a large? How would we get it across
+the country? I'm here in Florida. And if I wanted to talk to someone in California, could we use
+reticulum to do that? That's the question. OK, so with the Lora radios, we were able to get three
+and a half miles. It wasn't a perfect test, but it was just basically on an open road. So
+decent test. No elevation, no altitude and really no exotic setups there. But if we did the math on
+that, right, if we assumed a three and a half mile hop using Lora nodes, distance from here to say
+even California is twenty five hundred miles and we would need eight hundred nodes to achieve that
+connection. And although theoretically you could stick a Lora repeater in the sky like a CubeSat
+to get around the curvature of the earth, but you'd still probably need multiple satellites to cover a
+full coast to coast path. Or you can do what projects like MeshSat are exploring, which is to
+use the Lora mesh, a gateway over USB serial and then end up connecting to something like an
+iridium modem so that one gateway can carry a message for the whole mesh. But again, you need
+to broker an agreement with iridium and you do have to pay for the right to use their infrastructure.
+Still a cool setup I'll probably explore in the future, but not exactly something I can get up
+and running with the gear I currently have. At this point, I'm staring at the math and thinking,
+cool, all I need is eight hundred nodes, a space program and a small national budget to get this
+to work. But then a thought came to me because here's the interesting thing about Reticulum.
+It doesn't actually care what kind of network the data travels across. So, you know, Wi-Fi,
+Ethernet, tunnels, Lora, Reticulum doesn't care what the link is. And even something ridiculous
+like Morse code theoretically could work. Basically, if it can move ones and zeros,
+Reticulum can route it. To Reticulum, they're all just links. So instead of building hundreds of
+radio nodes across the country, what if we just connect two distant mesh networks together with
+a tunnel, one here in Florida and one in Venezuela with my editor Adolfo? But how would we actually
+do that? So to bridge that gap, we're using something called Tailscale. Now, we all know
+the Internet is just a series of tubes and building on that example, Tailscale is basically
+your own private set of tubes. Tailscale creates what's called a mesh VPN. And that just means that
+multiple machines can join the same private encrypted network and communicate directly
+with each other, which if we set up correctly, could potentially give us all the long haul we
+would ever need in our network. In fact, I already use a setup like this. So for this YouTube channel,
+I've struggled for a long time to build a good workflow with my editor Adolfo,
+who lives all the way in Venezuela. We've used things like Adobe's Frame.io, we've tried remote
+storage, cloud tools, etc. Moving hundreds of gigabytes back and forth was constantly breaking.
+So I ended up building a NAS in my home lab running an open source OS called TrueNAS based
+on Linux. And then I installed Tailscale on it. Now, Adolfo just connects to my private tail net
+and through some encrypted VPN tunnels and Samba black magic, the drives show up on his computer
+as if they were local to him. So when I drop a file onto the NAS here in Florida, it virtually
+instantly appears on his machine in Venezuela, like it's sitting on his own hard drive. And so
+far that's been getting the job done without issue. So one of the really cool things about
+the NAS that we've set up is that I can generate a piece of content like a video, say for instance,
+with my phone. So I just hit record, I'm snapping a video right here. And what I can do is once I
+have that content ready to go, I can go ahead and airdrop it over to my computer. And that uses
+Bluetooth and that should show up in my downloads. So that puts it onto my computer. But my NAS,
+which is over here, has a bunch of different drives. And my editor Adolfo over in Venezuela
+has Tailscale. So what's cool about that is if I take the video that I just recorded,
+and I pull it over onto the NAS, he should be able to see that show up on his NAS in real time.
+And go ahead and play that Adolfo. I think it's because it's a .mov. Oh, nevermind. There we go.
+Okay, so it took a second there. But so I don't have to do anything. All I have to do is take my
+files, put them on the NAS, which is right there. And he's able to access and watch and edit all
+that content from wherever in the world because he just connects to my tailnet. I have Tailscale
+running on my true NAS server. And it really makes our whole editing process a lot faster and a lot
+more streamlined. So that's just like one example of how you could use mesh VPNs to do some really
+creative things. So I thought if that works for sending videos, there's no reason it shouldn't
+work for connecting two disparate mesh networks. Now to clarify, this is not the public internet.
+Now technically, the packets are still traveling over existing internet infrastructure, but they're
+not traveling over the public internet in the way most services do. They're moving inside a private
+encrypted network. Think of it like a really long encrypted ethernet cable stretching across the
+country or in this case, across the world. All the messages are encrypted and addressed inside
+Reticulum. So the underlying infrastructure can carry the packets, but it can't read them. And
+if you don't want to rely on a private service like Tailscale specifically, there are completely
+open source ways to do the same things using tools like WireGuard or HeadScale, which lets you run
+the entire coordination layer yourself. But the concept's the same. And what's cool is over time,
+those links don't actually have to be internet tunnels. We could end up using long range radio,
+satellite, or thousands of community nodes. And then it's at that point that the internet becomes
+optional. So if everything works, a packet should leave my LoRa node here in Florida,
+hit my computer, travel across the Reticulum network over Tailscale,
+and appear on a terminal in Venezuela on Adolfo's screen. So let's try it.
+[SOUND]
+Okay, so this is where we are stringing everything together. And we're going to send a message
+locally from here in Florida, actually all the way to Venezuela. And the current setup that we have
+is the origin node is a LoRa Heltech node. So we're sending the message over LoRa. We're using
+the R node software. The client is Android, which is running Sideband. And that's going to send the
+message to my computer, which has another R node going. But then my computer has another interface
+that is connected to TCP/IP. And that TCP/IP is my Tailscale IP address. Adolfo, who is in
+Venezuela, is also connected to my Tailscale instance. And on his computer, he has a TCP
+interface listening on my Tailscale IP address. Now, what you're seeing on his screen right now
+is our chat, but we haven't sent any messages yet. And my goal is to send a message right from here
+to hop to my R node on my computer, to hop across an encrypted mesh VPN Tailscale,
+and land in Venezuela all over Reticulum. So you're going to find out in real time right now
+if we can make that happen. So I'm going to go into Sideband here, and I'm going to
+go into my messages. And I'm going to see if I can't send a message.
+So actually, Adolfo, can you click the button Announce Now?
+Oh, anonymous peer, anonymous peer, anonymous peer.
+See? Yeah! So that was the message here.
+All right. So we just sent the message sent from Florida from this Android phone that has
+no external network via the R node over this circularly polarized antenna to our R node over
+here, which is connected to my computer, which is connected to our Tailnet instance that connected
+to a mesh VPN, and then tunneled its way all the way to Venezuela to Adolfo's computer on his
+MeshChat instance all over Reticulum. So I think I'm confident to say that Reticulum is flexible,
+it's powerful, and it really can go toe-to-toe with a lot of the latest cutting-edge technology.
+And it's just really cool that everything's encrypted end-to-end. Sure, it went over the
+internet, but it went over a private instance of the internet. So it didn't go over the public
+internet. And the idea here would be over time, we can sort of phase out our reliance on traditional
+ISPs. But until we're there in terms of infrastructure rollout, and having satellites,
+and cell towers, and all that stuff, we can still use it to kind of complement the networks that we
+set up until we're able to be more independent. But yeah, it's just really kind of amazing to be
+able to get this to work like that. And the possibilities kind of definitely get the wheels
+turning in my mind about where this technology goes next. But so anyways, we got our message
+across my house, across the neighborhood, across the city, and now across the world.
+Part of the path crossed the internet, but not the public internet. It crossed a private encrypted
+mesh VPN between two nodes, which means we're borrowing the infrastructure, but the network
+itself is ours. But replace those links with radios, satellites, or community nodes, and suddenly
+the internet becomes optional. And if we end up going the way a lot of other countries have,
+having another internet might not be optional. Because a free decentralized mesh immune from
+state coercion is going to be pretty valuable in the coming years. At the end of the day,
+this channel has always been about two main things, which is communication freedom and running
+it on hardware that you actually own. And Reticulum might be the most serious answer to both of those
+things that I've ever tested. And with Reticulum, we don't need permission, we just need a path. So
+let's make a path. Because there's a reason Cyberpunk is having a major comeback right now,
+and it's that the barrier to entry in this space is just collapsing. Radios are getting cheaper,
+open source projects are deploying AI to build applications the legacy incumbents would never
+be able to approve of. Devices get more capable with each passing day. And all of this has me
+stuck on one idea that I've been turning over for the last several months, a bold idea that will
+threaten some and inspire others. But nonetheless, an idea I believe whose time has come.
+Anyways guys, and as always, thanks for watching. For more, click here.

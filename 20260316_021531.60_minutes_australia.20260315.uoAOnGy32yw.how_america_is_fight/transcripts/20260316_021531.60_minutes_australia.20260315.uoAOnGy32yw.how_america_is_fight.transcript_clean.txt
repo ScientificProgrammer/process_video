@@ -1,0 +1,247 @@
+# Coming Up on 60 Minutes
+
+"We didn't start this war, but under President Trump, we are finishing it."
+
+Think the mayhem in the Middle East is bad? Well, watch out. There's worse to come.
+
+"It is an autonomous fighter jet."
+
+"No pilot."
+
+"One of the most ominous things I've ever seen."
+
+How weapons with artificial intelligence—up to 320 km an hour. It's a kamikaze drone—can now hunt and kill for themselves. The whims of an algorithm decide to blow up half of Sydney. That's next on 60 Minutes.
+
+If you think war is hell now, that the deteriorating mayhem in the Middle East is a frightening scenario, then I'm sorry to say, you ain't seen nothing yet. The modern battlefield is changing at a pace the world has never before experienced. It's being driven by technical brilliance, the rise of artificial intelligence. The fact is drones and robots controlled entirely by AI are no longer the product of someone's imagination. These weapons can now hunt and kill for themselves. But does all of this no doubt impressive know-how mean we're protecting humanity or accelerating our own extinction?
+
+In the remote canyons behind Los Angeles, we're in the middle of a top secret test battle of AI weapons. Instead of soldiers, robots are doing the fighting. Lethal drones controlled by an artificially intelligent brain hidden in this ATV.
+
+"Things like unleashing a fast attack drone. You are going to see every single adversary in the air on the ground."
+
+They almost look like toys, but autonomous robotic warfare is no longer the realm of science fiction. And these drones are dangerously real weapons of destruction.
+
+Their creator is the new age warlord running a private military tech company. Palmer Luckey.
+
+"Robots probably will make a mistake, but people make so vastly many more mistakes. I can't really get too worried about the robot side."
+
+"Do you trust robots more than you trust humans?"
+
+"I trust our robots more than I trust other people's humans. Everything that would be the first target that China or Russia would go after in a war, we should be manning with robots, not people."
+
+Mass drone warfare has become the defining feature in the new Middle East conflict.
+
+"Oh my god."
+
+With Iran reported to have up to 80,000 of them stockpiled. But they're almost prehistoric compared to what's fast approaching an all-out AI weapons war.
+
+"We're about 6,000 people."
+
+And 33-year-old Palmer Luckey is adamant battles will be fought very differently in the future.
+
+"It's not a matter of should we use AI at all or should we not. It's a matter of using it everywhere where we can achieve higher precision, less collateral damage, more ethical use of force. Are you a tech innovator, Palmer, or are you an arms dealer? How do you reconcile?"
+
+"Well, I'd say I'm not an arms dealer in that my business is not—an arms dealer typically is someone who is selling other people's arms, right? They're a middleman. They're a guy who is in the business of moving things around. We're a weapons manufacturer."
+
+You wouldn't expect to find a global arms headquarters nestled in Southern California, just minutes from Newport Beach. But it's here where Palmer runs his company, Anduril. And don't let his casual appearance fool you. He's built a $30 billion AI success in just 7 years.
+
+"So, Altius is deployed, sentry towers are deployed, dives are deployed, Roadrunner is deployed. These are on bases all over the world. We're launching from land and from ships."
+
+"That is one of the most ominous things I've ever seen."
+
+On a tour of his weapons, Palmer gets a kick out of showing off his wares. He's selling them to militaries around the world, including the US, which just signed up for this sleek creation.
+
+"It is an autonomous fighter jet. No person aboard whatsoever."
+
+"No pilot in the fight."
+
+"No pilot. It's frightening to hear about how artificial intelligence controls this and missile."
+
+"Let's say that I have 10 missiles. You could have them all come in in a line. 1, 2, 3, 4, 5, 6, you know, 10 on. I can have the first one go in and the other one can observe that was not a good hit. I'm going to go in. They go in and strike. They say, 'Oh, target destroyed.' The other eight move on to the next target. And they play the same game. So having a brain on board is a very useful thing."
+
+"The bullets are making decisions for themselves as well as the gun. Is it that simple?"
+
+"Correct."
+
+It's this artificial intelligence that's the key invention controlling all the weapons. It's called Lattice.
+
+"Lattice is kind of the AI brain that powers everything we do."
+
+"I'll be back."
+
+For those new to AI weaponry, it's all eerily similar to something Hollywood offered up more than 40 years ago. In the sci-fi classic Terminator, the AI brain Skynet turns on and nearly destroys humanity with its robots.
+
+"Most people's view of the future comes from science fiction. That's why they think the future of warfare looks like Terminator because that's what the science fiction tells them."
+
+"And that's a basic fear. I know you're probably tired of that comparison, but the comparison of what you're doing here to Terminator and Skynet, that's what people when they listen to you fear."
+
+"I have to admit I have a little bit of beef with science fiction series these days that are often written by people who have no idea about science, only about fiction."
+
+But weird science has always been Palmer's passion. At 16, he founded his first company with his creation Oculus, a groundbreaking virtual reality headset. Remarkably, 5 years later, he sold it to Facebook for almost $3 billion Australian.
+
+"When you've cashed in a few billion dollars as you put it. How old were you?"
+
+"Let's see. 21 at the time."
+
+"21 and you're a billionaire."
+
+"That's right."
+
+"Why didn't you just go, okay, that's me done. I've done all the hard work. I'm just going to enjoy my life now."
+
+"The type of person who makes a billion dollars is not the kind of guy who can imagine doing that. It's just people say, 'Oh, you know, if I had a billion, I'd go and I'd drink my ties on the beach.' But the curse of it is that anyone who can get to a billion is probably something's wrong with their brain. I can tell you most billionaires, the sickness is not gathering dollars. It's working and doing things. Why would I go sit on a beach when I could be working in Anduril?"
+
+Palmer's obsession means Anduril just keeps getting bigger. Last year he even opened a base in Australia.
+
+"Managing it is new CEO, David Goodrich, who wants to show off how the AI brain Lattice can control a simulated battleground."
+
+"You will see all of the incoming drones, all of the vehicles that are in the battle space around you. You will be able to then understand whether or not those drones are friend or foe."
+
+Across this landscape, drones are ready to launch at a moment's notice.
+
+"That it's pretty light. Not your average drone either, is it? It's more mini helicopter."
+
+"Yep. Well, it's a military drone. Small unmanned military drone."
+
+Once they're in the air, Lattice dictates their every move. Each drone has a mind of its own and a job to do. Some are for surveillance while others are anti-drones that hone in on enemy aircraft.
+
+"It's moving around. Is there any human control?"
+
+"No human control whatsoever. The design is all designed in order to accelerate from its normal speed of about 120 km an hour up to 320 km an hour to smash into the enemy drone and take it out of the sky."
+
+"So, it's basically a kamikaze drone."
+
+"It's a kamikaze drone. You really want to make sure that nothing can get up on you without you knowing about it and being able to reach out and destroy it before it gets to you."
+
+"Where are these drones you've shown me in the world right now?"
+
+"All over the world. They're in Taiwan. They're in Ukraine. They are in the United States. They're in a handful of Nordic countries that don't want me to name them."
+
+As the autonomous buildup continues, coming up, why AI experts are pleading with countries to slow down before it's too late.
+
+"This thing could secretly stealthily drive itself into Sydney harbour and then at the whims of an algorithm decide to blow up half of Sydney."
+
+"What do you have in store for me here, Toby?"
+
+"So, this is the lab where we—"
+
+Meeting Hero the robot dog is a strange and somewhat awkward experience.
+
+"And then right, say hello to Hero."
+
+"Wow."
+
+"Stuff of nightmares."
+
+"He wants to shake your hand."
+
+"Okay. Oh, okay. Thank you. Will he go again?"
+
+"Try again."
+
+"Show, man. There we go."
+
+"Hello, Hero."
+
+"Oh, that's terrifying."
+
+As head of the robotic center at the University of New South Wales, Professor Toby Walsh has bought this $4,000 Chinese-made dog robot for a special AI project. Today, Hero's tricks are completely controlled remotely by Toby's students, but not for long. They plan to give Hero artificial intelligence for a noble reason. He'll be sent out to earthquake disaster zones to search the rubble for bodies on his own with no human control.
+
+"I guess there's AI in robotics that we're seeing here and then there's AI in a battlefield, right? Is there really much difference between the two?"
+
+"There isn't. I mean, that's the classic dilemma of AI. It's dual use. The same robots that we're building to help you in a disaster situation to go into a destroyed nuclear power station, an earthquake zone are the ones that are going to be able to navigate around a battlefield."
+
+"So then I guess how will this AI you're testing here potentially be misused in a conflict?"
+
+"That's the moral dilemma you have as an AI researcher. Everything you do can be taken by other people and used for purposes that you wouldn't like."
+
+It's indeed a huge conundrum for the professor who's built his career on being an expert in and huge advocate for artificial intelligence, but he knows more than most its limitations and how AI could make a deadly miscalculation.
+
+"They're going to make it much easier to go to war. If you can think that you can go to war without putting boots on the ground, then you're more likely to go to war."
+
+"With the world heading in the direction it is with autonomous and AI warfare, what's the worst case scenario?"
+
+"It will look like a bad Hollywood movie. We've seen this in Hollywood has given us a vision of what that future will look like and that's exactly I fear how it will be."
+
+Here at the Arlington National Military Cemetery just outside Washington DC, there are nearly half a million US armed forces, veterans, and their families buried here. It's the perfect backdrop for the predictable sales pitch for autonomous weapons that with their use, fewer military personnel will die. But critics argue it won't save lives. It'll actually endanger more. Because when you hand over decision making to machines, the fear is you can also lose complete control.
+
+"I think the worst case scenario is that we would have a nuclear conflict that was unnecessary, unwanted, that it was a mistake that the algorithms made."
+
+"The Ukrainians are using it to destroy."
+
+But for the man who sells AI controlled weapons for a living, Palmer defends the autonomy of his robots.
+
+"Where do you draw that line to ensure safety that a machine or an algorithm or AI is not making a decision that could be catastrophic?"
+
+"I think that you'd be surprised at just how far the line already is with the military. They are engineering these systems to be extraordinarily certain of the decisions that they're making."
+
+"Well, wait a second. This is not making warfare any better. This is actually making the world a less safe place. This is changing the nature of conflict in a way that's going to make it worse for all of us. And therefore, we should hold back from using these weapons. We should hold back from developing these weapons. We should hold back from selling these weapons."
+
+"It's actually much harder for a robot to make a mistake with all of that information than, let's say, a human pilot. And so I think that the right bar to compare with is not that a robot will never make a mistake. We need to make sure that robots are making mistakes much, much, much less often than a person. And we also need to have a person who can be held accountable for the decisions of that robot."
+
+That sounds good in theory. Except Professor Walsh knows at least one country has already broken all the moral and ethical rules of autonomous warfare.
+
+"If you want the most terrifying weapon that I've ever heard, it's the Poseidon autonomous underwater drone that Russia is developing. It's nuclear-powered, so it can travel at high speed, almost unlimited distances. It's small. It's only the size of a bus. It's much smaller than other nuclear submarines. And it's believed, or it's claimed by the Russians at least, that it will carry a dirty cobalt nuclear device. This thing could secretly stealthily drive itself into Sydney harbour and then at the whims of an algorithm decide to blow up half of Sydney. And that can be deployed right now."
+
+"There are pictures of prototypes of this weapon."
+
+With weapons like this on the horizon, it's not surprising that last year Australia started buying up an AI controlled arsenal.
+
+"David."
+
+"Hey, Adam. Welcome to Anduril."
+
+"Thanks for having me."
+
+"Our pleasure."
+
+"Look at the size of the joint."
+
+David Goodrich is the gatekeeper of a hidden military factory. And there's good reason why the exact location of this facility in Sydney is kept top secret.
+
+"You're at pains to not reveal exactly where we are."
+
+"We need to keep it secret because there are a number of adversaries who would love to know what we're doing here. And we need to protect those national secrets."
+
+This is what David's protecting. It's an autonomous AI powered submersible called Ghost Shark.
+
+"It also has strike capabilities. Formidable strike capabilities."
+
+The Royal Australian Navy has just ordered a fleet of them from Palmer Luckey's company, Anduril, and they'll all be built here.
+
+"This is where it all comes together, Adam. We bring all of the components here. We have over 42 Australian companies that are in our supply chain."
+
+Incredibly, Australia is the first country in the world to deploy these particular AI powered robotic submarines.
+
+"Australia isn't typically known for being at the forefront of new age technology, particularly in warfare. What's changed so dramatically?"
+
+"We are currently experiencing the most challenging geopolitical circumstances since the Second World War. We've seen dictators around the world who have engaged in conflict and war. Australia has recognized that we need to be more self-sufficient."
+
+What's truly impressive is even before the Australian Navy agreed to buy these Ghost Sharks in bulk, Anduril made the decision to spend its own money, a massive $60 million to build this factory here in Sydney. But we now know it was worth it with the $1.7 billion mega deal inked late last year to deliver dozens of these autonomous subs to patrol our waters and possibly fight our wars.
+
+"It's important that we do a test in salt water that mirrors the ocean."
+
+The factory includes this 400,000 L sea pool where each Ghost Shark is tested before their delivery to the Navy to ensure they're not only able to patrol our vast coastline, but that they're also robust enough to carry missiles.
+
+"I mean, the thing about one of our crewed submarines is they can't be everywhere, but when you're talking about Ghost Shark, they literally can be everywhere."
+
+"Well, Minister, these are clearly high-tech aircraft, but not AI operated. Is there still a place for them?"
+
+"There's definitely a place for these."
+
+Australia's defense minister, Richard Marles, is overseeing our adoption of autonomous military technology. In the water, we'll have the Ghost Shark. And in the air, the Royal Australian Air Force has just spent $1.4 billion on the Ghost Bat.
+
+"We live in a more contested world. The increase in China's military capability and that is something which is definitely shaping the strategic circumstances of our nation and we've been very clear about that. We will make sure that we have the capabilities to keep Australia safe going into the future. Autonomous platforms are an absolutely critical part."
+
+Now further influenced by the mass use of suicide drones in the Middle East conflict, the minister is contemplating buying our own kamikaze drones.
+
+"The nature of the front line has changed dramatically and most certainly drones are a much bigger part. Are we purchasing drone fleets?"
+
+"We are moving down a pathway of having more autonomous platforms, and that does mean more drones."
+
+So, what will armies of the future look like after the break? Who needs humans when you've got AI robots?
+
+"China has the lead in a lot of AI relevant technology. They're making them cheaper. They're making them better."
+
+In China's capital, Beijing, locals here have just finished celebrating the new year of the horse. It's a festive time across the country. But for Victor Gao, a former Chinese Communist Party diplomat and interpreter, there's a serious message he wants to give Australia. He thinks we're wasting our time and money on a new $3 billion autonomous warfare program that includes an AI controlled submersible to patrol our coastline.
+
+"China has no interest in Australia for military conquest or for colonization. No, we have no interest. The only interest we have as Chinese for Australia

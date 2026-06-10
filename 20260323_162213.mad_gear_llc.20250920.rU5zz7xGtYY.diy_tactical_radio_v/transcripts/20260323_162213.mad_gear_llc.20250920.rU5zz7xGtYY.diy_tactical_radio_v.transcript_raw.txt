@@ -1,0 +1,317 @@
+You might have seen a viral video that's
+going around recently that talks about
+reverse engineering a $20,000 military
+router or really a man radio. And that
+stands for mobile ad hoc networking
+radio. Although that video did introduce
+a ton of people to the idea of man
+radios or at least to some of the
+technologies surrounding man. I'm going
+to add more details in this video and
+give you some insight to the open-
+source community that is tackling this
+problem head-on. A huge difference
+between 5 figure militarygrade manet
+radios and the DIY projects that are
+going on in certain communities right
+now. Now, that's not to say that these
+projects aren't worthy of your time, but
+it's important to acknowledge that there
+are key differences between them. The
+open- source community project I'm
+talking about is called Open Manet. I'm
+going to compare and contrast the
+project that Open Manet is working with
+and militaryra Manet radios. So stay
+tuned for that. This video won't have
+any digital products for sale. It's just
+going to be education. So you want to
+watch the whole thing because I'm
+packing all the information into this
+video. And before we get started, please
+like and subscribe. It really means a
+lot to me and it helps the channel grow.
+Let's start by setting the scene. I'm
+going to tell you a little bit about the
+top tier militaryra man radios that
+exist. One company is called Silvis and
+the other is called Persistent Systems.
+Silvis has a radio called the
+Streamcaster and Persistent Systems has
+a radio called the MPU 5. You're able to
+snag one of these radios on the
+secondary market. Each one is going to
+run you 5 figures at least. So
+expensive. Two things, a proprietary
+waveform and an integrated ecosystem.
+You might not know what a proprietary
+waveform is. So I'm going to explain
+that is basically a custombuilt radio
+wave that accomplishes specific goals.
+For example, with these systems, they
+are low probability of intercept, low
+probability of detection, and they also
+have anti-jam properties. This means
+that the bad guys aren't going to be
+able to listen to your communications.
+They're not going to be able to tell
+where you're coming from, and they're
+not going to be able to stop you from
+communicating. systems has their wave
+relay and Silvis has their MN myo which
+means mobileorked multiple input
+multiple output developed by RF
+engineers professionals who have spent
+years learning how to make these types
+of systems but it's not just the
+proprietary waveform it's also the
+integrated ecosystem you're not just
+buying a single one-off unit you're
+buying the ecosystem the software the
+user interface the radio systems and how
+they all interconnect together basically
+it's an it just works solution for
+missionritical situations. It's also
+worth noting that the hardware is
+topnotch. You're getting IP68
+enclosures. You're getting swappable
+frequency packs. I know that the MPU5
+has the ability to just change
+frequencies with a module that you can
+swap on the unit. You get some really
+high-end features. And this is the part
+that is probably going to piss some
+people off, but you don't really need
+one. Let me explain. Unless you are
+being issued one of these devices for
+your job, odds are that it's just not
+necessary. If you have the means or the
+wherewithal to pursue these types of
+systems, then by all means do it, but
+you don't necessarily have to in order
+to get a system that is good enough for
+say community resilience. The features
+on these high-end devices are really
+designed for contested environments like
+militaries dealing with adversaries. So,
+you'd be paying a massive premium for
+capabilities that you most likely will
+never use. Be akin to buying a Ferrari
+as your grocery getter. Does it look
+really cool? Yeah. Is it practical?
+Absolutely not. The issue appears to be
+that there aren't any lower-end options.
+And that is where Open Manet comes in.
+Is a communitydriven project which seeks
+to develop affordable manet gear.
+definitely in the early stages and it is
+mostly DIY but I am in that community
+and I can tell you there are people
+working really hard to make it better
+every day. My biggest contribution that
+I know that I can make is awareness. So
+by telling everybody about open manet
+and the project in general, I'm hoping
+that people will go and contribute their
+time and their energy. Cool thing about
+open-source projects is that you get a
+lot of community involvement to make the
+project better. Unfortunately, that does
+come with cons. People are using their
+free time to develop this stuff.
+Oftentimes there's no money involved. So
+people have to take money out of their
+own pockets to develop this stuff.
+Oftentimes these open source projects
+can take a lot longer to get legs. What
+is in the open manet recipe? And I say
+recipe because it's not a product. It's
+not just something you can go buy off
+the shelf. It uses things that you can
+buy off the shelf and things that are
+openly available. So I would see it as
+more of a recipe. Open Manet is building
+a recipe for how to make your own Manet
+gear. Software. Open WRT is a
+Linux-based lightweight, highly
+customizable operating system for
+networking devices. The software turns
+your device into a router that has
+advanced configuration capabilities. And
+then Batman advanced gives it the
+instructions on how to route
+intelligently. Batman stands for better
+approach to mobile ad hoc networking.
+allows nodes to continuously evaluate
+the quality of connections to its
+neighbors. Really cool thing about
+Batman is that if one node goes down,
+the mesh self-heals itself because
+traffic is able to be rerouted cuz all
+the nodes are continuously evaluating
+the nodes around them. Whenever multiple
+nodes are moving around in a network,
+you might lose links in one case or gain
+new links in another. Hardware. Right
+now, Open Manet is using the Raspberry
+Pi as its test bed. And if you don't
+know what that is, it's just a single
+board computer that people use for
+development. You can add things to
+Raspberry Pies that allow you to do
+really specific things. Like in this
+case, if you add the right chips and the
+right connections, you now have a very
+special form of Wi-Fi that not a lot of
+people know about. And that's exactly
+what this project is doing. There's a
+special type of Wi-Fi called Wi-Fi Halo.
+It operates in the 900 MHz band, which
+gives it some different qualities. For
+example, 900 MHz Wi-Fi can travel a lot
+farther than 2.4 GHz or 5 GHz. It also
+has better penetration capabilities like
+going through walls or foliage, whereas
+2.4 GHz and 5 GHz Wi-Fi can often times
+get blocked by walls and trees pretty
+easily. 900 MHz Wi-Fi has a range in the
+miles instead of say the hundreds of
+feet. As you can imagine, that does come
+at a cost and we'll talk about that
+later whenever we compare the
+capabilities. quick moment to compare
+proprietary waveforms to ITLE E
+standards. So if you've heard of ILE E
+standards like 80211 AH SBE AX IE E
+standards are known worldwide anybody
+can use them for their equipment that
+takes us back to the open-source nature
+of open man using an opensource Wi-Fi
+standard 802.11 ah open man is exploring
+802.11s and Batman advanced but it's
+important to note that Batman is
+designed to be better for mobile ad hoc
+networking quick head-to-head head
+comparison of these top tier man radios
+and open manet so we can get a really
+good picture of what the difference is
+between a DIY project and professional
+military grade equipment data throughput
+with your syllabus devices or your
+persistent systems devices you can
+expect to get into the hundreds of
+megabytes per second for open manet
+because we're only using the 900
+meghertz spectrum you can expect between
+1 and 15 megabytes per second in optimal
+conditions It's really important to be
+real with yourself about the
+capabilities that you need. Not
+everybody's going to need hundreds of
+megabytes per second. You can really get
+away with a lot of situational awareness
+between 1 and 15 megabytes per second.
+You can send pictures. You can send data
+packages. You can update points on maps
+using ATAC. You can even stream maybe a
+single video. 99% of people 1 to 15
+megabytes per second is going to do just
+fine for a resilient community network.
+Let's talk about security. Your high-end
+Manet devices are capable of
+militarygrade encryption, LPI, LPD, like
+we talked about before, and anti-jam.
+These are all security features. It's
+important to note that open Manet
+devices are still going to have standard
+Wi-Fi security, which is sufficiently
+strong for most cases. And unless you're
+head-to-head with a nation state, which
+you probably aren't, this isn't
+necessarily something that you would be
+worried about. Voice and video
+integration. Your higher-end devices are
+going to have that type of capability
+natively. You'll have hardware video
+encoders and pushto talk natively
+capable. Open source projects, you're
+typically going to be relying on
+software to do that transmission for you
+instead of efficient encoders on the
+hardware itself. Talk about network
+scalability a little bit here. So, your
+top-end systems are going to be capable
+of hosting hundreds of nodes and they
+are built to handle this type of
+ecosystem. Open source projects can
+support multiple nodes in a community
+pretty easily, especially for the things
+that you are most likely to be using
+them for. But it's important to note
+that there are limitations. Systems have
+gone through a ton of testing to make
+sure that they are reliable no matter
+where people are moving and what they're
+doing. Whereas open- source systems are
+just not tested as much. There's not as
+much money behind it. That's not to say
+that it's not good enough for your uses
+because 99% of the time it will be.
+Let's talk about a hardware comparison.
+High-end units are going to be IP68
+rated. They're going to be super
+ruggedized, capable of being thrown on
+the ground, run over, and continuing to
+work no matter the environment that you
+put these things in. Buying an it just
+works solution. People shouldn't be
+worried about having to baby their
+radios. Open- source projects, on the
+other hand, rely on people in their
+spare time designing 3D printed
+enclosures in CAD. I've seen a ton of
+ingenious designs that people have made.
+I've even dabbled a little bit myself in
+making radio enclosures. They're not
+water and dust resistant and they're not
+metal. This isn't to say that it's not
+useful for your use case. In fact, for
+the most part, it's going to be exactly
+what you need. But these things are not
+hardened, engineered, super durable,
+ruggedized radios. I truly believe that
+the ingenuity that I've seen in this
+community, that will come with time.
+Somebody's going to develop one of these
+enclosures that uh satisfies all of
+these tenants. But again, people are
+working hard in their spare time. The
+best thing about the Open Manet project
+is that you can get started for around a
+hundred bucks. My opinion, instead of
+downloading a nearly $100 PDF, you can
+go to the Open Manet GitHub and get all
+the information you would ever need.
+Conclusion: Are these Open Manet devices
+a reverse engineered version of a
+$20,000 military router? No. It's a
+completely different flavor of something
+similar. Still an incredibly valuable
+project. To my knowledge, there aren't a
+lot of solutions in the middle. Things
+like Open Manet are going to drive
+innovators to a point where they can
+start capturing parts of the market that
+aren't $20,000 a radio. As Open Manet
+develops more, people are going to have
+access to that DIY knowledge, that
+recipe that's going to exist in this
+open-source community. And that's why
+it's so important to tinker and push the
+limits and become involved in these type
+of communities. We're pushing technology
+further and making it more accessible
+for everybody. Go support Open Manet and
+stay tuned for some really cool
+technology that's going to be coming out
+really soon. Thanks for watching.

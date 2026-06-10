@@ -8,7 +8,9 @@ This document is for AI agents (@Data, @Clawdbot, @JARVIS) that need to invoke
 | Item | Path |
 |------|------|
 | **Installed executable** | `~/.local/bin/process_video` (stable release copy) |
+| **Installed lib modules** | `~/.local/bin/lib/*.sh` (9 sourced modules) |
 | **Development source** | `~/Projects/git-repos/github-repos/process_video/process_video` |
+| **Development lib/** | `~/Projects/git-repos/github-repos/process_video/lib/` |
 | **Default config** | `~/Projects/git-repos/github-repos/process_video/process_video.config.json` |
 | **Fallback transcript tool** | `~/.local/bin/fetch_transcript` |
 | **Fabric patterns directory** | `~/.config/fabric/patterns/` |
@@ -18,6 +20,7 @@ development source lives in the git repo. At release milestones, the release
 copy is updated via:
 ```bash
 cp ~/Projects/git-repos/github-repos/process_video/process_video ~/.local/bin/process_video
+cp -r ~/Projects/git-repos/github-repos/process_video/lib/ ~/.local/bin/lib/
 ```
 Always invoke via `process_video` (the `~/.local/bin` copy) in production.
 
@@ -129,7 +132,7 @@ See `process_video.config.json` in this repo for the full template. Key fields:
 
 ```bash
 # 1. Navigate to the working session directory
-cd ~/Projects/working_sessions/youtube-transcripts/YYYYMMDD_HHMMSS.session_name/
+cd ~/Projects/working-sessions/youtube-transcripts/YYYYMMDD_HHMMSS.session_name/
 
 # 2. Run process_video
 process_video --model claude-sonnet-4-5 --vendor Anthropic --pdf https://youtu.be/VIDEO_ID

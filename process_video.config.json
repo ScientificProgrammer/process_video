@@ -1,21 +1,21 @@
 {
   "process_video": {
     "fabric": {
-      "model": "gemini-3.1-pro-preview",
-      "vendor": null,
+      "model": "gpt-5.4-mini",
+      "vendor": "OpenAI",
       "strategy": null,
       "raw": true,
       "temperature": null,
       "session": null,
       "sleep_between_patterns": 0,
-      "parallel_jobs": 8,
+      "parallel_jobs": 2,
       "llm_slug": true
     },
     "patterns": [
+      "create_5_sentence_summary",
       "youtube_summary",
       "create_summary",
       "summarize",
-      "analyze_claims",
       "extract_wisdom_large",
       "extract_ideas",
       "extract_insights",
