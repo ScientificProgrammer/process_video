@@ -157,7 +157,19 @@ if [[ -f "${HOME}/.local/bin/phdr.sh" ]]; then
     # Wrap the sourced phdr to handle set -u with missing $1
     _orig_phdr="$(declare -f phdr)"
     eval "${_orig_phdr/phdr ()/_sourced_phdr ()}"
-    phdr() { _sourced_phdr "${1:-}"; }
+    phdr() {
+        local text="${1:-}"
+        local width="${COLUMNS:-80}"
+
+        if [[ -z "$text" ]]; then
+            _sourced_phdr --len "$width"
+            return
+        fi
+
+        local minimum_width=$(( ${#text} + 5 ))
+        (( width < minimum_width )) && width=$minimum_width
+        _sourced_phdr --len "$width" "$text"
+    }
 elif ! declare -f phdr &>/dev/null; then
     phdr() { _phdr_impl "${1:-}"; }
 fi
