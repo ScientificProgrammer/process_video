@@ -1386,7 +1386,7 @@ model: "${OPT_MODEL}"
 
 | Field | Value |
 |-------|-------|
-| **Title** | ${VIDEO_TITLE} |
+| **Title** | ${VIDEO_TITLE//|/-} |
 | **Channel** | ${CHANNEL_NAME} |
 | **Upload Date** | ${UPLOAD_DATE} |
 | **Video ID** | ${VIDEO_ID} |

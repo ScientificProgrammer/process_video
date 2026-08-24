@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Title slug max length reduced from 40 to 20 characters
 - VIDEO_ID is now preserved verbatim (case-sensitive) in filenames
 - Processing model is included as a sanitized filename component
+- Markdown report tables tolerate video titles containing pipe characters
 
 ### Fixed
 - VIDEO_ID was incorrectly lowercased, breaking YouTube links
