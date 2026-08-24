@@ -3,3 +3,9 @@
 .tmp_*
 __pycache__/
 *.pyc
+
+# Generated process_video output directories and loose transcript downloads.
+/[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]_[0-9][0-9][0-9][0-9][0-9][0-9].*/
+/???????????.txt
+/*.vtt
+/*.srt
