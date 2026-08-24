@@ -5,7 +5,7 @@
 setup() {
     # Extract the extract_video_id function from the main script
     SCRIPT_DIR="$(cd "$(dirname "$BATS_TEST_FILENAME")/../.." && pwd)"
-    
+
     # Define the function inline for testing (matches the script's implementation)
     extract_video_id() {
         local url="$1"

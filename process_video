@@ -1833,12 +1833,10 @@ main() {
     # Use a temporary approach: first create a temp dir, fetch metadata,
     # then set up the real output dir with the proper name
     if [[ "$OPT_DRY_RUN" == "true" ]]; then
-        BASE_FILENAME="dryrun.${VIDEO_ID}"
-        setup_output_dir
         fetch_metadata
         generate_llm_slug
         generate_base_filename
-        info "[dry-run] Final output directory would be: ${PWD}/${BASE_FILENAME}"
+        setup_output_dir
     else
         # Create a temp directory for metadata fetch
         local tmp_meta_dir
