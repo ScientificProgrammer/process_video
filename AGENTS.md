@@ -64,7 +64,17 @@ process_video --model claude-sonnet-4-5 --vendor Anthropic --pdf https://youtu.b
 ## Output Structure
 
 The script creates an output directory in the current working directory named:
-`{channel}.{upload_date}.{video_id}.{title_slug}/`
+`{processed_date}.{channel}.{upload_date}.{video_id}.{title_slug}.{model}/`
+
+**Filename components:**
+- `processed_date` -- UTC timestamp when processing started (`YYYYMMDD_HHMMSS`)
+- `channel` -- Sanitized channel name (max 20 chars, lowercase)
+- `upload_date` -- Video upload date (`YYYYMMDD`)
+- `video_id` -- YouTube video ID (**preserved verbatim, case-sensitive**)
+- `title_slug` -- Sanitized title (max 20 chars, lowercase)
+- `model` -- Processing model ID, sanitized for the filesystem
+
+**Example:** `20260213_193045.veritasium.20240115.mD4jN6DyF7M.quantum_computing.gpt-5_6-luna/`
 
 ```
 {base}/

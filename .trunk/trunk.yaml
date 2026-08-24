@@ -1,0 +1,48 @@
+# Trunk configuration for process_video
+# https://docs.trunk.io
+
+version: 0.1
+cli:
+  version: 1.22.6
+
+repo:
+  repo:
+    host: github.com
+    owner: ScientificProgrammer
+    name: process_video
+
+lint:
+  enabled:
+    - shellcheck@0.10.0
+    - shfmt@3.8.0
+    - actionlint@1.7.4
+    - markdownlint@0.42.0
+    - prettier@3.4.2
+
+  disabled:
+    - trufflehog  # Disable secret scanning for now
+
+  ignore:
+    - linters: [ALL]
+      paths:
+        - tests/fixtures/**
+
+  definitions:
+    - name: shellcheck
+      files: [bash, sh]
+      commands:
+        - output: sarif
+          run: shellcheck --format=json1 --severity=warning ${target}
+          success_codes: [0, 1]
+
+runtimes:
+  enabled:
+    - node@18.20.5
+    - python@3.10.8
+
+actions:
+  enabled:
+    - trunk-announce
+    - trunk-check-pre-push
+    - trunk-fmt-pre-commit
+    - trunk-upgrade-available
