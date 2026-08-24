@@ -47,17 +47,18 @@ process_video --model claude-sonnet-4-5 --vendor Anthropic --pdf https://youtu.b
 
 Output directories follow this naming convention:
 ```
-{processed_date}.{channel}.{upload_date}.{video_id}.{title_slug}/
+{processed_date}.{channel}.{upload_date}.{video_id}.{title_slug}.{model}/
 ```
 
-Example: `20260213_193045.veritasium.2024-01-15.mD4jN6DyF7M.quantum_computing/`
+Example: `20260213_193045.veritasium.20240115.mD4jN6DyF7M.quantum_computing.gpt-5_6-luna/`
 
 **Components:**
 - `processed_date` — UTC timestamp (YYYYMMDD_HHMMSS)
 - `channel` — Channel name (max 20 chars, lowercase)
-- `upload_date` — Video upload date (YYYY-MM-DD)
+- `upload_date` — Video upload date (YYYYMMDD)
 - `video_id` — YouTube video ID (case-sensitive, preserved verbatim)
 - `title_slug` — Video title (max 20 chars, lowercase)
+- `model` — Filesystem-safe processing model ID
 
 ## Common Options
 

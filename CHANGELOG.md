@@ -19,10 +19,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - CHANGELOG.md for version history
 
 ### Changed
-- **BREAKING**: Output directory format changed from `{channel}.{upload_date}.{video_id}.{title_slug}` to `{processed_date}.{channel}.{upload_date}.{video_id}.{title_slug}`
+- **BREAKING**: Output directory format changed from `{channel}.{upload_date}.{video_id}.{title_slug}` to `{processed_date}.{channel}.{upload_date}.{video_id}.{title_slug}.{model}`
 - Version now derived from git tags at runtime (`git describe --tags`)
 - Title slug max length reduced from 40 to 20 characters
 - VIDEO_ID is now preserved verbatim (case-sensitive) in filenames
+- Processing model is included as a sanitized filename component
 
 ### Fixed
 - VIDEO_ID was incorrectly lowercased, breaking YouTube links

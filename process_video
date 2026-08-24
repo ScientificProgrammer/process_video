@@ -1038,7 +1038,7 @@ generate_base_filename() {
     local processed_date
     processed_date="$(date -u +%Y%m%d_%H%M%S)"
 
-    local channel_part title_part
+    local channel_part title_part safe_model
 
     if [[ -n "$LLM_TITLE_SLUG" ]] && [[ -n "$LLM_CHANNEL_SLUG" ]]; then
         # LLM slugs are already sanitized and lowercased
@@ -1053,9 +1053,18 @@ generate_base_filename() {
         title_part="${title_part:0:20}"
     fi
 
-    # Assemble filename: VIDEO_ID preserved verbatim (case-sensitive)
-    # Format: {processed_date}.{channel}.{upload_date}.{video_id}.{title_slug}
-    BASE_FILENAME="${processed_date}.${channel_part}.${UPLOAD_DATE}.${VIDEO_ID}.${title_part}"
+    # Keep the processing model in the artifact identity while making it safe
+    # for a single filename component. Preserve case for model IDs and VIDEO_ID.
+    safe_model="$(printf '%s' "$OPT_MODEL" \
+        | sed -E 's/[^A-Za-z0-9_-]+/_/g' \
+        | sed -E 's/_+/_/g' \
+        | sed -E 's/^_|_$//g' \
+        | tr -d '\n')"
+    [[ -n "$safe_model" ]] || safe_model="unknown_model"
+
+    # Format:
+    # {processed_date}.{channel}.{upload_date}.{video_id}.{title_slug}.{model}
+    BASE_FILENAME="${processed_date}.${channel_part}.${UPLOAD_DATE}.${VIDEO_ID}.${title_part}.${safe_model}"
 
     # Final safety: remove any remaining problematic characters (but preserve case)
     BASE_FILENAME="$(printf '%s' "$BASE_FILENAME" \
